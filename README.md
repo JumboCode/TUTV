@@ -30,8 +30,8 @@ it on your own if you don't have it!
  3. Install React dependencies. `cd src/frontend` and then, `yarn install`. If you don't have
     `yarn`, figure out how to install it! Feel free to ask questions about preferred methods, etc.
 
- 4. Back in the project root, start your [virtual environment]
-    (https://www.google.com/search?q=virtual+environment+python) shell:
+ 4. Back in the project root, start your
+    [virtual environment](https://www.google.com/search?q=virtual+environment+python) shell:
     `cd ../..` and then, `pipenv shell`.
 
  5. Start the Django development server. `./manage.py runserver`. You may see a red error message
@@ -52,9 +52,9 @@ comfortable with our tools and our workflow until our next meeting.
 We are going to develop this section as a team as our project progresses. Here's a tentative overview
 of how our design and development process will look like:
 
- - Design docs (yes), both visual and technical, will go in the [project wiki]
-   (https://github.com/JumboCode/TUTV/wiki), which is empty right now. Do you have an idea for a wiki
-   page? Add it!
+ - Design docs (yes), both visual and technical, will go in the
+   [project wiki](https://github.com/JumboCode/TUTV/wiki), which is empty right now. Do you have an idea
+   for a wiki page? Add it!
 
  - Everyone will contribute to keeping our wiki and our README up to date.
 
