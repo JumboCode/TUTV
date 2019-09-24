@@ -16,10 +16,24 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "eslint": "eslint \"src/**/*.tsx\"",
+    "stylelint": "stylelint src/**/*.css",
+    "prettier-write": "prettier --write \"src/**/*.{tsx,css}\""
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "plugin:prettier/recommended"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-prettier/recommended"
+    ]
   },
   "proxy": "http://localhost:8000",
   "browserslist": {
@@ -33,5 +47,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.18.2",
+    "stylelint": "^11.0.0",
+    "stylelint-config-prettier": "^6.0.0",
+    "stylelint-prettier": "^1.1.1"
   }
 }
