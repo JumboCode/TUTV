@@ -1,4 +1,8 @@
-#here is our code 
-function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
+import React from 'react';
+
+const Hello: React.FC = () => {
+  return (
+   <h1>Hello, world</h1>);
 }
+
+export default Hello;
