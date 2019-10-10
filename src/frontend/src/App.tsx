@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+<<<<<<< HEAD
 import Welcome from './hello'
+=======
+import Hello from './hello';
+>>>>>>> f497b23ef2ba800e2416de395640c3748395c7a2
 
 const App: React.FC = () => {
   return (
@@ -11,7 +15,12 @@ const App: React.FC = () => {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+<<<<<<< HEAD
         <Welcome />
+=======
+        <Hello>
+        </Hello>
+>>>>>>> f497b23ef2ba800e2416de395640c3748395c7a2
         <a
           className="App-link"
           href="https://reactjs.org"
