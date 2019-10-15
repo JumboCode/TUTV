@@ -13,3 +13,4 @@ matrix:
       script:
         - yarn run eslint
         - yarn run stylelint
+        - yarn run styleguide:build
