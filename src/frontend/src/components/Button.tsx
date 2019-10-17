@@ -5,7 +5,7 @@ function Button() {
 		<div>
 			<p>buttonText</p>
 
-			<button onClick={}>buttonText</button>
+			<button onClick={/*something goes here*/}>buttonText</button>
 		</div>
 	);
 }
