@@ -1,13 +1,20 @@
 import React from 'react';
 
-function Button() {
-	return (
-		<div>
-			<p>buttonText</p>
+const Button: React.FC = () => {
+	// function Button(props) {
+	// 	return (
+	// 		<div>
+	// 			<button onClick={/*something goes here*/}>props.text</button>
+	// 		</div>
+	// 	);
+	// }
 
-			<button onClick={/*something goes here*/}>buttonText</button>
+	return (
+		//when the user clicks, we call setCounter with a value incremented by 1.
+		<div>
+			<button onClick={/*something goes here*/}>BUTTON TEXT GOES HERE</button>
 		</div>
 	);
-}
+};
 
 export default Button;
