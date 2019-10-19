@@ -10,7 +10,7 @@ const Catalog: React.FC = () => {
       <h1>Catalog page</h1>
       <Switch>
         <Route path={`${(match || { path: '/' }).path}/:itemId`}>
-          <ItemDetails/>
+          <ItemDetails />
         </Route>
         <Route path={(match || { path: '/' }).path}>No item selected</Route>
       </Switch>
