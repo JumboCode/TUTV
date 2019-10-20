@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer: React.FC = () => {
   return (
     <div className="footer">
-      <p> TUTV Contact Info/Hours </p> 
+      <p> TUTV Contact Info/Hours </p>
     </div>
   );
 };

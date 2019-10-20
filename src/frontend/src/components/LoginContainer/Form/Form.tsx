@@ -1,27 +1,25 @@
-import React, { useState } from "react";
+import React from 'react';
 import './Form.css';
 import Button from './Button/Button';
 
 const Form: React.FC = () => {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
   return (
     <div className="Form">
       <form className="Login">
-	      <div className="form-group">
-	      	<p> Sign In </p>
-	        <div className="e-mail">
-	          <p className="info">E-Mail</p>
-	          <input type="text" name="e-mail"/>
-	        </div>
-	        <div className="password">
-	          <p className="info">Password</p>
-	          <input type="password" name="pass"/>
-	        </div>
-	        <label>
-				<Button />
-			</label>
-	      </div>
+        <div className="form-group">
+          <p> Sign In </p>
+          <div className="e-mail">
+            <p className="info">E-Mail</p>
+            <input type="text" name="e-mail" />
+          </div>
+          <div className="password">
+            <p className="info">Password</p>
+            <input type="password" name="pass" />
+          </div>
+          <label>
+            <Button />
+          </label>
+        </div>
       </form>
     </div>
   );
