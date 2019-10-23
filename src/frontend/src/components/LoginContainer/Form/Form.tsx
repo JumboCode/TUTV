@@ -1,6 +1,6 @@
 import React from 'react';
-import './Form.css';
-import Button from './Button/Button';
+// import './Form.css';
+import Button from './Button';
 
 const Form: React.FC = () => {
   return (
@@ -16,9 +16,7 @@ const Form: React.FC = () => {
             <p className="info">Password</p>
             <input type="password" name="pass" />
           </div>
-          <label>
-            <Button />
-          </label>
+          <Button />
         </div>
       </form>
     </div>
