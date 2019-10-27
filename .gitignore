@@ -128,3 +128,5 @@ dmypy.json
 
 # Style guide
 styleguide/
+
+.DS_Store
