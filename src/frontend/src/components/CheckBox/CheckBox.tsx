@@ -1,6 +1,12 @@
 import React from 'react';
 
-const CheckBox: React.FC = ({ checked, label, handleClick }) => {
+type CheckBoxProps = {
+  checked: boolean;
+  label: string;
+  handleClick: () => void;
+};
+
+const CheckBox: React.FC<CheckBoxProps> = ({ checked, label, handleClick }) => {
   return (
     <div>
       <input
