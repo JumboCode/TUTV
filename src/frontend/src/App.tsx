@@ -1,7 +1,7 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import Hello from "./helloworld";
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Hello from './helloworld';
 
 const App: React.FC = () => {
   return (

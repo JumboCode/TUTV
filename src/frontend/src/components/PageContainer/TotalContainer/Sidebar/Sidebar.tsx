@@ -3,7 +3,11 @@ import './Sidebar.css';
 import Calendar from './Calendar';
 
 const Sidebar: React.FC = () => {
-  return <div>Calendar</div>;
+  return (
+    <React.Fragment>
+      <Calendar />
+    </React.Fragment>
+  );
 };
 
 export default Sidebar;
