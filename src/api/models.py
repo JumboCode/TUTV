@@ -5,8 +5,12 @@ from django.utils import timezone
 class EquipmentType(models.Model):
     name = models.CharField(max_length=100)
 
+    def items(self):
+        return self.linked_items.all()
+
+
 class EquipmentItem(models.Model):
-    equipment_type = models.ForeignKey(EquipmentType, on_delete=models.CASCADE)
+    equipment_type = models.ForeignKey(EquipmentType, on_delete=models.CASCADE, related_name='linked_items')
     comments = models.CharField(max_length=200, blank=True)
     created_at = models.DateTimeField(editable=False)
 
