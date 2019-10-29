@@ -7,7 +7,7 @@ class EquipmentType(models.Model):
 
 class EquipmentItem(models.Model):
     equipment_type = models.ForeignKey(EquipmentType, on_delete=models.CASCADE)
-    comments = models.CharField(max_length=200)
+    comments = models.CharField(max_length=200, blank=True)
     created_at = models.DateTimeField(editable=False)
 
     def save(self, *args, **kwargs):
