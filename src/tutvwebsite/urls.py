@@ -18,12 +18,7 @@ import sys
 from django.contrib import admin
 from django.urls import include, path
 
-sys.path.append('..')
-
-from api.urls import urlpatterns as urlpatterns2
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('/', include('api.urls')),
-    *urlpatterns2,
+    path('', include('api.urls')),
 ]
