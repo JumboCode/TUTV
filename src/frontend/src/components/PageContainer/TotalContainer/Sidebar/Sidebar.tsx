@@ -1,12 +1,12 @@
 import React from 'react';
-import './Sidebar.css';
 import Calendar from './Calendar';
+import styles from './Sidebar.module.css';
 
 const Sidebar: React.FC = () => {
   return (
-    <React.Fragment>
+    <div className={styles.sidebar}>
       <Calendar />
-    </React.Fragment>
+    </div>
   );
 };
 

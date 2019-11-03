@@ -9203,11 +9203,6 @@ react-simple-code-editor@^0.9.7:
   resolved "https://registry.yarnpkg.com/react-simple-code-editor/-/react-simple-code-editor-0.9.15.tgz#59e3583832e9e98992d3674b2d7673b4cd1c5709"
   integrity sha512-M8iKgjBTBZK92tZYgOEfMuR7c3zZ0q0v3QYllSxIPx3SU+w003VofH50txXQSBTu92pSOm2tidON1HbQ1l8BDA==
 
-react-styleguide@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/react-styleguide/-/react-styleguide-0.0.4.tgz#d44bae372d5263efdfc1d38ad897aff415c05441"
-  integrity sha1-1EuuNy1SY+/fwdOK2Jev9BXAVEE=
-
 react-styleguidist@^9.1.16:
   version "9.1.16"
   resolved "https://registry.yarnpkg.com/react-styleguidist/-/react-styleguidist-9.1.16.tgz#8d70cf02c4c631cb906946388ff7b4a26812054d"

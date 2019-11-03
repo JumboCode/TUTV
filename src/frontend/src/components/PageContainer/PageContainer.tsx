@@ -2,14 +2,15 @@ import React from 'react';
 import Header from './Header';
 import TotalContainer from './TotalContainer';
 import Footer from './Footer';
+import styles from './PageContainer.module.css';
 
 const PageContainer: React.FC = () => {
   return (
-    <React.Fragment>
+    <div className={styles.PageContainer}>
       <Header />
       <TotalContainer />
       <Footer />
-    </React.Fragment>
+    </div>
   );
 };
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import './Calendar.css';
+import styles from './Calendar.module.css';
 
 const Calendar: React.FC = () => {
-  return <div>Calendar</div>;
+  return <div className={styles.calendar}>Calendar</div>;
 };
 
 export default Calendar;

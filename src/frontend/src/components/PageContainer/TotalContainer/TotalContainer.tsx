@@ -1,6 +1,7 @@
 import React from 'react';
 import MainContent from './MainContent';
 import Sidebar from './Sidebar';
+import './TotalContainer.modules.css';
 
 const TotalContainer: React.FC = () => {
   return (

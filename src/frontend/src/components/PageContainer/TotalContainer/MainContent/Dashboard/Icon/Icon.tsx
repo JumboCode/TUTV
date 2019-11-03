@@ -1,8 +1,8 @@
 import React from 'react';
-import './Icon.css';
+import styles from './Icon.module.css';
 
 const Icon: React.FC = () => {
-  return <div>Icon</div>;
+  return <div className={styles.icon}>Icon</div>;
 };
 
 export default Icon;

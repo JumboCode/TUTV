@@ -1,12 +1,12 @@
 import React from 'react';
-import './MainContent.css';
+import styles from './MainContent.module.css';
 import Dashboard from './Dashboard';
 
 const MainContent: React.FC = () => {
   return (
-    <React.Fragment>
+    <div className={styles.mainContent}>
       <Dashboard />
-    </React.Fragment>
+    </div>
   );
 };
 

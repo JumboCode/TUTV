@@ -1,13 +1,12 @@
 import React from 'react';
-import './Dashboard.css';
+import styles from './Dashboard.module.css';
 import Icon from './Icon';
 
 const Dashboard: React.FC = () => {
-  //return <div>Icon</div>;
   return (
-    <React.Fragment>
+    <div className={styles.dashboard}>
       <Icon />
-    </React.Fragment>
+    </div>
   );
 };
 
