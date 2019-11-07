@@ -21,6 +21,8 @@ class EquipmentTypeSerializer(serializers.HyperlinkedModelSerializer):
         fields = '__all__'
 
 class EquipmentItemSerializer(serializers.HyperlinkedModelSerializer):
+    equipment_type = EquipmentTypeSerializer(read_only=True)
+
     class Meta:
         model = EquipmentItem
         fields = '__all__'
