@@ -5,3 +5,11 @@ Here's how you can display your component in the styleguide:
 ```jsx
 <Button />
 ```
+
+Big pink button:
+
+```jsx
+<Button size="large" color="deeppink">
+	Click Me
+</Button>
+```
