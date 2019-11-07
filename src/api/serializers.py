@@ -15,13 +15,32 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['admin', 'user']
 
 
+# Serializers to support seralizing EquipmentType objects
+
+
+class EquipmentItemSerializerSimple(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = EquipmentItem
+        fields = ['id', 'url']
+
 class EquipmentTypeSerializer(serializers.HyperlinkedModelSerializer):
+    items = EquipmentItemSerializerSimple(many=True)
+
     class Meta:
         model = EquipmentType
-        fields = '__all__'
+        fields = ['name', 'items', 'url']
+
+
+# Serializers to support serializing EquipmentItem objects
+
+
+class EquipmentTypeSerializerSimple(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = EquipmentType
+        fields = ['name', 'id', 'url']
 
 class EquipmentItemSerializer(serializers.HyperlinkedModelSerializer):
-    equipment_type = EquipmentTypeSerializer(read_only=True)
+    equipment_type = EquipmentTypeSerializerSimple(read_only=True)
 
     class Meta:
         model = EquipmentItem
