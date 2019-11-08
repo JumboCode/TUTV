@@ -24,7 +24,7 @@ class EquipmentItemSerializerSimple(serializers.HyperlinkedModelSerializer):
         fields = ['id', 'url']
 
 class EquipmentTypeSerializer(serializers.HyperlinkedModelSerializer):
-    items = EquipmentItemSerializerSimple(many=True)
+    items = EquipmentItemSerializerSimple(many=True, required=False)
 
     class Meta:
         model = EquipmentType
