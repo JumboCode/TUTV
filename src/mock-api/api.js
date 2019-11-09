@@ -1,12 +1,12 @@
 const express = require('express');
 
-const api = express.Router();
+const api = express.Router({ strict: true });
 
 api.get('/', (req, res) => { res.json({ status: 'ok' }); });
 
 
 // Returns a summary of all equipment in the TUTV inventory
-api.get('/equipment', (req, res) => {
+api.get('/equipment/', (req, res) => {
   res.json([
     // Storage
     {
