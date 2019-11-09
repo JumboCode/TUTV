@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+app.enable('strict routing');
+
 app.get('/', (req, res) => {
   res.json({ status: 'ok' });
 });
