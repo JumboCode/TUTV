@@ -2,6 +2,8 @@ from api.models import EquipmentType, EquipmentItem
 from rest_framework import viewsets
 from api.serializers import EquipmentTypeSerializer, EquipmentItemSerializer
 
+from django.http import JsonResponse
+
 
 class EquipmentTypeViewSet(viewsets.ModelViewSet):
     """
@@ -17,3 +19,8 @@ class EquipmentItemViewSet(viewsets.ModelViewSet):
     """
     queryset = EquipmentItem.objects.all()
     serializer_class = EquipmentItemSerializer
+
+
+def list_equipment(request, format=None):
+    all_equipment = list(EquipmentType.objects.values())
+    return JsonResponse(all_equipment, safe=False)
