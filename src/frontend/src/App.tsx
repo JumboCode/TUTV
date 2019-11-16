@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 // Components for pages of the app
 import Home from './pages/Home';
 import Catalog from './pages/Catalog';
+import EquipmentBrowser from './pages/EquipmentBrowser';
 
 const App: React.FC = () => {
   return (
@@ -17,12 +18,18 @@ const App: React.FC = () => {
             <li>
               <Link to="/catalog">Equipment Catalog</Link>
             </li>
+            <li>
+              <Link to="/EquipmentBrowser">Equipment Browser</Link>
+            </li>
           </ul>
         </nav>
 
         <Switch>
           <Route path="/catalog">
             <Catalog />
+          </Route>
+          <Route path="/EquipmentBrowser">
+            <EquipmentBrowser />
           </Route>
           <Route path="/">
             <Home />
