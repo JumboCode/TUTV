@@ -10,8 +10,13 @@ const EquipmentBrowser: React.FC = () => {
     <div>
       <h1>Equipment Browser page</h1>
       <Header />
-      <Button />
-      <Button />
+      <Link to="/Home">
+        <Button />
+      </Link>
+
+      <Link to="/Checkout">
+        <Button />
+      </Link>
     </div>
   );
 };
