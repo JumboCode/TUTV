@@ -14,7 +14,7 @@ const EquipmentBrowser: React.FC = () => {
         <Button />
       </Link>
 
-      <Link to="/Checkout">
+      <Link to="/Home">
         <Button />
       </Link>
     </div>
