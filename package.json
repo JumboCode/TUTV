@@ -70,9 +70,9 @@
   "scripts": {
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
+    "start": "cd client && node scripts/start.js",
+    "build": "cd client && node scripts/build.js",
+    "test": "cd client && node scripts/test.js",
     "eslint": "eslint \"src/**/*.tsx\"",
     "stylelint": "stylelint src/**/*.css",
     "prettier-write": "prettier --write \"src/**/*.{tsx,css}\""
