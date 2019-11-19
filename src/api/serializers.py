@@ -45,3 +45,8 @@ class EquipmentItemSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = EquipmentItem
         fields = '__all__'
+
+class EquipmentRequestsSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = EquipmentRequest
+        fields = '__all__'
