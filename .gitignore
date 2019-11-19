@@ -22,6 +22,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+styleguide
+
+## Python #########
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -151,5 +155,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+## Misc. ########
 
 .vscode/

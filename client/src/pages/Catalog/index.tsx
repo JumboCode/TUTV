@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, Link, useRouteMatch } from 'react-router-dom';
+import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import ItemDetails from './ItemDetails';
 
 const Catalog: React.FC = () => {

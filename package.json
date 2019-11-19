@@ -68,14 +68,14 @@
     "workbox-webpack-plugin": "4.3.1"
   },
   "scripts": {
-    "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build",
+    "styleguide": "cd client && styleguidist server",
+    "styleguide:build": "cd client && styleguidist build",
     "start": "cd client && node scripts/start.js",
     "build": "cd client && node scripts/build.js",
     "test": "cd client && node scripts/test.js",
-    "eslint": "eslint \"src/**/*.tsx\"",
-    "stylelint": "stylelint src/**/*.css",
-    "prettier-write": "prettier --write \"src/**/*.{tsx,css}\""
+    "eslint": "eslint \"client/src/**/*.tsx\"",
+    "stylelint": "stylelint \"client/src/**/*.css\"",
+    "prettier-write": "prettier --write \"client/src/**/*.{tsx,css}\""
   },
   "eslintConfig": {
     "extends": [
