@@ -22,5 +22,5 @@ from django.contrib.staticfiles.views import serve
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('api.urls')),
-    path('', lambda req: serve(req, 'index.html'))
+    path('<path>', lambda req, **kwargs: serve(req, 'index.html')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
