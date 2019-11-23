@@ -1,0 +1,17 @@
+.header {
+	background-color: white;
+	border-color: black;
+	border-width: 4px;
+	top: 0px;
+	width: 100%;
+	left: 0;
+	right: 0;
+	position: relative;
+	justify-content: flex-start;
+	border-style: solid;
+}
+
+.TUTV-logo {
+	height: 100px;
+	left: 0;
+}

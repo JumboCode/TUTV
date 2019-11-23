@@ -1,0 +1,8 @@
+.LoginContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+/*	border-style: solid;
+	border-radius: 8px;*/
+}
