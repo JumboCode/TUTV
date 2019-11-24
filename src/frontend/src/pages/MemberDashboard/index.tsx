@@ -1,1 +1,1 @@
-export { default } from './ViewButton';
+export { default } from './MemberDashboard';
