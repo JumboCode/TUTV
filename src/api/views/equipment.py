@@ -2,9 +2,9 @@ from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
-from api.models import EquipmentType, EquipmentItem
+from api.models import *
 from rest_framework import viewsets
-from api.serializers import EquipmentTypeSerializer, EquipmentItemSerializer
+from api.serializers import *
 
 from django.http import JsonResponse
 
@@ -13,6 +13,13 @@ class EquipmentTypeList(APIView):
         equipments = EquipmentType.objects.all()
         serializer = EquipmentTypeSerializer(equipments, many=True, context={'request': request})
         return Response(serializer.data)
+
+class EquipmentCategoryViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows Equipment Types to be viewed or edited.
+    """
+    queryset = EquipmentCategory.objects.all()
+    serializer_class = EquipmentCategorySerializer
 
 class EquipmentTypeViewSet(viewsets.ModelViewSet):
     """
@@ -27,7 +34,6 @@ class EquipmentItemViewSet(viewsets.ModelViewSet):
     API endpoint that allows Equipment Items to be viewed or edited.
     """
     queryset = EquipmentItem.objects.all()
-
     serializer_class = EquipmentItemSerializer
 
 

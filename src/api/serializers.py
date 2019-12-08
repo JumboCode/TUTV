@@ -2,22 +2,18 @@ from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 from .models import *
 
-
+# Serializers to support seralizing User and Group objects
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
         fields = ['email', 'first_name', 'last_name', 'groups', 'is_staff']
-
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Group
         fields = ['admin', 'user']
 
-
 # Serializers to support seralizing EquipmentType objects
-
-
 class EquipmentItemSerializerSimple(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = EquipmentItem
@@ -32,8 +28,6 @@ class EquipmentTypeSerializer(serializers.HyperlinkedModelSerializer):
 
 
 # Serializers to support serializing EquipmentItem objects
-
-
 class EquipmentTypeSerializerSimple(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = EquipmentType
@@ -46,6 +40,13 @@ class EquipmentItemSerializer(serializers.HyperlinkedModelSerializer):
         model = EquipmentItem
         fields = '__all__'
 
+# Serializers to support serializing EquipmentCategory objects
+class EquipmentCategorySerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = EquipmentCategory
+        fields = "__all__"
+
+# Serializers to support serializing EquipmentRequests objects
 class EquipmentRequestsSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = EquipmentRequest
