@@ -5,7 +5,7 @@ import styles from './EquipmentBrowser.module.css';
 
 import Item from 'types/Item';
 
-import EquipmentGrid from 'components/EquipmentGrid/EquipmentGrid';
+import EquipmentGrid from 'components/EquipmentGrid';
 
 const EquipmentBrowser: React.FC = () => {
   const [items, setItems] = React.useState<Array<Item>>([]);
