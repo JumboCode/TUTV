@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Catalog from './pages/Catalog';
 import EquipmentBrowser from './pages/EquipmentBrowser';
+import RequestSummary from './pages/admin/RequestSummary';
 
 const App: React.FC = () => {
   return (
@@ -21,6 +22,9 @@ const App: React.FC = () => {
             <li>
               <Link to="/equipmentbrowser">Equipment Browser</Link>
             </li>
+            <li>
+              <Link to="/admin/equipment-request">Equipment Request</Link>
+            </li>
           </ul>
         </nav>
 
@@ -30,6 +34,9 @@ const App: React.FC = () => {
           </Route>
           <Route path="/equipmentbrowser">
             <EquipmentBrowser />
+          </Route>
+          <Route path="/admin/equipment-request">
+            <RequestSummary />
           </Route>
           <Route path="/">
             <Home />
