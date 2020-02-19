@@ -1,10 +1,6 @@
 import React from 'react';
 
-interface ButtonProps {
-  children: Array<Element>;
-}
-
-const Button: React.FC<ButtonProps> = ({ children }) => {
+const Button: React.FC = ({ children }) => {
   return <button>{children}</button>;
 };
 
