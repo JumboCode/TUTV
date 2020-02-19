@@ -2,18 +2,7 @@ import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import styles from './EquipmentBrowser.module.css';
-
-export interface Item {
-  name: string;
-  slug: string;
-  category: {
-    name: string;
-    slug: string;
-    id: number;
-  };
-  total_count: number;
-  image: string | null;
-}
+import Item from 'types/Item';
 
 const EquipmentBrowser: React.FC = () => {
   const [items, setItems] = React.useState<Array<Item>>([]);
