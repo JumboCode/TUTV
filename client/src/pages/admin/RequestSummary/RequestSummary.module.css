@@ -1,0 +1,26 @@
+.topItems {
+  display: flex;
+  align-items: center;
+}
+
+.topItems button {
+  display: inline-block;
+}
+
+.topItems h1 {
+  margin-left: 1em;
+}
+
+
+.flexContainer {
+  display: flex;
+}
+
+.panelRight {
+  min-width: 400px;
+  padding: 20px;
+}
+
+.panelRight > div {
+  margin-bottom: 1em;
+}
