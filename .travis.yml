@@ -9,7 +9,6 @@ matrix:
         - echo "done"
     - language: node_js
       node_js: 10.16.3
-      before_install: cd src/frontend
       script:
         - yarn run eslint
         - yarn run stylelint

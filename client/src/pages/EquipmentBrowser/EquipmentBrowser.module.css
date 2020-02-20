@@ -1,0 +1,19 @@
+.header {
+  background: #aaa;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header > * {
+  margin: 10px;
+}
+
+.timepicker {
+  display: flex;
+  justify-content: space-between;
+  background: #faa;
+}
+
+.timepicker > * {
+  margin: 5px;
+}

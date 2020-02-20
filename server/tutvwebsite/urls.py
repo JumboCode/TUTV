@@ -16,9 +16,12 @@ Including another URLconf
 import sys
 
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import include, path, re_path
+
+import api.views as views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include('api.urls')),
+    re_path(r'^', views.FrontendAppView.as_view())
 ]

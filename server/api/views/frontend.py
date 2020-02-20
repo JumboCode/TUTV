@@ -5,6 +5,7 @@ from django.views.generic import View
 from django.http import HttpResponse
 from django.conf import settings
 
+
 class FrontendAppView(View):
     """
     Serves the compiled frontend entry point (only works if you have run `yarn
@@ -13,7 +14,7 @@ class FrontendAppView(View):
 
     def get(self, request):
         try:
-            with open(os.path.join(settings.REACT_APP_DIR, 'build', 'index.html')) as f:
+            with open(os.path.join(settings.BASE_DIR, '../' 'build', 'index.html')) as f:
                 return HttpResponse(f.read())
 
         except FileNotFoundError:

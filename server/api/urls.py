@@ -9,12 +9,8 @@ router.register(r'equipment-types', views.EquipmentTypeViewSet)
 router.register(r'equipment-items', views.EquipmentItemViewSet)
 router.register(r'equipment-categories', views.EquipmentCategoryViewSet)
 
-
 urlpatterns = [
-    # ... the rest of the urlpatterns ...
-    # must be catch-all for pushState to work
     *router.urls,
     re_path(r'equipment', views.list_equipment),
     path('snippets/', views.EquipmentTypeList.as_view()),
-    re_path(r'^', views.FrontendAppView.as_view()),
 ]
