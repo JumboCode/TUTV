@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.backdrop {
+  background: #eceff8;
+}
+
+.requestbox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.requestheader {
+  margin-right: 800px;
+}
+
+.newreqbutton {
+  background: #0766bd;
+  color: #fff;
+  align-self: left;
+}
+
+.menuitem {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.menubar {
+  display: flex;
+  justify-content: space-between;
+}
+.viewbutton {
+  background: #0766bd;
+  color: #fff;
+  margin-left: 700px;
+  align-self: left;
+}
+
+.projectreq {
+  display: flex;
+  background: #fff;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
