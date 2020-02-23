@@ -3,34 +3,19 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import styles from './EquipmentBrowser.module.css';
 
-export interface Item {
-  name: string;
-  slug: string;
-  category: {
-    name: string;
-    slug: string;
-    id: number;
-  };
-  total_count: number;
-  image: string | null;
-}
+import Item from 'types/Item';
+
+import EquipmentGrid from 'components/EquipmentGrid';
 
 const EquipmentBrowser: React.FC = () => {
   const [items, setItems] = React.useState<Array<Item>>([]);
-  const listItems = items.map(item => (
-    <div className={styles.equipment} key={item.name}>
-      <div>
-        <img src="https://via.placeholder.com/150" />
-      </div>
-      <div>{item.name}</div>
-    </div>
-  ));
   React.useEffect(() => {
     fetch('https://tutv-mock.now.sh/api/v1/equipment/')
       .then(response => response.json())
       .then(response => setItems(response.data))
       .catch(error => console.error(error));
   }, []);
+
   return (
     <div>
       <div className={styles.header}>
@@ -61,16 +46,16 @@ const EquipmentBrowser: React.FC = () => {
               </TabList>
 
               <TabPanel>
-                <div className={styles.equipmentContainer}>{listItems}</div>
+                <EquipmentGrid items={items} />
               </TabPanel>
               <TabPanel>
-                <div className={styles.equipmentContainer}>{listItems}</div>
+                <EquipmentGrid items={items} />
               </TabPanel>
               <TabPanel>
-                <div className={styles.equipmentContainer}>{listItems}</div>
+                <EquipmentGrid items={items} />
               </TabPanel>
               <TabPanel>
-                <div className={styles.equipmentContainer}>{listItems}</div>
+                <EquipmentGrid items={items} />
               </TabPanel>
             </Tabs>
           </div>
