@@ -35,13 +35,24 @@
 .viewbutton {
   background: #0766bd;
   color: #fff;
-  margin-left: 700px;
+  align-self: left;
+}
+
+.editbutton {
+  background: #0766bd;
+  color: #fff;
   align-self: left;
 }
 
 .projectreq {
-  display: flex;
+  background: #fff;
+}
+
+.reqtable {
+  /* display: flex; */
   background: #fff;
   margin-bottom: 10px;
+  width: 100%;
   justify-content: space-between;
+  background: #eceff8;
 }
