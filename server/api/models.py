@@ -3,23 +3,24 @@ from django.utils import timezone
 
 '''
 ENCAPSULATION OF MODELS:
-     CATEGORY --> TYPE --> ITEM 
+     CATEGORY --> TYPE --> ITEM
 '''
 
 class EquipmentCategory(models.Model):
     name = models.CharField(max_length=100)
 
     def __str__(self):
-        return 'Category: ' + self.name
+        return f'Category: {self.name}'
     def types(self):
         return self.linked_types.all
+
 
 class EquipmentType(models.Model):
     name = models.CharField(max_length=100)
     category = models.ForeignKey(EquipmentCategory, on_delete=models.CASCADE, related_name='linked_types')
 
     def __str__(self):
-        return 'Equipment Type: ' + self.name
+        return f'Equipment Type: {self.name}'
     def items(self):
         return self.linked_items.all()
     def num_items(self):
@@ -32,8 +33,11 @@ class EquipmentItem(models.Model):
     comments = models.CharField(max_length=200, blank=True)
     created_at = models.DateTimeField(editable=False)
 
+    image = models.ImageField(upload_to='') # is the upload_to attribute correct?
+    description = models.CharField(max_length=200, blank=True)
+
     def __str__(self):
-        return 'Equipment Item: ' + self.equipment_type.name + ' #' + str(self.id) + ' of ' + str(self.equipment_type.num_items())# Need fixing
+        return f'Equipment Item: {self.equipment_type.name} #{self.id} of {self.equipment_type.num_items()}' # Need fixing
 
     def save(self, *args, **kwargs):
         # Runs on first create (model will have id after its initial creation)
