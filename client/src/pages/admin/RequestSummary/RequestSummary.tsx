@@ -14,7 +14,7 @@ const RequestSummary: React.FC = () => {
       .then(response => response.json())
       .then(response => setItems(response.data))
       .catch(error => console.error(error));
-  });
+  }, []);
 
   const checkoutTime = new Date('November 5, 2019 18:00');
   const returnTime = new Date('November 7, 2019 18:00');
