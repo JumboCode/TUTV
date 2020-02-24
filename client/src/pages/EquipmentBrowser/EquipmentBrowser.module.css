@@ -42,17 +42,6 @@
   align-items: center;
 }
 
-.equipmentContainer {
-  display: flex;
-  background: rgb(57, 60, 241);
-  flex-flow: row wrap;
-}
-
-.equipment {
-  padding: 10px;
-  width: 25%;
-}
-
 .selectedEquipment {
   display: flex;
   background: rgb(176, 177, 231);
