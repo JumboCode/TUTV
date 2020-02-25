@@ -1,5 +1,5 @@
 {
-  "buildpacks": ["heroku/nodejs", "heroku/python"],
+  "buildpacks": [{ "url": "heroku/nodejs" }, { "url": "heroku/python" }],
   "env": {
     "SECRET_KEY": {
       "description": "The secret key for Django.",
