@@ -1,0 +1,10 @@
+{
+  "buildpacks": ["heroku/nodejs", "heroku/python"],
+  "env": {
+    "SECRET_KEY": {
+      "description": "The secret key for Django.",
+      "required": true,
+      "generator": "secret"
+    }
+  }
+}
