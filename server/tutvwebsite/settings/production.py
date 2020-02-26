@@ -7,3 +7,4 @@ DEBUG = False
 
 STATIC_URL = '/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
+django_heroku(locals())
