@@ -17,3 +17,33 @@
 .timepicker > * {
   margin: 5px;
 }
+
+.equipmentPage {
+  background: rgb(240, 240, 243);
+  display: flex;
+  padding: 20px;
+}
+
+.equipmentPage > * {
+  margin: 10px;
+}
+
+.equipmentGrid {
+  display: flex;
+  background: rgb(171, 172, 231);
+  justify-content: space-between;
+  max-width: 100%;
+  flex-flow: row wrap;
+  width: 65%;
+}
+
+.equipmentGrid > * {
+  flex-flow: row-wrap;
+  align-items: center;
+}
+
+.selectedEquipment {
+  display: flex;
+  background: rgb(176, 177, 231);
+  flex-grow: 1;
+}
