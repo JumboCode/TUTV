@@ -105,5 +105,3 @@ STATICFILES_DIRS = [
 ]
 
 WHITENOISE_INDEX_FILE = True
-
-django_heroku.settings(locals())

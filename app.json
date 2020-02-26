@@ -1,4 +1,9 @@
 {
+  "addons": [
+    {
+      "plan": "heroku-postgresql:hobby-dev"
+    }
+  ],
   "buildpacks": [{ "url": "heroku/nodejs" }, { "url": "heroku/python" }],
   "env": {
     "SECRET_KEY": {
