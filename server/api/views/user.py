@@ -1,47 +1,50 @@
-# from django.http import HttpResponseRedirect
-# from django.contrib.auth.models import User
-# from rest_framework import permissions, status
-# from rest_framework.decorators import api_view
-# from rest_framework.response import Response
-# from rest_framework.views import APIView
-# from api.serializers import UserSerializer, GroupSerializer, UserSerializerWithToken
-#
-#
-# @api_view(['GET'])
-# def current_user(request):
-#     """
-#     Determine the current user by their token, and return their data
-#     """
-#
-#     serializer = UserSerializer(request.user)
-#     return Response(serializer.data)
-#
-#
-# class UserList(APIView):
-#     """
-#     Create a new user. It's called 'UserList' because normally we'd have a get
-#     method here too, for retrieving a list of all User objects.
-#     """
-#
-#     permission_classes = (permissions.AllowAny,)
-#
-#     def post(self, request, format=None):
-#         serializer = UserSerializerWithToken(data=request.data)
-#         if serializer.is_valid():
-#             serializer.save()
-#             return Response(serializer.data, status=status.HTTP_201_CREATED)
-#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+from django.http import HttpResponseRedirect
+from django.contrib.auth.models import User
+from rest_framework import permissions, status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from api.serializers import UserSerializer, GroupSerializer, UserSerializerWithToken
 
-
-
-from django.contrib.auth.models import User, Group
-from rest_framework import viewsets
-from api.serializers import UserSerializer, GroupSerializer
-
-
-class UserViewSet(viewsets.ModelViewSet):
+# https://medium.com/@dakota.lillie/django-react-jwt-authentication-5015ee00ef9a
+@api_view(['GET'])
+def current_user(request):
     """
-    API endpoint that allows users to be viewed or edited.
+    Determine the current user by their token, and return their data
     """
-    queryset = User.objects.all().order_by('-date_joined')
-    serializer_class = UserSerializer
+
+    serializer = UserSerializer(request.user)
+    return Response(serializer.data)
+
+# https://medium.com/@dakota.lillie/django-react-jwt-authentication-5015ee00ef9a
+class UserList(APIView):
+    """
+    Create a new user. It's called 'UserList' because normally we'd have a get
+    method here too, for retrieving a list of all User objects.
+    """
+
+    permission_classes = (permissions.AllowAny,)
+
+    def post(self, request, format=None):
+        serializer = UserSerializerWithToken(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+"""
+this is the way that it was previously done. keeping because this one works with
+UserSerializer and not UserSerializerWithToken. Maybe this is not needed.
+"""
+# from django.contrib.auth.models import User, Group
+# from rest_framework import viewsets
+# from api.serializers import UserSerializer, GroupSerializer
+#
+#
+# class UserViewSet(viewsets.ModelViewSet):
+#     """
+#     API endpoint that allows users to be viewed or edited.
+#     """
+#     queryset = User.objects.all().order_by('-date_joined')
+#     serializer_class = UserSerializer
