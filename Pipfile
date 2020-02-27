@@ -9,6 +9,8 @@ name = "pypi"
 django = "*"
 gunicorn = "*"
 django-heroku = "*"
+djangorestframework-jwt = "*"
+django-cors-headers = "*"
 
 [requires]
 python_version = "3.7"

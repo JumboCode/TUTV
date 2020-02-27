@@ -18,9 +18,11 @@ from django.urls import include, path
 from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.staticfiles.views import serve
+from rest_framework_jwt.views import obtain_jwt_token
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('api.urls')),
+    path('token-auth/', obtain_jwt_token),
     path('<path>', lambda req, **kwargs: serve(req, 'index.html')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
