@@ -12,6 +12,7 @@ gunicorn = "*"
 django-heroku = "*"
 djangorestframework = "*"
 pillow = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.7"
