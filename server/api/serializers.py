@@ -7,8 +7,7 @@ from .models import *
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        # Should it have the 'username' field?
-        fields = ['email', 'first_name', 'last_name', 'groups', 'is_staff', 'username']
+        fields = ['username', 'email', 'first_name', 'last_name', 'groups', 'is_staff']
 
 # from from https://medium.com/@dakota.lillie/django-react-jwt-authentication-5015ee00ef9a
 class UserSerializerWithToken(serializers.HyperlinkedModelSerializer):
@@ -33,7 +32,7 @@ class UserSerializerWithToken(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = User
-        fields = ('token', 'username', 'password')
+        fields = ['username', 'email', 'first_name', 'last_name', 'groups', 'is_staff', 'token', 'password']
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
