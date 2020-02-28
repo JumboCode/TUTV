@@ -1,0 +1,64 @@
+.pageContainer {
+  background: rgb(240, 240, 243);
+  display: flex;
+  justify-content: space-between;
+}
+
+.requestContainer {
+  background: rgb(141, 65, 177);
+  display: flex;
+  max-width: 100%;
+  padding: 10px;
+}
+
+.timeline {
+  display: flex;
+  background: #aaa;
+  flex-flow: row wrap;
+}
+
+.requestDetails {
+  background: rgb(57, 60, 241);
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.active {
+  padding: 10px;
+  display: flex;
+  background: rgb(218, 198, 132);
+  flex-direction: column;
+}
+
+.past {
+  padding: 10px;
+  display: flex;
+  background: rgb(218, 198, 132);
+  flex-direction: column;
+}
+
+.request {
+  padding: 10px;
+  width: 25%;
+}
+
+.projectDetails {
+  background: rgb(4, 117, 61);
+  display: flex;
+  justify-content: space-between;
+}
+
+.projectDetails > * {
+  margin: 10px;
+}
+
+.requestHeader {
+  background: rgb(199, 111, 11);
+  display: flex;
+  justify-content: left;
+}
+
+.requestHeader > * {
+  margin: 5px;
+}
