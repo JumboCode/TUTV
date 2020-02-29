@@ -11,7 +11,7 @@
 .timepicker {
   display: flex;
   justify-content: space-between;
-  background: #faa;
+  background: #add8e6;
 }
 
 .timepicker > * {
@@ -46,4 +46,12 @@
   display: flex;
   background: rgb(176, 177, 231);
   flex-grow: 1;
+}
+
+.collapsehead {
+  /* display: flex; */
+  background: #add8e6;
+  margin-bottom: 10px;
+  border: 1px solid #0067cd;
+  cursor: pointer;
 }
