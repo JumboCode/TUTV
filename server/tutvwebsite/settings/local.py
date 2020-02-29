@@ -23,3 +23,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # TODO: set MEDIA_URL to something?
 # https://docs.djangoproject.com/en/3.0/ref/models/fields/#django.db.models.FileField.storage
 # https://docs.djangoproject.com/en/3.0/ref/models/fields/#imagefield
+
+INSTALLED_APPS = ['whitenoise.runserver_nostatic'] + INSTALLED_APPS
