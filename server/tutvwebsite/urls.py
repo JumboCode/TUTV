@@ -26,7 +26,7 @@ import api.views as views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include('api.urls')),
-    path('token-obtain/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('token-refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     re_path(r'^', views.FrontendAppView.as_view())
 ]
