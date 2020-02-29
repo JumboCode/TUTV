@@ -2,53 +2,102 @@ import React from 'react';
 import 'react-tabs/style/react-tabs.css';
 import styles from './AdminDashboard.module.css';
 
+export interface RequestInfo {
+  name: string;
+  checkoutTime: Date;
+  returnTime: Date;
+  status: 'pending' | 'approved' | 'checked out' | 'returned';
+}
+
 const AdminDashboard: React.FC = () => {
+  const rowFromRequestInfo = ({
+    name,
+    checkoutTime,
+    returnTime,
+    status
+  }: RequestInfo) => {
+    return (
+      <tr className={styles.projectDetails} key={name}>
+        <td>{name}</td>
+        <td>{checkoutTime.toDateString()}</td>
+        <td>{returnTime.toDateString()}</td>
+        <td>{status}</td>
+        <td>
+          <button>View</button>
+        </td>
+      </tr>
+    );
+  };
+
+  const currentRequests: RequestInfo[] = [
+    {
+      name: 'O hey',
+      checkoutTime: new Date(),
+      returnTime: new Date(),
+      status: 'pending'
+    },
+    {
+      name: 'O hey',
+      checkoutTime: new Date(),
+      returnTime: new Date(),
+      status: 'pending'
+    }
+  ];
+  // All past requests will be returned requests
+  const pastRequests: RequestInfo[] = [
+    {
+      name: 'O hey',
+      checkoutTime: new Date(),
+      returnTime: new Date(),
+      status: 'returned'
+    },
+    {
+      name: 'O hey 2',
+      checkoutTime: new Date(),
+      returnTime: new Date(),
+      status: 'returned'
+    },
+    {
+      name: 'O hey',
+      checkoutTime: new Date(),
+      returnTime: new Date(),
+      status: 'returned'
+    }
+  ];
+
   return (
     <div>
-      <div>
-        <h1>Welcome Back, Admin</h1>
-        <div className={styles.pageContainer}>
-          <div className={styles.requestContainer}>
-            <h2>Requests Timeline</h2>
-          </div>
-          <div className={styles.requestDetails}>
-            <div className={styles.active}>
-              <h2>Active Requests</h2>
-              <div className={styles.requestHeader}>
-                <div>Project Name</div>
-                <div>Checkout Time</div>
-                <div>Return Time</div>
-                <div>Status</div>
-              </div>
-              <div className={styles.projectDetails}>
-                <div>Project 1</div>
-                <div>Checkout time</div>
-                <div>Return time</div>
-                <div>Approved</div>
-                <button>View</button>
-              </div>
-              <div className={styles.projectDetails}>
-                <div>Project 2</div>
-                <div>Checkout time</div>
-                <div>Return time</div>
-                <div>Approved</div>
-                <button>View</button>
-              </div>
-            </div>
-            <div className={styles.past}>
-              <h2>Past Requests</h2>
-              <div className={styles.projectDetails}>
-                <div>Project 3</div>
-                <div>Checkout time</div>
-                <div>Return time</div>
-                <div>Returned</div>
-                <button>View</button>
-              </div>
-            </div>
-          </div>
-        </div>
+      <h1>Welcome Back, Admin</h1>
+      <div className={styles.pageContainer}>
+        <h2>Active Requests</h2>
+        <table>
+          <tbody>
+            <tr className={styles.requestHeader}>
+              <th>Project Name</th>
+              <th>Checkout Time</th>
+              <th>Return Time</th>
+              <th>Status</th>
+              <th> </th>
+            </tr>
+            {currentRequests.map(rowFromRequestInfo)}
+          </tbody>
+        </table>
+        <h2>My Past Requests</h2>
+        <table>
+          <tbody>
+            <tr className={styles.requestHeader}>
+              <th>Project Name</th>
+              <th>Checkout Time</th>
+              <th>Return Time</th>
+              <th>Status</th>
+              <th> </th>
+            </tr>
+            {pastRequests.map(rowFromRequestInfo)}
+          </tbody>
+        </table>
       </div>
     </div>
   );
 };
+
 export default AdminDashboard;

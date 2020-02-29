@@ -2,6 +2,21 @@
   background: rgb(240, 240, 243);
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.pageContainer > table {
+  border-collapse: collapse;
+}
+
+.pageContainer td,
+.pageContainer th {
+  text-align: left;
+}
+
+.requestHeader {
+  background: rgb(199, 111, 11);
 }
 
 .requestContainer {
@@ -45,18 +60,12 @@
 
 .projectDetails {
   background: rgb(4, 117, 61);
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: space-between; */
 }
 
 .projectDetails > * {
   margin: 10px;
-}
-
-.requestHeader {
-  background: rgb(199, 111, 11);
-  display: flex;
-  justify-content: left;
 }
 
 .requestHeader > * {
