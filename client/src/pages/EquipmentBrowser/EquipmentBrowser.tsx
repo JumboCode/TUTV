@@ -37,28 +37,36 @@ const EquipmentBrowser: React.FC = () => {
       </div>
       <div>
         <div className={styles.equipmentPage}>
-          <div>
+          <div className={styles.wrapper}>
             <Collabspible
               trigger="Camera &#9660;"
+              triggerTagName="div"
               className={styles.collapsehead}
+              openedClassName={styles.collapsehead}
             >
               <EquipmentGrid items={items} />
             </Collabspible>
             <Collabspible
               trigger="Audio &#9660;"
+              triggerTagName="div"
               className={styles.collapsehead}
+              openedClassName={styles.collapsehead}
             >
               <EquipmentGrid items={items} />
             </Collabspible>
             <Collabspible
               trigger="Lighting &#9660;"
+              triggerTagName="div"
               className={styles.collapsehead}
+              openedClassName={styles.collapsehead}
             >
               <EquipmentGrid items={items} />
             </Collabspible>
             <Collabspible
               trigger="Misc &#9660;"
+              triggerTagName="div"
               className={styles.collapsehead}
+              openedClassName={styles.collapsehead}
             >
               <EquipmentGrid items={items} />
             </Collabspible>
