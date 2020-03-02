@@ -1,10 +1,58 @@
+.page {
+  display: flex;
+  background-color: rgb(214, 214, 236);
+  justify-content: space-around;
+  padding: 20px;
+}
 .signIn {
   display: flex;
   flex-direction: column;
+  background-color: white;
   max-width: 400px;
-  /* align-items: center; */
+  align-items: stretch;
+  align-self: center;
+  padding: 5px;
 }
-
 .logo {
   align-self: center;
+  max-width: 65%;
+  margin: 20px;
+}
+
+.input {
+  display: flex;
+  margin: 5px;
+  padding: 5px;
+  background: rgb(214, 214, 236);
+}
+
+.label {
+  font-size: large;
+}
+
+.signInButton {
+  font-size: medium;
+  background-color: cornflowerblue;
+  border-radius: 15px;
+  max-width: 30%;
+  align-self: center;
+  padding: 7px;
+  margin: 10px;
+}
+
+.pageTitle {
+  font-size: larger;
+  align-self: center;
+  margin: 20px;
+}
+
+.forgotPass {
+  font-size: small;
+  color: darkblue;
+  text-align: right;
+}
+.email {
+  font-size: small;
+  align-self: center;
+  margin: 10px;
 }
