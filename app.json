@@ -1,0 +1,15 @@
+{
+  "addons": [
+    {
+      "plan": "heroku-postgresql:hobby-dev"
+    }
+  ],
+  "buildpacks": [{ "url": "heroku/nodejs" }, { "url": "heroku/python" }],
+  "env": {
+    "SECRET_KEY": {
+      "description": "The secret key for Django.",
+      "required": true,
+      "generator": "secret"
+    }
+  }
+}

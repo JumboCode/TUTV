@@ -7,6 +7,7 @@ import Catalog from './pages/Catalog';
 import EquipmentBrowser from './pages/EquipmentBrowser';
 import MemberDashboard from './pages/MemberDashboard';
 import RequestSummary from './pages/admin/RequestSummary';
+import SignIn from './pages/SignIn';
 
 const App: React.FC = () => {
   return (
@@ -29,6 +30,9 @@ const App: React.FC = () => {
             <li>
               <Link to="/admin/equipment-request">Equipment Request</Link>
             </li>
+            <li>
+              <Link to="/signin">Sign In</Link>
+            </li>
           </ul>
         </nav>
 
@@ -44,6 +48,9 @@ const App: React.FC = () => {
           </Route>
           <Route path="/admin/equipment-request">
             <RequestSummary />
+          </Route>
+          <Route path="/signin">
+            <SignIn />
           </Route>
           <Route path="/">
             <Home />
