@@ -17,7 +17,9 @@ DATABASES = {
     }
 }
 
-STATIC_URL = '/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+MIDDLEWARE = MIDDLEWARE + ['tutvwebsite.middleware.dev_cors_middleware']
 
-INSTALLED_APPS = ['whitenoise.runserver_nostatic'] + INSTALLED_APPS
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+# TODO: set MEDIA_URL to something?
+# https://docs.djangoproject.com/en/3.0/ref/models/fields/#django.db.models.FileField.storage
+# https://docs.djangoproject.com/en/3.0/ref/models/fields/#imagefield
