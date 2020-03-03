@@ -25,7 +25,7 @@ const App: React.FC = () => {
               <Link to="/equipmentbrowser">Equipment Browser</Link>
             </li>
             <li>
-              <Link to="/admin-dashboard">Admin Dashboard</Link>
+              <Link to="/admin/dashboard">Admin Dashboard</Link>
             </li>
             <li>
               <Link to="/admin/equipment-request">Equipment Request</Link>
