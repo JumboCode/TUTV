@@ -37,7 +37,7 @@ const App: React.FC = () => {
         </nav>
 
         <Switch>
-          <Route path="/admin-dashboard">
+          <Route path="/admin/dashboard">
             <AdminDashboard />
           </Route>
           <Route path="/catalog">
