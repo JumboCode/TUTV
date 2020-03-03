@@ -24,6 +24,6 @@
   background: rgb(70, 177, 204);
 }
 
-.projectDetails > * {
+.projectDetails > td {
   padding: 5px;
 }

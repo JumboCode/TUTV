@@ -1,5 +1,4 @@
 import React from 'react';
-import 'react-tabs/style/react-tabs.css';
 import styles from './AdminDashboard.module.css';
 
 export interface RequestInfo {
