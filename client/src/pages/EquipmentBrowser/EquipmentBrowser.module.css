@@ -34,8 +34,6 @@
   justify-content: space-between;
   max-width: 65%;
   flex-flow: row wrap;
-  /* width: 65%; */
-  /* flex-basis: 65%; */
 }
 
 .equipmentGrid > * {
