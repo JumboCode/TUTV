@@ -1,0 +1,29 @@
+.pageContainer {
+  background: rgb(240, 240, 243);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.pageContainer > table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.pageContainer td,
+.pageContainer th {
+  text-align: left;
+}
+
+.requestHeader {
+  background: rgb(235, 231, 227);
+}
+
+.projectDetails {
+  background: rgb(70, 177, 204);
+}
+
+.projectDetails > td {
+  padding: 5px;
+}
