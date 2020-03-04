@@ -1,6 +1,4 @@
 import React from 'react';
-// import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-// import 'react-tabs/style/react-tabs.css';
 import styles from './EquipmentBrowser.module.css';
 import Collabspible from 'react-collapsible';
 
