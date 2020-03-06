@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './SignIn.module.css';
 import logo from './TUTVLogo.png';
-import button from '../../components/Button';
+import Button from 'components/Button';
 
 const SignIn: React.FC = () => {
   const [username, setUsername] = React.useState('');
@@ -37,13 +37,9 @@ const SignIn: React.FC = () => {
           onChange={e => setPassword(e.target.value)}
         />
         <div className={styles.forgotPass}>{'Forgot Password?'}</div>
-        <button
-          className={styles.signInButton}
-          type="submit"
-          onClick={e => attemptSignIn()}
-        >
+        <Button type="submit" pill onClick={e => attemptSignIn()}>
           Sign In
-        </button>
+        </Button>
         <div className={styles.email}>
           {"Don't have an account? Email TUTV.studios@gmail.com"}
         </div>
