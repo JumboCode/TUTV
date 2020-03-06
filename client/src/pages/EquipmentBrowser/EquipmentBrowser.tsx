@@ -1,7 +1,6 @@
 import React from 'react';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
 import styles from './EquipmentBrowser.module.css';
+import Collabspible from 'react-collapsible';
 
 import Item from 'types/Item';
 
@@ -36,28 +35,39 @@ const EquipmentBrowser: React.FC = () => {
       </div>
       <div>
         <div className={styles.equipmentPage}>
-          <div className={styles.equipmentGrid}>
-            <Tabs>
-              <TabList>
-                <Tab>Camera</Tab>
-                <Tab>Audio</Tab>
-                <Tab>Lighting</Tab>
-                <Tab>Misc</Tab>
-              </TabList>
-
-              <TabPanel>
-                <EquipmentGrid items={items} />
-              </TabPanel>
-              <TabPanel>
-                <EquipmentGrid items={items} />
-              </TabPanel>
-              <TabPanel>
-                <EquipmentGrid items={items} />
-              </TabPanel>
-              <TabPanel>
-                <EquipmentGrid items={items} />
-              </TabPanel>
-            </Tabs>
+          <div className={styles.wrapper}>
+            <Collabspible
+              trigger="Camera &#9660;"
+              triggerTagName="div"
+              className={styles.collapsehead}
+              openedClassName={styles.collapsehead}
+            >
+              <EquipmentGrid items={items} />
+            </Collabspible>
+            <Collabspible
+              trigger="Audio &#9660;"
+              triggerTagName="div"
+              className={styles.collapsehead}
+              openedClassName={styles.collapsehead}
+            >
+              <EquipmentGrid items={items} />
+            </Collabspible>
+            <Collabspible
+              trigger="Lighting &#9660;"
+              triggerTagName="div"
+              className={styles.collapsehead}
+              openedClassName={styles.collapsehead}
+            >
+              <EquipmentGrid items={items} />
+            </Collabspible>
+            <Collabspible
+              trigger="Misc &#9660;"
+              triggerTagName="div"
+              className={styles.collapsehead}
+              openedClassName={styles.collapsehead}
+            >
+              <EquipmentGrid items={items} />
+            </Collabspible>
           </div>
           <div className={styles.selectedEquipment}>
             <div>
