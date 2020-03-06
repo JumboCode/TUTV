@@ -11,7 +11,7 @@
 .timepicker {
   display: flex;
   justify-content: space-between;
-  background: #faa;
+  background: #add8e6;
 }
 
 .timepicker > * {
@@ -32,9 +32,8 @@
   display: flex;
   background: rgb(171, 172, 231);
   justify-content: space-between;
-  max-width: 100%;
+  max-width: 65%;
   flex-flow: row wrap;
-  width: 65%;
 }
 
 .equipmentGrid > * {
@@ -46,4 +45,16 @@
   display: flex;
   background: rgb(176, 177, 231);
   flex-grow: 1;
+  flex-basis: 30%;
+}
+
+.collapsehead {
+  background: #add8e6;
+  margin-bottom: 10px;
+  border: 1px solid #0067cd;
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 65%;
 }
