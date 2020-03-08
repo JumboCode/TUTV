@@ -3,19 +3,21 @@
   background-color: rgb(214, 214, 236);
   justify-content: space-around;
   padding: 20px;
+  flex-direction: column;
 }
 .signIn {
   display: flex;
   flex-direction: column;
   background-color: white;
-  max-width: 400px;
+  border-radius: 5px;
+  max-width: 500px;
   align-items: stretch;
   align-self: center;
-  padding: 5px;
+  padding: 50px;
 }
 .logo {
   align-self: center;
-  max-width: 65%;
+  max-width: 40%;
   margin: 20px;
 }
 
@@ -32,12 +34,14 @@
 
 .signInButton {
   font-size: medium;
+  color: white;
   background-color: cornflowerblue;
   border-radius: 15px;
-  max-width: 30%;
   align-self: center;
-  padding: 7px;
+  padding: 5px 35px;
   margin: 10px;
+  size: small;
+  max-width: 30%;
 }
 
 .pageTitle {
