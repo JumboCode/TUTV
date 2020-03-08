@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from 'react-modal';
+import Modal from '../../components/ModalDialog';
 
 import styles from './EquipmentBrowser.module.css';
 import Collabspible from 'react-collapsible';
@@ -46,11 +46,7 @@ const EquipmentBrowser: React.FC = () => {
             <span className={styles.timebutton} onClick={openModal}>
               {checkoutTime.toLocaleString()}
             </span>
-            <Modal
-              isOpen={modalIsOpen}
-              onRequestClose={closeModal}
-              contentLabel="Example Modal"
-            >
+            <Modal displayed={modalIsOpen} onClose={closeModal}>
               <button onClick={closeModal}>close</button>
               <div>
                 <h1>Select Checkout Time</h1>
@@ -68,11 +64,7 @@ const EquipmentBrowser: React.FC = () => {
             <div>
               <div>Checkout Time</div>
               <span onClick={openModal}>{checkoutTime.toLocaleString()}</span>
-              <Modal
-                isOpen={modalIsOpen}
-                onRequestClose={closeModal}
-                contentLabel="Example Modal"
-              >
+              <Modal displayed={modalIsOpen} onClose={closeModal}>
                 <button onClick={closeModal}>close</button>
                 <div>
                   <h1>Select Checkout Time</h1>
