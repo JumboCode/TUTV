@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Button from '../Button';
+
 import styles from './ModalDialog.module.css';
 
 type ModalProps = {
@@ -8,7 +10,11 @@ type ModalProps = {
   onClose: () => void;
 };
 
-const ModalDialog: React.FC<ModalProps> = ({ displayed, children }) => {
+const ModalDialog: React.FC<ModalProps> = ({
+  displayed,
+  onClose,
+  children
+}) => {
   const wrapperClassName = [
     styles.modalWrapper,
     displayed ? styles.displayed : styles.hidden
@@ -17,6 +23,7 @@ const ModalDialog: React.FC<ModalProps> = ({ displayed, children }) => {
   return ReactDOM.createPortal(
     <div className={wrapperClassName}>
       <div className={styles.scrim}>
+        <Button onClick={onClose}>Close modal</Button>
         <div className={styles.dialog}>{children}</div>
       </div>
     </div>,
