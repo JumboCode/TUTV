@@ -22,7 +22,14 @@ const ModalDialog: React.FC<ModalProps> = ({
 
   return ReactDOM.createPortal(
     <div className={wrapperClassName}>
-      <div className={styles.scrim}>
+      <div
+        className={styles.scrim}
+        onClick={e => {
+          if ((e.target as HTMLElement).className.includes('_scrim__')) {
+            onClose();
+          }
+        }}
+      >
         <div className={styles.modal}>
           <Button onClick={onClose}>X</Button>
           <div className={styles.modalContent}>{children}</div>
