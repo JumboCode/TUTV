@@ -18,6 +18,11 @@
   margin: 5px;
 }
 
+.timebutton {
+  margin-top: 2px;
+  border: 2px solid blue;
+}
+
 .equipmentPage {
   background: rgb(240, 240, 243);
   display: flex;

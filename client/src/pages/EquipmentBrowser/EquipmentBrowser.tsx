@@ -1,6 +1,6 @@
 import React from 'react';
-// import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-// import 'react-tabs/style/react-tabs.css';
+import Modal from 'react-modal';
+
 import styles from './EquipmentBrowser.module.css';
 import Collabspible from 'react-collapsible';
 
@@ -17,17 +17,75 @@ const EquipmentBrowser: React.FC = () => {
       .catch(error => console.error(error));
   }, []);
 
+  // function afterOpenModal() {
+  //   // references are now sync'd and can be accessed.
+  //   subtitle.style.color = '#f00';
+  // }
+
+  // function closeModal(){
+  //   setIsOpen(false);
+  // }
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  function openModal() {
+    setIsOpen(true);
+  }
+  function closeModal() {
+    setIsOpen(false);
+    // MAKE FUNCTION
+  }
+
+  const [checkoutTime, setCheckoutTime] = React.useState(new Date());
+
   return (
     <div>
       <div className={styles.header}>
         <div className={styles.timepicker}>
           <div>
             <div>Checkout Time</div>
-            <input type="datetime-local" />
+
+            <span className={styles.timebutton} onClick={openModal}>
+              {checkoutTime.toLocaleString()}
+            </span>
+            <Modal
+              isOpen={modalIsOpen}
+              onRequestClose={closeModal}
+              contentLabel="Example Modal"
+            >
+              <button onClick={closeModal}>close</button>
+              <div>
+                <h1>Select Checkout Time</h1>
+                <form>
+                  <input />
+                  <button>tab navigation</button>
+                  <button>stays</button>
+                  <button>inside</button>
+                  <button>the modal</button>
+                </form>
+              </div>
+            </Modal>
           </div>
           <div>
-            <div>Return Time</div>
-            <input type="datetime-local" />
+            <div>
+              <div>Checkout Time</div>
+              <span onClick={openModal}>{checkoutTime.toLocaleString()}</span>
+              <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                contentLabel="Example Modal"
+              >
+                <button onClick={closeModal}>close</button>
+                <div>
+                  <h1>Select Checkout Time</h1>
+                  <form>
+                    <input />
+                    <button>tab navigation</button>
+                    <button>stays</button>
+                    <button>inside</button>
+                    <button>the modal</button>
+                  </form>
+                </div>
+              </Modal>
+            </div>
           </div>
         </div>
         <div>
