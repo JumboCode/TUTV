@@ -6,6 +6,10 @@ import Home from './pages/Home';
 import Catalog from './pages/Catalog';
 import EquipmentBrowser from './pages/EquipmentBrowser';
 import AdminCheckout from './pages/AdminCheckout';
+import MemberDashboard from './pages/MemberDashboard';
+import AdminDashboard from './pages/admin/AdminDashboard';
+import RequestSummary from './pages/admin/RequestSummary';
+import SignIn from './pages/SignIn';
 
 const App: React.FC = () => {
   return (
@@ -25,19 +29,43 @@ const App: React.FC = () => {
             <li>
               <Link to="/admincheckout">Admin Checkout</Link>
             </li>
+            <li>
+              <Link to="/memberdashboard">MemberDashboard</Link>
+            </li>
+            <li>
+              <Link to="/admin/dashboard">Admin Dashboard</Link>
+            </li>
+            <li>
+              <Link to="/admin/equipment-request">Equipment Request</Link>
+            </li>
+            <li>
+              <Link to="/signin">Sign In</Link>
+            </li>
           </ul>
         </nav>
 
         <Switch>
+          <Route path="/admin/dashboard">
+            <AdminDashboard />
+          </Route>
           <Route path="/catalog">
             <Catalog />
           </Route>
           <Route path="/equipmentbrowser">
             <EquipmentBrowser />
           </Route>
-            <Route path="/admincheckout">
-              <AdminCheckout />
-            </Route>
+          <Route path="/admincheckout">
+            <AdminCheckout />
+          </Route>
+          <Route path="/memberdashboard">
+            <MemberDashboard />
+          </Route>
+          <Route path="/admin/equipment-request">
+            <RequestSummary />
+          </Route>
+          <Route path="/signin">
+            <SignIn />
+          </Route>
           <Route path="/">
             <Home />
           </Route>

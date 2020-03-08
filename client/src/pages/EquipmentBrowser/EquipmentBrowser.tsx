@@ -1,36 +1,20 @@
 import React from 'react';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
 import styles from './EquipmentBrowser.module.css';
+import Collabspible from 'react-collapsible';
 
-export interface Item {
-  name: string;
-  slug: string;
-  category: {
-    name: string;
-    slug: string;
-    id: number;
-  };
-  total_count: number;
-  image: string | null;
-}
+import Item from 'types/Item';
+
+import EquipmentGrid from 'components/EquipmentGrid';
 
 const EquipmentBrowser: React.FC = () => {
   const [items, setItems] = React.useState<Array<Item>>([]);
-  const listItems = items.map(item => (
-    <div className={styles.equipment} key={item.name}>
-      <div>
-        <img src="https://via.placeholder.com/150" />
-      </div>
-      <div>{item.name}</div>
-    </div>
-  ));
   React.useEffect(() => {
     fetch('https://tutv-mock.now.sh/api/v1/equipment/')
       .then(response => response.json())
       .then(response => setItems(response.data))
       .catch(error => console.error(error));
   }, []);
+
   return (
     <div>
       <div className={styles.header}>
@@ -51,28 +35,39 @@ const EquipmentBrowser: React.FC = () => {
       </div>
       <div>
         <div className={styles.equipmentPage}>
-          <div className={styles.equipmentGrid}>
-            <Tabs>
-              <TabList>
-                <Tab>Camera</Tab>
-                <Tab>Audio</Tab>
-                <Tab>Lighting</Tab>
-                <Tab>Misc</Tab>
-              </TabList>
-
-              <TabPanel>
-                <div className={styles.equipmentContainer}>{listItems}</div>
-              </TabPanel>
-              <TabPanel>
-                <div className={styles.equipmentContainer}>{listItems}</div>
-              </TabPanel>
-              <TabPanel>
-                <div className={styles.equipmentContainer}>{listItems}</div>
-              </TabPanel>
-              <TabPanel>
-                <div className={styles.equipmentContainer}>{listItems}</div>
-              </TabPanel>
-            </Tabs>
+          <div className={styles.wrapper}>
+            <Collabspible
+              trigger="Camera &#9660;"
+              triggerTagName="div"
+              className={styles.collapsehead}
+              openedClassName={styles.collapsehead}
+            >
+              <EquipmentGrid items={items} />
+            </Collabspible>
+            <Collabspible
+              trigger="Audio &#9660;"
+              triggerTagName="div"
+              className={styles.collapsehead}
+              openedClassName={styles.collapsehead}
+            >
+              <EquipmentGrid items={items} />
+            </Collabspible>
+            <Collabspible
+              trigger="Lighting &#9660;"
+              triggerTagName="div"
+              className={styles.collapsehead}
+              openedClassName={styles.collapsehead}
+            >
+              <EquipmentGrid items={items} />
+            </Collabspible>
+            <Collabspible
+              trigger="Misc &#9660;"
+              triggerTagName="div"
+              className={styles.collapsehead}
+              openedClassName={styles.collapsehead}
+            >
+              <EquipmentGrid items={items} />
+            </Collabspible>
           </div>
           <div className={styles.selectedEquipment}>
             <div>
