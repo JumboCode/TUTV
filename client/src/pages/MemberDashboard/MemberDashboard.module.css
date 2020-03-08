@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.backdrop {
+  background: #eceff8;
+}
+
+.projectreq {
+  background: #fff;
+}
+
+.reqtable {
+  margin-bottom: 10px;
+  width: 100%;
+  justify-content: space-between;
+  background: #eceff8;
+}
