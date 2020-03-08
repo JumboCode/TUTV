@@ -23,8 +23,10 @@ const ModalDialog: React.FC<ModalProps> = ({
   return ReactDOM.createPortal(
     <div className={wrapperClassName}>
       <div className={styles.scrim}>
-        <Button onClick={onClose}>Close modal</Button>
-        <div className={styles.dialog}>{children}</div>
+        <div className={styles.modal}>
+          <Button onClick={onClose}>X</Button>
+          <div className={styles.modalContent}>{children}</div>
+        </div>
       </div>
     </div>,
     // Render inside the top-level modal container element
