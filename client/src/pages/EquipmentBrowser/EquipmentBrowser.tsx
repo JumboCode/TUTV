@@ -47,34 +47,29 @@ const EquipmentBrowser: React.FC = () => {
               {checkoutTime.toLocaleString()}
             </span>
             <Modal displayed={modalIsOpen} onClose={closeModal}>
-              <button onClick={closeModal}>close</button>
               <div>
                 <h1>Select Checkout Time</h1>
-                <form>
-                  <input />
-                  <button>tab navigation</button>
-                  <button>stays</button>
-                  <button>inside</button>
-                  <button>the modal</button>
-                </form>
+                <button>tab navigation</button>
+                <button>stays</button>
+                <button>inside</button>
+                <button>the modal</button>
               </div>
             </Modal>
           </div>
           <div>
             <div>
-              <div>Checkout Time</div>
-              <span onClick={openModal}>{checkoutTime.toLocaleString()}</span>
+              <div>Return Time</div>
+              <span className={styles.timebutton} onClick={openModal}>
+                {checkoutTime.toLocaleString()}
+              </span>
               <Modal displayed={modalIsOpen} onClose={closeModal}>
-                <button onClick={closeModal}>close</button>
                 <div>
-                  <h1>Select Checkout Time</h1>
-                  <form>
-                    <input />
-                    <button>tab navigation</button>
-                    <button>stays</button>
-                    <button>inside</button>
-                    <button>the modal</button>
-                  </form>
+                  <h1>Select Return Time</h1>
+
+                  <button>tab navigation</button>
+                  <button>stays</button>
+                  <button>inside</button>
+                  <button>the modal</button>
                 </div>
               </Modal>
             </div>
