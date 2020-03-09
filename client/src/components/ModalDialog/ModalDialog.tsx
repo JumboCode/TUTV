@@ -25,9 +25,11 @@ const ModalDialog: React.FC<ModalProps> = ({
     <div className={wrapperClassName}>
       <div
         className={styles.scrim}
-        onClick={e => {
-          const classname = (e.target as HTMLElement).className.toString();
-          if (classname.includes('scrim')) onClose();
+        onClick={({ target }) => {
+          // Automatically hide the modal when users click on the scrim
+          try {
+            if ((target as HTMLElement).className.includes('scrim')) onClose();
+          } catch {}
         }}
       >
         <div className={styles.modal}>
