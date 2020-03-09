@@ -1,6 +1,6 @@
 .page {
   display: flex;
-  background-color: rgb(214, 214, 236);
+  background-color: #eceff8;
   justify-content: space-around;
   padding: 20px;
   flex-direction: column;
@@ -13,19 +13,19 @@
   max-width: 500px;
   align-items: stretch;
   align-self: center;
-  padding: 50px;
+  padding: 40px;
 }
 .logo {
   align-self: center;
   max-width: 40%;
-  margin: 20px;
+  object-fit: contain;
 }
 
 .input {
   display: flex;
-  margin: 5px;
-  padding: 5px;
-  background: rgb(214, 214, 236);
+  height: 35px;
+  background: #eceff8;
+  border: none;
 }
 
 .label {
@@ -33,26 +33,30 @@
 }
 
 .signInButton {
-  font-size: medium;
+  /* font-size: medium;
   color: white;
   background-color: cornflowerblue;
-  border-radius: 15px;
+  border-radius: 15px; */
   align-self: center;
-  padding: 5px 35px;
+  top: 72px;
+  /* padding: 5px 35px;
   margin: 10px;
   size: small;
-  max-width: 30%;
+  max-width: 30%; */
 }
 
 .pageTitle {
-  font-size: larger;
-  align-self: center;
-  margin: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-size: 25px;
 }
 
 .forgotPass {
   font-size: small;
-  color: darkblue;
+  color: #3279d5;
   text-align: right;
 }
 .email {
