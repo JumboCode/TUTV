@@ -28,8 +28,17 @@
   box-shadow: 0 10px 40px -20px rgba(0, 0, 0, 0.25);
 }
 
+.modalWrapper .modal > :global(button) {
+  position: absolute;
+  top: 18px;
+  right: 28px;
+  padding: 3px;
+  background: none;
+  cursor: pointer;
+}
+
 .modalContent {
   width: 400px;
   max-width: calc(100vw - 160px - 40px);
-  margin-top: 20px;
+  margin-top: 10px;
 }

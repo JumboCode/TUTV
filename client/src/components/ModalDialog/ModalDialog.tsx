@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { X as XIcon } from 'react-feather';
 import Button from '../Button';
 
 import styles from './ModalDialog.module.css';
@@ -25,13 +26,14 @@ const ModalDialog: React.FC<ModalProps> = ({
       <div
         className={styles.scrim}
         onClick={e => {
-          if ((e.target as HTMLElement).className.includes('_scrim__')) {
-            onClose();
-          }
+          const classname = (e.target as HTMLElement).className.toString();
+          if (classname.includes('scrim')) onClose();
         }}
       >
         <div className={styles.modal}>
-          <Button onClick={onClose}>X</Button>
+          <Button pill onClick={onClose}>
+            <XIcon size={26} color="black" style={{ display: 'block' }} />
+          </Button>
           <div className={styles.modalContent}>{children}</div>
         </div>
       </div>
