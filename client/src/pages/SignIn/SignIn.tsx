@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './SignIn.module.css';
+import logo from './TUTVLogo.png';
+import Button from 'components/Button';
 
 const SignIn: React.FC = () => {
   const [username, setUsername] = React.useState('');
@@ -10,29 +12,43 @@ const SignIn: React.FC = () => {
   };
 
   return (
-    <div className={styles.signIn}>
-      <img
-        className={styles.logo}
-        src="https://via.placeholder.com/200x200"
-        alt="TUTV logo"
-      />
-      <label htmlFor="username">Username</label>
-      <input
-        id="username"
-        type="text"
-        value={username}
-        onChange={e => setUsername(e.target.value)}
-      />
-      <label htmlFor="password">Password</label>
-      <input
-        id="password"
-        type="password"
-        value={password}
-        onChange={e => setPassword(e.target.value)}
-      />
-      <button type="submit" onClick={e => attemptSignIn()}>
-        Sign In
-      </button>
+    <div className={styles.page}>
+      <div className={styles.signIn}>
+        <img className={styles.logo} src={logo} alt="TUTV logo" />
+        <div className={styles.pageTitle}>{'MEMBER LOGIN'}</div>
+        <label className={styles.label} htmlFor="username">
+          Username
+        </label>
+        <input
+          className={styles.input}
+          id="username"
+          type="text"
+          value={username}
+          onChange={e => setUsername(e.target.value)}
+        />
+        <label className={styles.label} htmlFor="password">
+          Password
+        </label>
+        <input
+          className={styles.input}
+          id="password"
+          type="password"
+          value={password}
+          onChange={e => setPassword(e.target.value)}
+        />
+        <div className={styles.forgotPass}>{'Forgot Password?'}</div>
+        <Button
+          className={styles.signInButton}
+          type="submit"
+          pill
+          onClick={e => attemptSignIn()}
+        >
+          Sign In
+        </Button>
+      </div>
+      <div className={styles.email}>
+        {"Don't have an account? Email TUTV.studios@gmail.com"}
+      </div>
     </div>
   );
 };
