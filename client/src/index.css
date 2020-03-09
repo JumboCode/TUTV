@@ -6,6 +6,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  font-size: calc(.3vw + .3vh + .15vmin + 12px);
+  line-height: 1.25;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
