@@ -1,18 +1,21 @@
 import React from 'react';
 import styles from './Button.module.css';
 
-interface ButtonProps {
-  onClick?: () => any;
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
   variant?: 'blue' | 'gray';
   compact?: boolean;
+  pill?: boolean;
+  className?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
-  onClick,
   children,
   variant = 'blue',
-  compact = false
+  compact = false,
+  pill = false,
+  className = '',
+  ...rest
 }) => {
   let styleClass = styles.blue;
 
@@ -26,8 +29,9 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
-      onClick={onClick}
-      className={`${styles.btn} ${styleClass} ${compact && styles.compact}`}
+      className={`${styles.btn} ${styleClass} ${compact &&
+        styles.compact} ${pill && styles.pill} ${className}`}
+      {...rest}
     >
       {children}
     </button>
