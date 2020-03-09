@@ -16,13 +16,13 @@ const ModalDialog: React.FC<ModalProps> = ({
   onClose,
   children
 }) => {
-  const wrapperClassName = [
-    styles.modalWrapper,
-    displayed ? styles.displayed : styles.hidden
-  ].join(' ');
-
   return ReactDOM.createPortal(
-    <div className={wrapperClassName}>
+    <div
+      className={`
+        ${styles.modalWrapper}
+        ${styles[displayed ? 'displayed' : 'hidden']}
+      `}
+    >
       <div
         className={styles.scrim}
         onClick={({ target }) => {
