@@ -1,0 +1,12 @@
+.grid {
+  display: flex;
+  background: rgb(171, 172, 231);
+  justify-content: space-between;
+  max-width: 65%;
+  flex-flow: row wrap;
+}
+
+.grid > * {
+  flex-flow: row-wrap;
+  align-items: center;
+}
