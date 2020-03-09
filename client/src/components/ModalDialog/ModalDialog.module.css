@@ -30,11 +30,16 @@
 
 .modalWrapper .modal > :global(button) {
   position: absolute;
-  top: 18px;
-  right: 28px;
-  padding: 3px;
+  top: 0.85rem;
+  right: 1rem;
+  padding: 3px; /* padding increases click target, and makes no visual difference since there is no background color */
   background: none;
   cursor: pointer;
+}
+
+.modalWrapper .modal > :global(button svg) {
+  width: 1.4rem;
+  height: 1.4rem;
 }
 
 .modalContent {
