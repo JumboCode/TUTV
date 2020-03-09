@@ -5,7 +5,7 @@ full-screen modal dialog.
 ```jsx
 import { useState } from 'react';
 
-import Button from '../Button';
+import Button from 'components/Button';
 import Modal from './ModalDialog.tsx';
 
 function ExampleComponent() {

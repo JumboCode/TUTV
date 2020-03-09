@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { X as XIcon } from 'react-feather';
-import Button from '../Button';
+import Button from 'components/Button';
 
 import styles from './ModalDialog.module.css';
 
