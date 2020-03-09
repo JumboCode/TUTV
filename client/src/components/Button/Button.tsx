@@ -6,6 +6,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'blue' | 'gray';
   compact?: boolean;
   pill?: boolean;
+  className?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -13,6 +14,7 @@ const Button: React.FC<ButtonProps> = ({
   variant = 'blue',
   compact = false,
   pill = false,
+  className = '',
   ...rest
 }) => {
   let styleClass = styles.blue;
@@ -28,7 +30,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       className={`${styles.btn} ${styleClass} ${compact &&
-        styles.compact} ${pill && styles.pill}`}
+        styles.compact} ${pill && styles.pill} ${className}`}
       {...rest}
     >
       {children}
