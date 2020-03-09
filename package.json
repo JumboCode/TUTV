@@ -53,6 +53,7 @@
     "react-collapsible": "^2.7.0",
     "react-dev-utils": "^9.1.0",
     "react-dom": "^16.9.0",
+    "react-feather": "^2.0.3",
     "react-router-dom": "^5.1.2",
     "react-styleguidist": "^9.1.16",
     "react-tabs": "^3.1.0",
