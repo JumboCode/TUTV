@@ -71,8 +71,8 @@ class EquipmentItem(models.Model):
 
 
 class EquipmentRequest(models.Model):
-    timestamp = models.DateTimeField(auto_now_add=True)
-    request_out = models.DateTimeField(blank=True)
-    request_in = models.DateTimeField(blank=True)
+    timestamp = models.DateTimeField(auto_now_add=True, null=True)
+    request_out = models.DateTimeField(blank=True, null=True)
+    request_in = models.DateTimeField(blank=True, null=True)
     equipment_item = models.ForeignKey(EquipmentItem, on_delete=models.CASCADE, related_name='linked_requests', null=True)
     # user = # TODO
