@@ -29,8 +29,9 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
-      className={`${styles.btn} ${styleClass} ${compact &&
-        styles.compact} ${pill && styles.pill} ${className}`}
+      className={`${styles.btn} ${styleClass} ${compact && styles.compact} ${
+        pill && styles.pill
+      } ${className}`}
       {...rest}
     >
       {children}

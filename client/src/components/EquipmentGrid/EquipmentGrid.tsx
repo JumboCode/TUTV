@@ -9,7 +9,7 @@ interface EquipmentGridProps {
 const EquipmentGrid: React.FC<EquipmentGridProps> = ({ items }) => {
   return (
     <div className={styles.equipmentGrid}>
-      {items.map(item => (
+      {items.map((item) => (
         <div className={styles.equipment} key={item.name}>
           <div>
             <img

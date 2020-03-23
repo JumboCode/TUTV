@@ -13,7 +13,7 @@ const AdminDashboard: React.FC = () => {
     name,
     checkoutTime,
     returnTime,
-    status
+    status,
   }: RequestInfo) => {
     return (
       <tr className={styles.projectDetails} key={name}>
@@ -33,14 +33,14 @@ const AdminDashboard: React.FC = () => {
       name: 'O hey',
       checkoutTime: new Date(),
       returnTime: new Date(),
-      status: 'pending'
+      status: 'pending',
     },
     {
       name: 'O hey',
       checkoutTime: new Date(),
       returnTime: new Date(),
-      status: 'pending'
-    }
+      status: 'pending',
+    },
   ];
   // All past requests will be returned requests
   const pastRequests: RequestInfo[] = [
@@ -48,20 +48,20 @@ const AdminDashboard: React.FC = () => {
       name: 'O hey',
       checkoutTime: new Date(),
       returnTime: new Date(),
-      status: 'returned'
+      status: 'returned',
     },
     {
       name: 'O hey 2',
       checkoutTime: new Date(),
       returnTime: new Date(),
-      status: 'returned'
+      status: 'returned',
     },
     {
       name: 'O hey',
       checkoutTime: new Date(),
       returnTime: new Date(),
-      status: 'returned'
-    }
+      status: 'returned',
+    },
   ];
 
   return (
