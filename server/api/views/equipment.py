@@ -36,6 +36,13 @@ class EquipmentItemViewSet(viewsets.ModelViewSet):
     queryset = EquipmentItem.objects.all()
     serializer_class = EquipmentItemSerializer
 
+class EquipmentRequestViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows Equipment Requests to be viewed or edited.
+    """
+    queryset = EquipmentRequest.objects.all()
+    serializer_class = EquipmentRequestSerializer
+
 
 def list_equipment(request, format=None):
     all_equipment = list(EquipmentType.objects.values())

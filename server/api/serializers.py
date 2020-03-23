@@ -71,7 +71,7 @@ class EquipmentItemSerializer(serializers.ModelSerializer):
 """
 Serializers to support serializing EquipmentRequests objects
 """
-class EquipmentRequestsSerializer(serializers.HyperlinkedModelSerializer):
+class EquipmentRequestSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = EquipmentRequest
         fields = '__all__'
