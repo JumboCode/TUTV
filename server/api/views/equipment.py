@@ -43,6 +43,17 @@ class EquipmentRequestViewSet(viewsets.ModelViewSet):
     queryset = EquipmentRequest.objects.all()
     serializer_class = EquipmentRequestSerializer
 
+class EquipmentAvailabilityViewSet(viewsets.ViewSet): # TODO: needs testing
+    def create(self, request, format=None): # Equivalent of post in normal views
+        serializer = EquipmentAvailabilitySerializer(data=request.data)
+        if serializer.is_valid():
+            equipment_item_id = serializer.data['equipment_item']['id']
+            equipment_item = EquipmentItem.objects.get(pk=equipment_item_id)
+            for request in equipment_item.linked_requests.all():
+                if (serializer.request_out < request.request_out) or (serializer.request_in > request.request_in):
+                    return Response(False)
+                return Response(True)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)    
 
 def list_equipment(request, format=None):
     all_equipment = list(EquipmentType.objects.values())

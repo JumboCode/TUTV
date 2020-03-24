@@ -66,16 +66,15 @@ class EquipmentItem(models.Model):
     def assoc_requests(self):
         return self.linked_requests.all()
 
-    def is_available(self, request_out, request_in): # TODO: needs testing
-        for request in self.linked_requests.all():
-            if (request_out < request.request_out) or (request_in > request.request_in):
-                return False
-        return True
-
 
 class EquipmentRequest(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True, null=True)
     request_out = models.DateTimeField(blank=True, null=True)
     request_in = models.DateTimeField(blank=True, null=True)
-    equipment_item = models.ManyToManyField(EquipmentItem, related_name='linked_requests') # no on_delete option possible. What happens when an item is deleted?
+    equipment_items = models.ManyToManyField(EquipmentItem, related_name='linked_requests') # no on_delete option possible. What happens when an item is deleted?
     # user = # TODO 
+
+    # def save(self, *args, **kwargs):
+    #     request = super(EquipmentRequest, self).save(*args, **kwargs)
+    #     for equipment_item in request.equipment_items.all():
+    #         equipment_item.equipment_type

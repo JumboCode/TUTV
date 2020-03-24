@@ -71,7 +71,17 @@ class EquipmentItemSerializer(serializers.ModelSerializer):
 """
 Serializers to support serializing EquipmentRequests objects
 """
-class EquipmentRequestSerializer(serializers.HyperlinkedModelSerializer):
+class EquipmentRequestSerializer(serializers.ModelSerializer):
     class Meta:
         model = EquipmentRequest
         fields = '__all__'
+
+class EquipmentItemSerializerID(serializers.ModelSerializer):
+    class Meta:
+        model = EquipmentItem
+        fields = ['id']
+
+class EquipmentAvailabilitySerializer(serializers.Serializer):
+    request_out = serializers.DateTimeField()
+    request_in = serializers.DateTimeField()
+    equipment_item = EquipmentItemSerializerID()
