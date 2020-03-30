@@ -63,3 +63,7 @@
 .wrapper {
   width: 65%;
 }
+
+.flex-container {
+  display: flex;
+}

@@ -7,6 +7,7 @@ import Collabspible from 'react-collapsible';
 import Item from 'types/Item';
 
 import EquipmentGrid from 'components/EquipmentGrid';
+import CheckoutTimePicker from 'components/CheckoutTimePicker';
 
 const EquipmentBrowser: React.FC = () => {
   const [items, setItems] = React.useState<Array<Item>>([]);
@@ -25,7 +26,9 @@ const EquipmentBrowser: React.FC = () => {
   // function closeModal(){
   //   setIsOpen(false);
   // }
+
   const [modalIsOpen, setIsOpen] = React.useState(false);
+
   function openModal() {
     setIsOpen(true);
   }
@@ -49,10 +52,7 @@ const EquipmentBrowser: React.FC = () => {
             <Modal displayed={modalIsOpen} onClose={closeModal}>
               <div>
                 <h1>Select Checkout Time</h1>
-                <button>tab navigation</button>
-                <button>stays</button>
-                <button>inside</button>
-                <button>the modal</button>
+                {/* <CheckoutTimePicker></CheckoutTimePicker> */}
               </div>
             </Modal>
           </div>
@@ -65,11 +65,7 @@ const EquipmentBrowser: React.FC = () => {
               <Modal displayed={modalIsOpen} onClose={closeModal}>
                 <div>
                   <h1>Select Return Time</h1>
-
-                  <button>tab navigation</button>
-                  <button>stays</button>
-                  <button>inside</button>
-                  <button>the modal</button>
+                  <CheckoutTimePicker></CheckoutTimePicker>
                 </div>
               </Modal>
             </div>
