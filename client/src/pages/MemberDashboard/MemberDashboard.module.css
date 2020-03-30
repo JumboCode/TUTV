@@ -3,6 +3,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 32px;
 }
 
 .backdrop {
@@ -11,6 +16,7 @@
 
 .projectreq {
   background: #fff;
+  width: 100%;
 }
 
 .reqtable {
@@ -18,4 +24,64 @@
   width: 100%;
   justify-content: space-between;
   background: #eceff8;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #628aba;
+}
+.cellName {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  color: #000000;
+}
+
+.cellTime {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  font-size: 12px;
+  color: #000000;
+}
+
+.cellP {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  color: #ffaa0b;
+}
+
+.cellA {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  color: #4ade47;
+}
+
+.cellR {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+.requestheader {
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 18px;
+  margin: 35px;
+}
+
+.header2 {
+  margin: 30px;
+}
+.searchBar {
+  float: right;
+  margin-right: 38px;
 }
