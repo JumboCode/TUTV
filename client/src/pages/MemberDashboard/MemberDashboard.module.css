@@ -7,22 +7,50 @@
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
-  margin: 32px;
+  padding: 32px;
 }
 
 .backdrop {
   background: #eceff8;
 }
 
-.projectreq {
-  background: #fff;
-  width: 100%;
+.header2 {
+  margin: 30px;
 }
 
-.reqtable {
-  margin-bottom: 10px;
+.searchBar {
+  float: right;
+  padding-right: 30px;
+}
+
+.requestheader {
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 18px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.requestheader hr {
+  border: 1px solid #628aba;
+}
+
+.tableClass {
   width: 100%;
-  justify-content: space-between;
+  border-spacing: 0 14px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.tableClass td {
+  padding: 16px;
+}
+
+.tableClass th {
+  margin-bottom: 10px;
+  text-align: left;
   background: #eceff8;
   font-family: Roboto;
   font-style: normal;
@@ -30,6 +58,24 @@
   font-size: 12px;
   color: #628aba;
 }
+
+.projectreq {
+  width: 100%;
+}
+
+.projectreq td {
+  background: #fff;
+}
+.projectreq td:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.projectreq td:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
 .cellName {
   font-family: Roboto;
   font-style: normal;
@@ -37,7 +83,6 @@
   font-size: 12px;
   color: #000000;
 }
-
 .cellTime {
   font-family: Roboto;
   font-style: normal;
@@ -69,19 +114,4 @@
   font-weight: bold;
   font-size: 12px;
   color: #b3b3b3;
-}
-
-.requestheader {
-  font-family: Roboto;
-  font-style: normal;
-  font-size: 18px;
-  margin: 35px;
-}
-
-.header2 {
-  margin: 30px;
-}
-.searchBar {
-  float: right;
-  margin-right: 38px;
 }

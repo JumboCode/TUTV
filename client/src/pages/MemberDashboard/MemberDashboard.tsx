@@ -15,10 +15,13 @@ const MemberDashboard: React.FC = () => {
       </div>
 
       <div>
-        <div className={styles.requestheader}>My current requests</div>
-        <table>
+        <div className={styles.requestheader}>
+          My current requests<hr></hr>
+        </div>
+
+        <table className={styles.tableClass}>
           <tbody>
-            <tr className={styles.reqtable}>
+            <tr>
               <th>Project Name</th>
               <th>Checkout Time</th>
               <th>Return Time</th>
@@ -61,10 +64,12 @@ const MemberDashboard: React.FC = () => {
       </div>
 
       <div>
-        <div className={styles.requestheader}>My past requests</div>
-        <table>
+        <div className={styles.requestheader}>
+          My past requests<hr></hr>
+        </div>
+        <table className={styles.tableClass}>
           <tbody>
-            <tr className={styles.reqtable}>
+            <tr>
               <th>Project Name</th>
               <th>Checkout Time</th>
               <th>Return Time</th>
