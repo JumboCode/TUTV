@@ -24,7 +24,7 @@ const SignIn: React.FC = () => {
           id="username"
           type="text"
           value={username}
-          onChange={e => setUsername(e.target.value)}
+          onChange={(e) => setUsername(e.target.value)}
         />
         <label className={styles.label} htmlFor="password">
           Password
@@ -34,14 +34,14 @@ const SignIn: React.FC = () => {
           id="password"
           type="password"
           value={password}
-          onChange={e => setPassword(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
         />
         <div className={styles.forgotPass}>{'Forgot Password?'}</div>
         <Button
           className={styles.signInButton}
           type="submit"
           pill
-          onClick={e => attemptSignIn()}
+          onClick={(e) => attemptSignIn()}
         >
           Sign In
         </Button>

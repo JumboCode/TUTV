@@ -10,9 +10,9 @@ const EquipmentBrowser: React.FC = () => {
   const [items, setItems] = React.useState<Array<Item>>([]);
   React.useEffect(() => {
     fetch('https://tutv-mock.now.sh/api/v1/equipment/')
-      .then(response => response.json())
-      .then(response => setItems(response.data))
-      .catch(error => console.error(error));
+      .then((response) => response.json())
+      .then((response) => setItems(response.data))
+      .catch((error) => console.error(error));
   }, []);
 
   return (
