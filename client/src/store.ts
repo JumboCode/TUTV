@@ -18,8 +18,8 @@ const initialState: State = {
   apiUrl: {
     development: 'http://127.0.0.1:8000/api/v1/',
     production: '/api/v1/',
-    test: 'https://tutv-dev.herokuapp.com/api/v1/'
-  }[NODE_ENV]
+    test: 'https://tutv-dev.herokuapp.com/api/v1/',
+  }[NODE_ENV],
 };
 
 // Create the context
@@ -36,7 +36,7 @@ const actionHandlers: ActionDictionary = {
   action2(state: State): State {
     console.log('ACTION 2');
     return state;
-  }
+  },
 };
 
 const reducer = (state: State, action: Action): State => {
