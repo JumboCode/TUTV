@@ -11,9 +11,9 @@ const RequestSummary: React.FC = () => {
   // Fetch on component mount
   React.useEffect(() => {
     fetch('https://tutv-mock.now.sh/api/v1/equipment/')
-      .then(response => response.json())
-      .then(response => setItems(response.data))
-      .catch(error => console.error(error));
+      .then((response) => response.json())
+      .then((response) => setItems(response.data))
+      .catch((error) => console.error(error));
   }, []);
 
   const checkoutTime = new Date('November 5, 2019 18:00');
