@@ -18,15 +18,6 @@ const EquipmentBrowser: React.FC = () => {
       .catch(error => console.error(error));
   }, []);
 
-  // function afterOpenModal() {
-  //   // references are now sync'd and can be accessed.
-  //   subtitle.style.color = '#f00';
-  // }
-
-  // function closeModal(){
-  //   setIsOpen(false);
-  // }
-
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
   function openModal() {
@@ -52,7 +43,7 @@ const EquipmentBrowser: React.FC = () => {
             <Modal displayed={modalIsOpen} onClose={closeModal}>
               <div>
                 <h1>Select Checkout Time</h1>
-                {/* <CheckoutTimePicker></CheckoutTimePicker> */}
+                <CheckoutTimePicker></CheckoutTimePicker>
               </div>
             </Modal>
           </div>
