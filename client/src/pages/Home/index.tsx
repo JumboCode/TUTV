@@ -2,7 +2,7 @@ import React from 'react';
 import useApi from '../../api';
 
 const Home: React.FC = () => {
-  const { data } = useApi(' ', {});
+  const { data } = useApi('users');
 
   return (
     <div>
