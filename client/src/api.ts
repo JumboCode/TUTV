@@ -37,22 +37,34 @@ export function useRequest(path: string, options: apiRequestOptions = {}) {
   return () => apiReq(base, path, options);
 }
 
+class APIError extends Error {
+  status: number;
+  response: object;
+
+  constructor(message: string, status: number, response: object) {
+    super(message);
+    this.status = status;
+    this.response = response;
+  }
+}
+
 /**
  * Make a request to the API
  * @param base - the base URL (for example: https://localhost:8000/api/v1/)
  * @param path - the path after that URL (for example: 'token')
  * @param options - options to apply to the fetch request
  */
-export async function apiReq(
-  base: string,
-  path: string,
-  options: apiRequestOptions
-) {
+export function apiReq(base: string, path: string, options: apiRequestOptions) {
   // Add the path to the base URL
   let { href } = new URL(path, base);
   // Unless addTrailingSlash was explicitly passed as false, we make sure it's there
   if (options.addTrailingSlash !== false && !href.endsWith('/'))
     href = `${href}/`;
 
-  return (await fetch(href, options)).json();
+  return fetch(href, options).then(async (r) => {
+    const json = await r.json();
+    if (r.ok) return json;
+    const { status, statusText } = r;
+    throw new APIError(statusText, status, json);
+  });
 }
