@@ -14,5 +14,7 @@ urlpatterns = [
     *router.urls,
     # re_path(r'equipment', views.list_equipment),
     path('snippets/', views.EquipmentTypeList.as_view()),
-    path('equipment-availability/<str:request_out>/<str:request_in>/<str:equipment_item_id>', views.get_availability)
+    path('equipment-availability/<str:request_out>/<str:request_in>/<str:equipment_item_id>/', views.get_availability),
+    path('signout/<int:request_id>/', views.sign_out_request.as_view()),
+    path('return/<int:request_id>/', views.return_request.as_view()),
 ]

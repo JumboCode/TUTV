@@ -10,6 +10,7 @@ import datetime
 
 from django.http import JsonResponse
 
+from django.shortcuts import get_object_or_404
 
 class EquipmentCategoryViewSet(viewsets.ModelViewSet):
     """
@@ -68,3 +69,41 @@ def get_availability(request, request_out, request_in, equipment_item_id):
         if (request_out_fmt < equipment_request.request_out) or (request_in_fmt > equipment_request.request_in):
             return JsonResponse(False, safe=False)
     return JsonResponse(True, safe=False)
+
+"""
+Partially update a request to reflect its signed out status
+Reference: https://stackoverflow.com/questions/50129567/django-rest-update-one-field
+"""
+class sign_out_request(APIView):
+    def patch(self, request, request_id):
+        # if no model exists by this PK, raise a 404 error
+        equipment_request = get_object_or_404(EquipmentRequest, pk=request_id)
+        if equipment_request.status != "Requested":
+            return Response("This request has already been signed out!", status=status.HTTP_400_BAD_REQUEST)
+        # this is the only field we want to update
+        data = {"actual_out": datetime.datetime.now(), "status": equipment_request.Status.SIGNEDOUT}
+        serializer = EquipmentRequestSerializer(equipment_request, data=data, partial=True)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        # return a meaningful error response
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        
+class return_request(APIView):
+    def patch(self, request, request_id):
+        # if no model exists by this PK, raise a 404 error
+        equipment_request = get_object_or_404(EquipmentRequest, pk=request_id)
+        if equipment_request.status == "Returned":
+            return Response("This request has already been returned!", status=status.HTTP_400_BAD_REQUEST)
+        if equipment_request.status == "Requested":
+            return Response("This request has not been signed out yet!", status=status.HTTP_400_BAD_REQUEST)
+        # this is the only field we want to update
+        data = {"actual_in": datetime.datetime.now(), "status": equipment_request.Status.RETURNED}
+        serializer = EquipmentRequestSerializer(equipment_request, data=data, partial=True)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        # return a meaningful error response
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
