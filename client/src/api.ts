@@ -1,7 +1,50 @@
 import useSWR, { responseInterface } from 'swr';
 import fetch from 'unfetch';
+import jwtDecode from 'jwt-decode';
 
 import { useStore } from './store';
+
+interface DecodedToken {
+  token_type: string;
+  exp: number;
+  user_id: number;
+}
+
+/**
+ * A react hook to get a valid access token. It will refresh the token if needed.
+ * Returns the token if it's possible to get it, otherwise returns undefined.
+ */
+export async function useAccessToken(): Promise<string | undefined> {
+  const { state, dispatch } = useStore();
+  const { accessToken, refreshToken } = state.auth;
+  // We can't get a token if we don't have a refresh token or an access token
+  if (!accessToken && !refreshToken) return undefined;
+  // Return the token if the one we have is not expired
+  const decoded: DecodedToken = jwtDecode(accessToken as string);
+  if (decoded.exp > Date.now() / 1000) return accessToken as string;
+  // If the token is expired, refresh
+  const newToken = await apiReq(state && state.apiUrl, 'token/refresh', {
+    // To refresh, we send a POST request with the refresh token
+    method: 'POST',
+    body: JSON.stringify({ refresh: refreshToken }),
+    headers: { 'Content-Type': 'application/json' },
+  })
+    .then(({ access: fetchedToken }) => {
+      dispatch({
+        type: 'login',
+        tokens: { access: fetchedToken, refresh: refreshToken as string },
+      });
+      return fetchedToken;
+    })
+    .catch((e) => {
+      // If we get an error, return undefined and log the user out
+      console.error('Error during token refresh:');
+      console.log(e);
+      dispatch({ type: 'logout' });
+      return undefined;
+    });
+  return newToken;
+}
 
 interface apiRequestOptions {
   method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
