@@ -63,8 +63,8 @@ def get_availability(request, request_out, request_in, equipment_item_id):
     if request_out_fmt > request_in_fmt:
         return JsonResponse("Request out cannot be later than request in", status=status.HTTP_400_BAD_REQUEST, safe=False)
 
-    for request in equipment_item.linked_requests.all():
+    for equipment_request in equipment_item.linked_requests.all():
         print("Checking request ID", request.id)
-        if (request_out_fmt < request.request_out) or (request_in_fmt > request.request_in):
+        if (request_out_fmt < equipment_request.request_out) or (request_in_fmt > equipment_request.request_in):
             return JsonResponse(False, safe=False)
     return JsonResponse(True, safe=False)
