@@ -37,7 +37,15 @@ const initialState: State = {
     test: 'https://tutv-dev.herokuapp.com/api/v1/',
   }[NODE_ENV],
 
-  auth: { accessToken: null, refreshToken: null },
+  // note: due to a bug, TypeScript marks code below this IIFE as "unreachable." This will be
+  // resolved in TypeScript 3.9. See https://github.com/microsoft/TypeScript/issues/36828
+  auth: (() => {
+    try {
+      return JSON.parse(localStorage.auth);
+    } catch (e) {
+      return { accessToken: null, refreshToken: null };
+    }
+  })(),
 };
 
 // Create the context
@@ -53,6 +61,7 @@ const actionHandlers: ActionDictionary = {
     } = action as LoginAction;
     state.auth.accessToken = access;
     state.auth.refreshToken = refresh;
+    localStorage.auth = JSON.stringify(state.auth);
     return state;
   },
 
