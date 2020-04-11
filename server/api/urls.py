@@ -9,10 +9,11 @@ router.register(r'equipment-types', views.EquipmentTypeViewSet)
 router.register(r'equipment-items', views.EquipmentItemViewSet)
 router.register(r'equipment-categories', views.EquipmentCategoryViewSet)
 router.register(r'equipment-requests', views.EquipmentRequestViewSet)
-router.register(r'equipment-availability', views.EquipmentAvailabilityViewSet, basename='EquipmentAvailability')
+# router.register(r'equipment-availability', views.EquipmentAvailabilityViewSet, basename='EquipmentAvailability')
 
 urlpatterns = [
     *router.urls,
-    re_path(r'equipment', views.list_equipment),
+    # re_path(r'equipment', views.list_equipment),
     path('snippets/', views.EquipmentTypeList.as_view()),
+    path('equipment-availability/<str:request_out>/<str:request_in>/<str:equipment_item_id>', views.get_availability)
 ]
