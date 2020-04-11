@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Catalog from './pages/Catalog';
 import EquipmentBrowser from './pages/EquipmentBrowser';
+import AdminCheckout from './pages/AdminCheckout';
 import MemberDashboard from './pages/MemberDashboard';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import RequestSummary from './pages/admin/RequestSummary';
@@ -24,6 +25,9 @@ const App: React.FC = () => {
             </li>
             <li>
               <Link to="/equipmentbrowser">Equipment Browser</Link>
+            </li>
+            <li>
+              <Link to="/admincheckout">Admin Checkout</Link>
             </li>
             <li>
               <Link to="/memberdashboard">MemberDashboard</Link>
@@ -49,6 +53,9 @@ const App: React.FC = () => {
           </Route>
           <Route path="/equipmentbrowser">
             <EquipmentBrowser />
+          </Route>
+          <Route path="/admincheckout">
+            <AdminCheckout />
           </Route>
           <Route path="/memberdashboard">
             <MemberDashboard />
