@@ -20,7 +20,7 @@ type LoginAction = {
 
 type LogoutAction = { type: 'logout' };
 
-type Action = LoginAction | LogoutAction;
+export type Action = LoginAction | LogoutAction;
 
 // END ACTION DEFINITIONS
 
