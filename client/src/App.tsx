@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { StoreProvider } from './store';
+import { useStore, StoreProvider } from './store';
 import LoginShield from './components/LoginShield';
+
+import Button from './components/Button';
 
 // Components for pages of the app
 import Home from './pages/Home';
@@ -40,6 +42,16 @@ const App: React.FC = () => {
                 </li>
               </ul>
             </nav>
+
+            {React.createElement(function LogOutButton() {
+              const { dispatch } = useStore();
+              const logout = () => dispatch({ type: 'logout' });
+              return (
+                <Button variant="gray" onClick={logout}>
+                  Log out
+                </Button>
+              );
+            })}
 
             <Switch>
               <Route path="/admin/dashboard">

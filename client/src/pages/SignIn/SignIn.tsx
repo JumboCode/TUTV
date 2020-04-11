@@ -8,7 +8,7 @@ import { useApiRequest } from '../../api';
 const SignIn: React.FC = () => {
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
-  const { state, dispatch } = useStore();
+  const { dispatch } = useStore();
 
   const getToken = useApiRequest('token', {
     method: 'POST',
