@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { StoreProvider } from './store';
+import LoginShield from './components/LoginShield';
 
 // Components for pages of the app
 import Home from './pages/Home';
@@ -15,57 +16,53 @@ const App: React.FC = () => {
   return (
     <Router>
       <StoreProvider>
-        <div className="App">
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/catalog">Equipment Catalog</Link>
-              </li>
-              <li>
-                <Link to="/equipmentbrowser">Equipment Browser</Link>
-              </li>
-              <li>
-                <Link to="/memberdashboard">MemberDashboard</Link>
-              </li>
-              <li>
-                <Link to="/admin/dashboard">Admin Dashboard</Link>
-              </li>
-              <li>
-                <Link to="/admin/equipment-request">Equipment Request</Link>
-              </li>
-              <li>
-                <Link to="/signin">Sign In</Link>
-              </li>
-            </ul>
-          </nav>
+        <LoginShield fallback={<SignIn />}>
+          <div className="App">
+            <nav>
+              <ul>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/catalog">Equipment Catalog</Link>
+                </li>
+                <li>
+                  <Link to="/equipmentbrowser">Equipment Browser</Link>
+                </li>
+                <li>
+                  <Link to="/memberdashboard">MemberDashboard</Link>
+                </li>
+                <li>
+                  <Link to="/admin/dashboard">Admin Dashboard</Link>
+                </li>
+                <li>
+                  <Link to="/admin/equipment-request">Equipment Request</Link>
+                </li>
+              </ul>
+            </nav>
 
-          <Switch>
-            <Route path="/admin/dashboard">
-              <AdminDashboard />
-            </Route>
-            <Route path="/catalog">
-              <Catalog />
-            </Route>
-            <Route path="/equipmentbrowser">
-              <EquipmentBrowser />
-            </Route>
-            <Route path="/memberdashboard">
-              <MemberDashboard />
-            </Route>
-            <Route path="/admin/equipment-request">
-              <RequestSummary />
-            </Route>
-            <Route path="/signin">
-              <SignIn />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
-        </div>
+            <Switch>
+              <Route path="/admin/dashboard">
+                <AdminDashboard />
+              </Route>
+              <Route path="/catalog">
+                <Catalog />
+              </Route>
+              <Route path="/equipmentbrowser">
+                <EquipmentBrowser />
+              </Route>
+              <Route path="/memberdashboard">
+                <MemberDashboard />
+              </Route>
+              <Route path="/admin/equipment-request">
+                <RequestSummary />
+              </Route>
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </div>
+        </LoginShield>
       </StoreProvider>
     </Router>
   );
