@@ -18,7 +18,9 @@ type LoginAction = {
   tokens: { access: string; refresh: string };
 };
 
-type Action = LoginAction | { type: 'action2' };
+type LogoutAction = { type: 'logout' };
+
+type Action = LoginAction | LogoutAction;
 
 // END ACTION DEFINITIONS
 
@@ -41,7 +43,7 @@ const initialState: State = {
   // resolved in TypeScript 3.9. See https://github.com/microsoft/TypeScript/issues/36828
   auth: (() => {
     try {
-      return JSON.parse(localStorage.auth);
+      return JSON.parse(localStorage.getItem('auth') || "this isn't json");
     } catch (e) {
       return { accessToken: null, refreshToken: null };
     }
@@ -61,12 +63,14 @@ const actionHandlers: ActionDictionary = {
     } = action as LoginAction;
     state.auth.accessToken = access;
     state.auth.refreshToken = refresh;
-    localStorage.auth = JSON.stringify(state.auth);
+    localStorage.setItem('auth', JSON.stringify(state.auth));
     return state;
   },
 
-  action2(state: State): State {
-    console.log('ACTION 2');
+  logout(state: State): State {
+    state.auth.accessToken = null;
+    state.auth.refreshToken = null;
+    localStorage.removeItem('auth');
     return state;
   },
 };
