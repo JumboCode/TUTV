@@ -8,6 +8,7 @@ interface apiRequestOptions {
   headers?: any;
   body?: FormData | Blob | ArrayBuffer | string;
   addTrailingSlash?: boolean;
+  token?: string;
 }
 
 /**
@@ -60,6 +61,12 @@ export function apiReq(base: string, path: string, options: apiRequestOptions) {
   // Unless addTrailingSlash was explicitly passed as false, we make sure it's there
   if (options.addTrailingSlash !== false && !href.endsWith('/'))
     href = `${href}/`;
+  // Add access token if we have it
+  if (options.token)
+    options.headers = {
+      ...options.headers,
+      Authorization: `Bearer ${options.token}`,
+    };
 
   return fetch(href, options).then(async (r) => {
     const json = await r.json();
