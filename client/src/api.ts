@@ -13,7 +13,7 @@ interface apiRequestOptions {
 /**
  * A react hook for connecting a component to API data
  * Automatically implements caching, revalidation, retries, and some other stuff. To make API
- * requests without any of these features, see useRequest
+ * requests without any of these features, see useApiRequest
  */
 export function useApiData<T>(
   url: string,
@@ -29,7 +29,7 @@ export function useApiData<T>(
 /**
  * A react hook for making a raw API request without any fancy logic on top
  */
-export function useRequest(path: string, options: apiRequestOptions = {}) {
+export function useApiRequest(path: string, options: apiRequestOptions = {}) {
   // Get the "base" URL from the store
   const { state } = useStore();
   const base = state && state.apiUrl;
