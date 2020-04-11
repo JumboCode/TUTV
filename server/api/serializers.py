@@ -8,11 +8,20 @@ class except that it uses hyperlinks to represent relationships, rather
 than primary keys. 
 """
 
-# Serializers to support seralizing User and Group objects
+"""
+Serializers to support seralizing User and Group objects
+"""
+class EquipmentRequestSerializerSimple(serializers.ModelSerializer):
+    class Meta:
+        model = EquipmentRequest
+        fields = ['request_out', 'request_in', 'equipment_items']
+
 class UserSerializer(serializers.HyperlinkedModelSerializer):
+    requests = EquipmentRequestSerializerSimple(many=True, required=False, read_only=True)
+    
     class Meta:
         model = User
-        fields = ['email', 'first_name', 'last_name', 'groups', 'is_staff']
+        fields = ['email', 'first_name', 'last_name', 'groups', 'is_staff', 'requests']
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

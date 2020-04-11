@@ -10,11 +10,6 @@ import datetime
 
 from django.http import JsonResponse
 
-class EquipmentTypeList(APIView):
-    def get(self, request, format=None):
-        equipments = EquipmentType.objects.all()
-        serializer = EquipmentTypeSerializer(equipments, many=True, context={'request': request})
-        return Response(serializer.data)
 
 class EquipmentCategoryViewSet(viewsets.ModelViewSet):
     """
@@ -23,12 +18,23 @@ class EquipmentCategoryViewSet(viewsets.ModelViewSet):
     queryset = EquipmentCategory.objects.all()
     serializer_class = EquipmentCategorySerializer
 
+
 class EquipmentTypeViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows Equipment Types to be viewed or edited.
     """
     queryset = EquipmentType.objects.all()
     serializer_class = EquipmentTypeSerializer
+
+class EquipmentTypeList(APIView):
+    def get(self, request, format=None):
+        equipments = EquipmentType.objects.all()
+        serializer = EquipmentTypeSerializer(equipments, many=True, context={'request': request})
+        return Response(serializer.data)
+
+def list_equipment(request, format=None):
+    all_equipment = list(EquipmentType.objects.values())
+    return JsonResponse(all_equipment, safe=False)
 
 
 class EquipmentItemViewSet(viewsets.ModelViewSet):
@@ -37,6 +43,7 @@ class EquipmentItemViewSet(viewsets.ModelViewSet):
     """
     queryset = EquipmentItem.objects.all()
     serializer_class = EquipmentItemSerializer
+
 
 class EquipmentRequestViewSet(viewsets.ModelViewSet):
     """
@@ -61,7 +68,3 @@ def get_availability(request, request_out, request_in, equipment_item_id):
         if (request_out_fmt < request.request_out) or (request_in_fmt > request.request_in):
             return JsonResponse(False, safe=False)
     return JsonResponse(True, safe=False)
-
-def list_equipment(request, format=None):
-    all_equipment = list(EquipmentType.objects.values())
-    return JsonResponse(all_equipment, safe=False)
