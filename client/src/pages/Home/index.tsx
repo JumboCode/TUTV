@@ -1,8 +1,8 @@
 import React from 'react';
-import useApi from '../../api';
+import { useApiData } from '../../api';
 
 const Home: React.FC = () => {
-  const { data } = useApi('users');
+  const { data } = useApiData('users');
 
   return (
     <div>
