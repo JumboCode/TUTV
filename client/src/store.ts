@@ -5,9 +5,22 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 
 type State = {
   apiUrl: string;
+  auth: {
+    accessToken: string | null;
+    refreshToken: string | null;
+  };
 };
 
-type Action = { type: 'action1' } | { type: 'action2' };
+// ACTION DEFINITIONS
+
+type LoginAction = {
+  type: 'login';
+  tokens: { access: string; refresh: string };
+};
+
+type Action = LoginAction | { type: 'action2' };
+
+// END ACTION DEFINITIONS
 
 type ActionDictionary = {
   [key: string]: (state: State, action: Action) => State;
@@ -23,6 +36,8 @@ const initialState: State = {
     production: new URL('/api/v1/', window.location.origin).href,
     test: 'https://tutv-dev.herokuapp.com/api/v1/',
   }[NODE_ENV],
+
+  auth: { accessToken: null, refreshToken: null },
 };
 
 // Create the context
@@ -32,10 +47,15 @@ const StoreContext = createContext({} as StoreContext);
 // handler function here.
 // A handler function should take state as input, and return a copy of the state object mutated
 const actionHandlers: ActionDictionary = {
-  action1(state: State): State {
-    console.log('ACTION 1');
+  login(state: State, action: Action): State {
+    const {
+      tokens: { access, refresh },
+    } = action as LoginAction;
+    state.auth.accessToken = access;
+    state.auth.refreshToken = refresh;
     return state;
   },
+
   action2(state: State): State {
     console.log('ACTION 2');
     return state;
