@@ -3,14 +3,14 @@ import styles from './SignIn.module.css';
 import logo from './TUTVLogo.png';
 import Button from 'components/Button';
 import { useStore } from '../../store';
-import { useRequest } from '../../api';
+import { useApiRequest } from '../../api';
 
 const SignIn: React.FC = () => {
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
   const { state, dispatch } = useStore();
 
-  const getToken = useRequest('token', {
+  const getToken = useApiRequest('token', {
     method: 'POST',
     body: JSON.stringify({ username, password }),
     headers: { 'Content-Type': 'application/json' },
