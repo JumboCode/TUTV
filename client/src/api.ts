@@ -67,7 +67,11 @@ export function useApiData<T>(
   const { state } = useStore();
   const base = state && state.apiUrl;
 
-  return useSWR<T>(url, (path: string) => apiReq(base, path, options));
+  const tokenPromise = useAccessToken();
+
+  return useSWR<T>(url, (path: string) =>
+    tokenPromise.then((token) => apiReq(base, path, { token, ...options }))
+  );
 }
 
 /**
@@ -77,8 +81,10 @@ export function useApiRequest(path: string, options: apiRequestOptions = {}) {
   // Get the "base" URL from the store
   const { state } = useStore();
   const base = state && state.apiUrl;
+  const tokenPromise = useAccessToken();
   // Return a function that can be called to send the request
-  return () => apiReq(base, path, options);
+  return () =>
+    tokenPromise.then((token) => apiReq(base, path, { token, ...options }));
 }
 
 class APIError extends Error {
