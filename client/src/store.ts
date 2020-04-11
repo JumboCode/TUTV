@@ -17,7 +17,7 @@ type StoreContext = { state: State; dispatch: React.Dispatch<Action> };
 const initialState: State = {
   apiUrl: {
     development: 'http://127.0.0.1:8000/api/v1/',
-    production: '/api/v1/',
+    production: new URL('/api/v1/', window.location.origin).href,
     test: 'https://tutv-dev.herokuapp.com/api/v1/',
   }[NODE_ENV],
 };
