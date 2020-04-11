@@ -9,7 +9,9 @@ type State = {
 
 type Action = { type: 'action1' } | { type: 'action2' };
 
-type ActionDictionary = { [key: string]: (state: State) => State };
+type ActionDictionary = {
+  [key: string]: (state: State, action: Action) => State;
+};
 
 type StoreContext = { state: State; dispatch: React.Dispatch<Action> };
 
@@ -18,7 +20,7 @@ const initialState: State = {
   apiUrl: {
     // note: trailing slashes matter!
     development: 'http://127.0.0.1:8000/api/v1/',
-    production: '/api/v1/',
+    production: new URL('/api/v1/', window.location.origin).href,
     test: 'https://tutv-dev.herokuapp.com/api/v1/',
   }[NODE_ENV],
 };
@@ -43,7 +45,7 @@ const actionHandlers: ActionDictionary = {
 const reducer = (state: State, action: Action): State => {
   const actionHandler = actionHandlers[action.type];
   const state2 = cloneDeep(state);
-  return actionHandler(state2);
+  return actionHandler(state2, action);
 };
 
 // The StoreProvider component wraps the whole app so that children can use useStore, which
