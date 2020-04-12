@@ -14,7 +14,7 @@ type ModalProps = {
 const ModalDialog: React.FC<ModalProps> = ({
   displayed,
   onClose,
-  children
+  children,
 }) => {
   return ReactDOM.createPortal(
     <div
