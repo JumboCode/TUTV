@@ -10,6 +10,6 @@ Big pink button:
 
 ```jsx
 <Button size="large" color="deeppink">
-	Click Me
+  Click Me
 </Button>
 ```
