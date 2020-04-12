@@ -1,4 +1,5 @@
 ### Basic modal
+
 In the example below, clicking the "Display modal" button will open a
 full-screen modal dialog.
 
@@ -37,11 +38,13 @@ function ExampleComponent() {
         </p>
       </Modal>
     </div>
-  )
+  );
 }
 
 <React.Fragment>
-  Click this button to open the modal:<br/><br/>
+  Click this button to open the modal:
+  <br />
+  <br />
   <ExampleComponent />
-</React.Fragment>
+</React.Fragment>;
 ```
