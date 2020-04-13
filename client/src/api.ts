@@ -1,5 +1,4 @@
 import useSWR, { responseInterface } from 'swr';
-import fetch from 'unfetch';
 import jwtDecode from 'jwt-decode';
 
 import { useStore, Action } from './store';
@@ -32,7 +31,7 @@ export async function getAccessToken(
     body: JSON.stringify({ refresh: refreshToken }),
     headers: { 'Content-Type': 'application/json' },
   })
-    .then(({ access: fetchedToken }) => {
+    .then(({ access: fetchedToken }: { access: string }) => {
       dispatch({
         type: 'login',
         tokens: { access: fetchedToken, refresh: refreshToken as string },
@@ -49,7 +48,7 @@ export async function getAccessToken(
   return newToken;
 }
 
-interface apiRequestOptions {
+interface ApiRequestOptions {
   method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
   headers?: any;
   body?: FormData | Blob | ArrayBuffer | string;
@@ -62,10 +61,10 @@ interface apiRequestOptions {
  * Automatically implements caching, revalidation, retries, and some other stuff. To make API
  * requests without any of these features, see useApiRequest
  */
-export function useApiData<T>(
+export const useApiData = <T>(
   url: string,
-  options: apiRequestOptions = {}
-): responseInterface<T, undefined> {
+  options: ApiRequestOptions = {}
+): responseInterface<T, undefined> => {
   // Get the "base" URL from the store
   const { state, dispatch } = useStore();
   const base = state && state.apiUrl;
@@ -76,12 +75,15 @@ export function useApiData<T>(
       apiReq(base, path, { token, ...options })
     );
   });
-}
+};
 
 /**
  * A react hook for making a raw API request without any fancy logic on top
  */
-export function useApiRequest(path: string, options: apiRequestOptions = {}) {
+export const useApiRequest = (
+  path: string,
+  options: ApiRequestOptions = {}
+) => {
   // Get the "base" URL from the store
   const { state, dispatch } = useStore();
   const base = state && state.apiUrl;
@@ -92,7 +94,7 @@ export function useApiRequest(path: string, options: apiRequestOptions = {}) {
       apiReq(base, path, { token, ...options })
     );
   };
-}
+};
 
 class APIError extends Error {
   status: number;
@@ -111,7 +113,11 @@ class APIError extends Error {
  * @param path - the path after that URL (for example: 'token')
  * @param options - options to apply to the fetch request
  */
-export function apiReq(base: string, path: string, options: apiRequestOptions) {
+export const apiReq = (
+  base: string,
+  path: string,
+  options: ApiRequestOptions
+) => {
   // Add the path to the base URL
   let { href } = new URL(path, base);
   // Unless addTrailingSlash was explicitly passed as false, we make sure it's there
@@ -130,4 +136,4 @@ export function apiReq(base: string, path: string, options: apiRequestOptions) {
     const { status, statusText } = r;
     throw new APIError(statusText, status, json);
   });
-}
+};

@@ -70,7 +70,6 @@
     "terser-webpack-plugin": "1.4.1",
     "ts-pnp": "1.1.4",
     "typescript": "3.6.3",
-    "unfetch": "^4.1.0",
     "url-loader": "2.1.0",
     "webpack": "4.41.0",
     "webpack-dev-server": "3.2.1",
@@ -83,7 +82,7 @@
     "start": "cd client && node scripts/start.js",
     "build": "cd client && node scripts/build.js",
     "test": "cd client && node scripts/test.js",
-    "eslint": "eslint \"client/src/**/*.tsx\"",
+    "eslint": "eslint \"client/src/**/*.{js,jsx,ts,tsx}\"",
     "stylelint": "stylelint \"client/src/**/*.css\"",
     "prettier-write": "prettier --write \"client/src/**/*.{tsx,css}\""
   },
