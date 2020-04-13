@@ -13,10 +13,6 @@
   background: #eceff8;
 }
 
-.header2 {
-  margin: 30px;
-}
-
 .searchBar {
   float: right;
   padding-right: 30px;
@@ -88,7 +84,7 @@
   color: #000000;
 }
 
-.cellP {
+.cellPend {
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -96,7 +92,7 @@
   color: #ffaa0b;
 }
 
-.cellA {
+.cellApp {
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -104,7 +100,7 @@
   color: #4ade47;
 }
 
-.cellR {
+.cellRet {
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
