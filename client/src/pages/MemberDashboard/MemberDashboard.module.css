@@ -26,8 +26,7 @@
   font-family: Roboto;
   font-style: normal;
   font-size: 18px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 0 30px;
 }
 
 .requestheader hr {
