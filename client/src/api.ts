@@ -1,5 +1,4 @@
 import useSWR, { responseInterface } from 'swr';
-import fetch from 'unfetch';
 
 import { useStore } from './store';
 
