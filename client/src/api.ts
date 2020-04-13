@@ -3,7 +3,7 @@ import fetch from 'unfetch';
 
 import { useStore } from './store';
 
-interface apiRequestOptions {
+interface ApiRequestOptions {
   method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
   headers?: any;
   body?: FormData | Blob | ArrayBuffer | string;
@@ -17,7 +17,7 @@ interface apiRequestOptions {
  */
 export function useApiData<T>(
   url: string,
-  options: apiRequestOptions = {}
+  options: ApiRequestOptions = {}
 ): responseInterface<T, undefined> {
   // Get the "base" URL from the store
   const { state } = useStore();
@@ -29,7 +29,7 @@ export function useApiData<T>(
 /**
  * A react hook for making a raw API request without any fancy logic on top
  */
-export function useApiRequest(path: string, options: apiRequestOptions = {}) {
+export function useApiRequest(path: string, options: ApiRequestOptions = {}) {
   // Get the "base" URL from the store
   const { state } = useStore();
   const base = state && state.apiUrl;
@@ -54,7 +54,7 @@ class APIError extends Error {
  * @param path - the path after that URL (for example: 'token')
  * @param options - options to apply to the fetch request
  */
-export function apiReq(base: string, path: string, options: apiRequestOptions) {
+export function apiReq(base: string, path: string, options: ApiRequestOptions) {
   // Add the path to the base URL
   let { href } = new URL(path, base);
   // Unless addTrailingSlash was explicitly passed as false, we make sure it's there
