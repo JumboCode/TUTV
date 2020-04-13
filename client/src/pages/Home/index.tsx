@@ -1,5 +1,5 @@
 import React from 'react';
-import { useApiData } from '../../api';
+import { useApiData } from 'api';
 
 const Home: React.FC = () => {
   const { data } = useApiData('users');
