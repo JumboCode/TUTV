@@ -15,27 +15,30 @@ interface ApiRequestOptions {
  * Automatically implements caching, revalidation, retries, and some other stuff. To make API
  * requests without any of these features, see useApiRequest
  */
-export function useApiData<T>(
+export const useApiData = <T>(
   url: string,
   options: ApiRequestOptions = {}
-): responseInterface<T, undefined> {
+): responseInterface<T, undefined> => {
   // Get the "base" URL from the store
   const { state } = useStore();
   const base = state && state.apiUrl;
 
   return useSWR<T>(url, (path: string) => apiReq(base, path, options));
-}
+};
 
 /**
  * A react hook for making a raw API request without any fancy logic on top
  */
-export function useApiRequest(path: string, options: ApiRequestOptions = {}) {
+export const useApiRequest = (
+  path: string,
+  options: ApiRequestOptions = {}
+) => {
   // Get the "base" URL from the store
   const { state } = useStore();
   const base = state && state.apiUrl;
   // Return a function that can be called to send the request
   return () => apiReq(base, path, options);
-}
+};
 
 class APIError extends Error {
   status: number;
@@ -54,7 +57,11 @@ class APIError extends Error {
  * @param path - the path after that URL (for example: 'token')
  * @param options - options to apply to the fetch request
  */
-export function apiReq(base: string, path: string, options: ApiRequestOptions) {
+export const apiReq = (
+  base: string,
+  path: string,
+  options: ApiRequestOptions
+) => {
   // Add the path to the base URL
   let { href } = new URL(path, base);
   // Unless addTrailingSlash was explicitly passed as false, we make sure it's there
@@ -67,4 +74,4 @@ export function apiReq(base: string, path: string, options: ApiRequestOptions) {
     const { status, statusText } = r;
     throw new APIError(statusText, status, json);
   });
-}
+};
