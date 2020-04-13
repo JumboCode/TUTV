@@ -67,3 +67,8 @@
 .flex-container {
   display: flex;
 }
+
+.equipmentModal > div {
+  width: 600px; /* adjust width if need */
+  max-width: 100vw;
+}

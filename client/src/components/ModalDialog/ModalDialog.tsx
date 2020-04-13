@@ -8,11 +8,13 @@ import styles from './ModalDialog.module.css';
 type ModalProps = {
   displayed: boolean;
   onClose: () => void;
+  className?: string;
 };
 
 const ModalDialog: React.FC<ModalProps> = ({
   displayed,
   onClose,
+  className,
   children
 }) => {
   const wrapperClassName = [
@@ -30,7 +32,7 @@ const ModalDialog: React.FC<ModalProps> = ({
           }
         }}
       >
-        <div className={styles.modal}>
+        <div className={`${styles.modal} ${className}`}>
           <Button onClick={onClose}>X</Button>
           <div className={styles.modalContent}>{children}</div>
         </div>
