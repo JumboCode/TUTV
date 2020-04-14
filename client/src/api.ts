@@ -64,8 +64,9 @@ export const apiReq = (
   // Add the path to the base URL
   let { href } = new URL(path, base);
   // Unless addTrailingSlash was explicitly passed as false, we make sure it's there
-  if (options.addTrailingSlash !== false && !href.endsWith('/'))
+  if (options.addTrailingSlash !== false && !href.endsWith('/')) {
     href = `${href}/`;
+  }
 
   return fetch(href, options).then(async (r) => {
     if (r.ok) return r.json();
