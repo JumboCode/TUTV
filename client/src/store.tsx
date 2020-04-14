@@ -58,19 +58,16 @@ const StoreContext = createContext({} as StoreContext);
 const actionHandlers: ActionDictionary = {
   login(state: State, action: Action): State {
     const {
-      tokens: { access, refresh },
+      tokens: { access: accessToken, refresh: refreshToken },
     } = action as LoginAction;
-    state.auth.accessToken = access;
-    state.auth.refreshToken = refresh;
-    localStorage.setItem('auth', JSON.stringify(state.auth));
-    return state;
+    const auth = { accessToken, refreshToken };
+    localStorage.setItem('auth', JSON.stringify(auth));
+    return { ...state, auth };
   },
 
   logout(state: State): State {
-    state.auth.accessToken = null;
-    state.auth.refreshToken = null;
     localStorage.removeItem('auth');
-    return state;
+    return { ...state, auth: { accessToken: null, refreshToken: null } };
   },
 };
 
