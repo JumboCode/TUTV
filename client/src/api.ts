@@ -121,19 +121,19 @@ export const apiReq = (
   // Add the path to the base URL
   let { href } = new URL(path, base);
   // Unless addTrailingSlash was explicitly passed as false, we make sure it's there
-  if (options.addTrailingSlash !== false && !href.endsWith('/'))
+  if (options.addTrailingSlash !== false && !href.endsWith('/')) {
     href = `${href}/`;
+  }
   // Add access token if we have it
-  if (options.token)
+  if (options.token) {
     options.headers = {
       ...options.headers,
       Authorization: `Bearer ${options.token}`,
     };
+  }
 
   return fetch(href, options).then(async (r) => {
-    const json = await r.json();
-    if (r.ok) return json;
-    const { status, statusText } = r;
-    throw new APIError(statusText, status, json);
+    if (r.ok) return r.json();
+    throw new APIError(r.statusText, r.status, await r.json());
   });
 };

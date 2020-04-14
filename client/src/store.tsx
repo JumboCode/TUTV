@@ -85,10 +85,10 @@ const reducer = (state: State, action: Action): State => {
 // leverages the context API
 export const StoreProvider: React.FC = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  return React.createElement(
-    StoreContext.Provider,
-    { value: { state, dispatch } },
-    children
+  return (
+    <StoreContext.Provider value={{ state, dispatch }}>
+      {children}
+    </StoreContext.Provider>
   );
 };
 
