@@ -68,9 +68,7 @@ export const apiReq = (
     href = `${href}/`;
 
   return fetch(href, options).then(async (r) => {
-    const json = await r.json();
-    if (r.ok) return json;
-    const { status, statusText } = r;
-    throw new APIError(statusText, status, json);
+    if (r.ok) return r.json();
+    throw new APIError(r.statusText, r.status, await r.json());
   });
 };
