@@ -12,9 +12,7 @@ const MemberDashboard: React.FC = () => {
       <div>
         <div className={styles.requestheader}>
           <div>My current requests</div>
-          <div className={styles.searchBar}>
-            <input type="string" placeholder="Search"></input>
-          </div>
+          <input type="string" placeholder="Search" />
         </div>
         <hr />
         <table className={styles.tableClass}>
