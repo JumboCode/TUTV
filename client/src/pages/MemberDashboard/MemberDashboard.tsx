@@ -9,16 +9,14 @@ const MemberDashboard: React.FC = () => {
         <div>TUTV Equipment Checkout</div>
         <Button>New Request</Button>
       </div>
-
-      <div className={styles.searchBar}>
-        <input type="string" placeholder="Search"></input>
-      </div>
-
       <div>
         <div className={styles.requestheader}>
-          My current requests<hr></hr>
+          <div>My current requests</div>
+          <div className={styles.searchBar}>
+            <input type="string" placeholder="Search"></input>
+          </div>
         </div>
-
+        <hr />
         <table className={styles.tableClass}>
           <tbody>
             <tr>
@@ -62,11 +60,9 @@ const MemberDashboard: React.FC = () => {
           </tbody>
         </table>
       </div>
-
       <div>
-        <div className={styles.requestheader}>
-          My past requests<hr></hr>
-        </div>
+        <div className={styles.requestheader}>My past requests</div>
+        <hr />
         <table className={styles.tableClass}>
           <tbody>
             <tr>
