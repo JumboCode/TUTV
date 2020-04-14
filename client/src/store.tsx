@@ -1,5 +1,4 @@
 import React, { useReducer, createContext, useContext } from 'react';
-import cloneDeep from 'lodash.clonedeep';
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -77,8 +76,7 @@ const actionHandlers: ActionDictionary = {
 
 const reducer = (state: State, action: Action): State => {
   const actionHandler = actionHandlers[action.type];
-  const state2 = cloneDeep(state);
-  return actionHandler(state2, action);
+  return actionHandler(state, action);
 };
 
 // The StoreProvider component wraps the whole app so that children can use useStore, which
