@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { useStore, StoreProvider } from './store';
-import LoginShield from './components/LoginShield';
+import LoginShield from 'components/LoginShield';
 
-import Button from './components/Button';
+import Button from 'components/Button';
 
 // Components for pages of the app
 import Home from './pages/Home';

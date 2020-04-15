@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { useStore } from '../../store';
+import { useStore } from 'store';
 
 export function useLoginState() {
   const { state } = useStore();

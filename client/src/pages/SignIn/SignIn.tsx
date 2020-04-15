@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './SignIn.module.css';
 import logo from './TUTVLogo.png';
 import Button from 'components/Button';
-import { useStore } from '../../store';
-import { useApiRequest } from '../../api';
+import { useStore } from 'store';
+import { useApiRequest } from 'api';
 
 const SignIn: React.FC = () => {
   const [username, setUsername] = React.useState('');
