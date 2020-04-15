@@ -17,8 +17,7 @@ const SignIn: React.FC = () => {
   });
 
   const doSignIn = (tokens: { refresh: string; access: string }) => {
-    const { refresh, access } = tokens;
-    dispatch({ type: 'login', tokens: { refresh, access } });
+    dispatch({ type: 'login', tokens });
   };
 
   const attemptSignIn = () => {
