@@ -1,27 +1,21 @@
 .header {
-  background: #aaa;
+  background: #eceff8;
   display: flex;
-  justify-content: space-between;
+  flex-flow: row;
+  align-items: center;
+  padding: 25px 15px;
 }
 
-.header > * {
-  margin: 10px;
-}
-
-.timepicker {
-  display: flex;
-  justify-content: space-between;
-  background: #add8e6;
-}
-
-.timepicker > * {
-  margin: 5px;
+.headerButton {
+  white-space: nowrap;
+  flex-basis: 150px;
+  flex-grow: 0;
+  flex-shrink: 1;
 }
 
 .equipmentPage {
   background: rgb(240, 240, 243);
   display: flex;
-  padding: 20px;
 }
 
 .equipmentPage > * {
@@ -33,7 +27,6 @@
   background: rgb(171, 172, 231);
   justify-content: space-between;
   max-width: 65%;
-  flex-flow: row wrap;
 }
 
 .equipmentGrid > * {
@@ -41,20 +34,78 @@
   align-items: center;
 }
 
-.selectedEquipment {
+.cart {
   display: flex;
-  background: rgb(176, 177, 231);
+  background: white;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  color: #628aba;
+  justify-content: center;
   flex-grow: 1;
   flex-basis: 30%;
 }
 
 .collapsehead {
-  background: #add8e6;
-  margin-bottom: 10px;
-  border: 1px solid #0067cd;
+  background: #3279d5;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 6px;
+  color: white;
   cursor: pointer;
+  margin: 11px;
 }
 
 .wrapper {
   width: 65%;
+}
+
+.tableClass {
+  border-spacing: 0 14px;
+  flex-grow: 1;
+  flex-basis: -1;
+}
+
+.tableClass td {
+  padding: 16px;
+}
+
+.tableClass th {
+  margin-bottom: 10px;
+  text-align: left;
+  background: #eceff8;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  padding: 0 16px;
+  color: #628aba;
+}
+
+.projectreq {
+  width: 100%;
+}
+
+.projectreq td {
+  background: #fff;
+}
+.projectreq td:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.projectreq td:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.cellName {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  color: #000000;
 }

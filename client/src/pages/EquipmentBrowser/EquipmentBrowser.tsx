@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './EquipmentBrowser.module.css';
 import Collabspible from 'react-collapsible';
+import Button from 'components/Button';
 
 import Item from 'types/Item';
 
@@ -18,21 +19,30 @@ const EquipmentBrowser: React.FC = () => {
   return (
     <div>
       <div className={styles.header}>
-        <div className={styles.timepicker}>
-          <div>
-            <div>Checkout Time</div>
-            <input type="datetime-local" />
-          </div>
-          <div>
-            <div>Return Time</div>
-            <input type="datetime-local" />
-          </div>
-        </div>
-        <div>
-          <button>Cancel Request</button>
-          <button>Continue</button>
-        </div>
+        <table className={styles.tableClass}>
+          <tbody>
+            <tr>
+              <th>Project Name</th>
+              <th>Checkout Time</th>
+              <th>Return Time</th>
+            </tr>
+            <tr className={styles.projectreq}>
+              <td className={styles.cellName}>Fake Project Name</td>
+              <td>
+                <input type="datetime-local" />
+              </td>
+              <td>
+                <input type="datetime-local" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <Button variant="gray" className={styles.headerButton}>
+          Cancel Request
+        </Button>
+        <Button className={styles.headerButton}>Continue</Button>
       </div>
+
       <div>
         <div className={styles.equipmentPage}>
           <div className={styles.wrapper}>
@@ -69,9 +79,9 @@ const EquipmentBrowser: React.FC = () => {
               <EquipmentGrid items={items} />
             </Collabspible>
           </div>
-          <div className={styles.selectedEquipment}>
+          <div className={styles.cart}>
             <div>
-              <div>Selected Equipment</div>
+              <div>Equipment Cart</div>
             </div>
           </div>
         </div>

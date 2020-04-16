@@ -1,7 +1,12 @@
 .equipmentGrid {
   display: flex;
-  background: rgb(57, 60, 241);
+  background: #eceff8;
   flex-flow: row wrap;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 9px;
+  color: black;
 }
 
 .equipment {
