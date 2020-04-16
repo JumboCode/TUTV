@@ -54,6 +54,7 @@ class EquipmentRequestViewSet(viewsets.ModelViewSet):
     serializer_class = EquipmentRequestSerializer
 
 def get_availability(request):
+    # Reference: https://www.webforefront.com/django/accessurlparamstemplates.html
     request_out = request.GET.get('out')
     request_in = request.GET.get('in')
     equipment_item_id = request.GET.get('id')
