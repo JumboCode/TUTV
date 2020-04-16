@@ -1,4 +1,4 @@
-# This script generates django fixtures from the hold TUTV app json format
+# This script generates django fixtures from the old TUTV app json format
 # Modify and run this script in case the django models change. Otherwise, 
 # is sufficient to run ./manage.py loaddata api/fixture/fixture_to_import.json
 # to populate a new sqlite database. 
