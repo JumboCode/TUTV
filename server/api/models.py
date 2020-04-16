@@ -74,7 +74,9 @@ class EquipmentRequest(models.Model):
     request_out = models.DateTimeField(null=True)
     request_in = models.DateTimeField(null=True)
     equipment_items = models.ManyToManyField(EquipmentItem, related_name='linked_requests') # no on_delete option possible. What happens when an item is deleted?
-    user = models.ForeignKey(User, related_name='linked_requests', on_delete=models.SET_NULL, null=True) # when the referenced object is deleted (i.e. the User), do not delete the request, but rather set the ForeignKey to null. This is only possible if null is True. 
+    # when the referenced object is deleted (i.e. the User), do not delete the request, but rather
+    # set the ForeignKey to null. This is only possible if null is True. 
+    user = models.ForeignKey(User, related_name='linked_requests', on_delete=models.SET_NULL, null=True)
 
     actual_out = models.DateTimeField(null=True, blank=True)
     actual_in = models.DateTimeField(null=True, blank=True)
