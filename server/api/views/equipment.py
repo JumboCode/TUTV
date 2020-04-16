@@ -53,7 +53,11 @@ class EquipmentRequestViewSet(viewsets.ModelViewSet):
     queryset = EquipmentRequest.objects.all()
     serializer_class = EquipmentRequestSerializer
 
-def get_availability(request, request_out, request_in, equipment_item_id):
+def get_availability(request):
+    request_out = request.GET.get('out')
+    request_in = request.GET.get('in')
+    equipment_item_id = request.GET.get('id')
+    
     request_out_fmt = datetime.datetime.strptime(request_out, "%Y-%m-%dT%H:%M:%S%z")
     request_in_fmt = datetime.datetime.strptime(request_in, "%Y-%m-%dT%H:%M:%S%z")
     
@@ -65,7 +69,7 @@ def get_availability(request, request_out, request_in, equipment_item_id):
         return JsonResponse("Request out cannot be later than request in", status=status.HTTP_400_BAD_REQUEST, safe=False)
 
     for equipment_request in equipment_item.linked_requests.all():
-        print("Checking request ID", request.id)
+        print("Checking request ID", equipment_request.id)
         if (request_out_fmt < equipment_request.request_out) or (request_in_fmt > equipment_request.request_in):
             return JsonResponse(False, safe=False)
     return JsonResponse(True, safe=False)
