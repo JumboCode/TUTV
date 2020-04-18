@@ -124,13 +124,12 @@ export const apiReq = (
   if (options.addTrailingSlash !== false && !href.endsWith('/')) {
     href = `${href}/`;
   }
-  // Add access token if we have it
-  if (options.token) {
-    options.headers = {
-      ...options.headers,
-      Authorization: `Bearer ${options.token}`,
-    };
-  }
+  // Add default headers (including access token if we have it)
+  options.headers = {
+    'Content-Type': 'application/json',
+    ...(options.token && { Authorization: `Bearer ${options.token}` }),
+    ...options.headers,
+  };
 
   return fetch(href, options).then(async (r) => {
     if (r.ok) return r.json();
