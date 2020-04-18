@@ -17,10 +17,10 @@ export async function getAccessToken(
   tokens: { accessToken: string | null; refreshToken: string | null },
   base: string,
   dispatch: React.Dispatch<Action>
-): Promise<string | undefined> {
+): Promise<string | null> {
   const { accessToken, refreshToken } = tokens;
   // We can't get a token if we don't have a refresh token or an access token
-  if (!accessToken && !refreshToken) return undefined;
+  if (!accessToken && !refreshToken) return null;
   // Return the token if the one we have is not expired
   const decoded: DecodedToken = jwtDecode(accessToken as string);
   if (decoded.exp > Date.now() / 1000) return accessToken as string;
@@ -39,11 +39,11 @@ export async function getAccessToken(
       return fetchedToken;
     })
     .catch((e) => {
-      // If we get an error, return undefined and log the user out
+      // If we get an error, return null and log the user out
       console.error('Error during token refresh:');
       console.log(e);
       dispatch({ type: 'logout' });
-      return undefined;
+      return null;
     });
   return newToken;
 }
@@ -53,7 +53,7 @@ interface ApiRequestOptions {
   headers?: any;
   body?: FormData | Blob | ArrayBuffer | string;
   addTrailingSlash?: boolean;
-  token?: string;
+  token?: string | null;
 }
 
 /**
