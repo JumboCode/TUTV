@@ -4,9 +4,24 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 
 type State = {
   apiUrl: string;
+  auth: {
+    accessToken: string | null;
+    refreshToken: string | null;
+  };
 };
 
-type Action = { type: 'action1' } | { type: 'action2' };
+// ACTION DEFINITIONS
+
+type LoginAction = {
+  type: 'login';
+  tokens: { access: string; refresh: string };
+};
+
+type LogoutAction = { type: 'logout' };
+
+export type Action = LoginAction | LogoutAction;
+
+// END ACTION DEFINITIONS
 
 type ActionDictionary = {
   [key: string]: (state: State, action: Action) => State;
@@ -22,6 +37,16 @@ const initialState: State = {
     production: new URL('/api/v1/', window.location.origin).href,
     test: 'https://tutv-dev.herokuapp.com/api/v1/',
   }[NODE_ENV],
+
+  // note: due to a bug, TypeScript marks code below this IIFE as "unreachable." This will be
+  // resolved in TypeScript 3.9. See https://github.com/microsoft/TypeScript/issues/36828
+  auth: (() => {
+    try {
+      return JSON.parse(localStorage.getItem('auth') || "this isn't json");
+    } catch (e) {
+      return { accessToken: null, refreshToken: null };
+    }
+  })(),
 };
 
 // Create the context
@@ -31,13 +56,18 @@ const StoreContext = createContext({} as StoreContext);
 // handler function here.
 // A handler function should take state as input, and return a copy of the state object mutated
 const actionHandlers: ActionDictionary = {
-  action1(state: State): State {
-    console.log('ACTION 1');
-    return state;
+  login(state: State, action: Action): State {
+    const {
+      tokens: { access: accessToken, refresh: refreshToken },
+    } = action as LoginAction;
+    const auth = { accessToken, refreshToken };
+    localStorage.setItem('auth', JSON.stringify(auth));
+    return { ...state, auth };
   },
-  action2(state: State): State {
-    console.log('ACTION 2');
-    return state;
+
+  logout(state: State): State {
+    localStorage.removeItem('auth');
+    return { ...state, auth: { accessToken: null, refreshToken: null } };
   },
 };
 
