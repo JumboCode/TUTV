@@ -20,19 +20,19 @@ the Windows Subsystem for Linux (WSL) before you try the setup instructions. Try
 it on your own if you don't have it!
 
  1. Clone this repository. `git clone https://github.com/JumboCode/TUTV.git` in your shell or
-    your favorite Git client. I recommend [Sourcetree](https://www.sourcetreeapp.com). If you
+    your favorite Git client. I recommend [Gitkraken](https://www.gitkraken.com/). If you
     do not have `git` installed, try and figure out how to install it on your computer.
 
  2. Install Python dependencies. `pipenv install`. If you don't have `pipenv`, try and figure out
     how to install it. Google 'how to install pipenv mac' or 'pipenv WSL' or 'ubuntu pipenv',
     depending on your OS. Learning how to install a missing dependency is a good skill to learn!
 
- 3. Install React dependencies. `cd src/frontend` and then, `yarn install`. If you don't have
+ 3. Install React dependencies. `cd client` and then, `yarn install`. If you don't have
     `yarn`, figure out how to install it! Feel free to ask questions about preferred methods, etc.
 
  4. Back in the project root, start your
     [virtual environment](https://www.google.com/search?q=virtual+environment+python) shell:
-    `cd ../..` and then, `pipenv shell`.
+    `cd ..` and then, `pipenv shell`.
 
  5. Start the Django development server. `./manage.py runserver`. You may see a red error message
     in your terminal at this point. Try and fix the error on your own. If you get stuck, ask for
