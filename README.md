@@ -46,6 +46,9 @@ setup instructions. Try installing it on your own if you don't have it!
  3. Install React dependencies. `cd client` and then, `yarn install`. If
     you don't have `yarn`, figure out how to install it! Feel free to ask
     questions about preferred methods, etc.
+   
+ 4. You need a `.env` file in the project root for the server to work
+    properly. Reach out to me about the content of this file.
 
 ## Starting Local Development
  1. In the project root, start your [virtual
@@ -80,7 +83,7 @@ look like:
    `master` for code reviews. Once code is reviewed, your branch will be
    merged into `dev` and deleted. 
 
- - We will be using ??? for communication. You will be invited soon, if you
+ - We will be using Discord for communication. You will be invited soon, if you
    haven't already.
 
  - We will use our weekly meetings to catch up on each other's progress,
