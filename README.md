@@ -4,7 +4,7 @@
 Current:
 * Project Manager: Frank Ma
 * Designer: Emai Lai
-* Developer: Xenia Rudchenko
+* Developer:[Xenia Rudchenko](https://github.com/XeniaRud)
 
 2019-2020:
 * Project Manager: Deepanshu Utkarsh
