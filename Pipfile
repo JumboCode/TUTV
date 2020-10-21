@@ -4,9 +4,17 @@ verify_ssl = true
 name = "pypi"
 
 [dev-packages]
+autopep8 = "*"
 
 [packages]
 django = "*"
+gunicorn = "*"
+django-heroku = "*"
+djangorestframework = "*"
+pillow = "*"
+whitenoise = "*"
+djangorestframework-simplejwt = "*"
+django-cors-headers = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.8"

@@ -1,0 +1,26 @@
+.btn {
+  border-radius: 4px;
+  border: none;
+  font-size: large;
+  padding: 8px 22px;
+}
+
+.btn.blue {
+  background: #3279d5;
+  color: #fff;
+}
+
+.btn.gray {
+  background: #eceff8;
+  color: #446bf7;
+}
+
+.btn.compact {
+  border-radius: 6px;
+  padding: 5px 18px;
+  font-size: 14px;
+}
+
+.btn.pill {
+  border-radius: 500px;
+}
