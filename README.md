@@ -2,7 +2,7 @@
 
 ## Contributors
 Current:
-* Project Manager: Frank Ma
+* Project Manager: [Frank Ma](https://github.com/Frama-99)
 * Designer: Emai Lai
 * Developer: [Xenia Rudchenko](https://github.com/XeniaRud)
 
