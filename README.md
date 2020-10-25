@@ -4,7 +4,7 @@
 Current:
 * Project Manager: Frank Ma
 * Designer: Emai Lai
-* Developer:[Xenia Rudchenko](https://github.com/XeniaRud)
+* Developer: [Xenia Rudchenko](https://github.com/XeniaRud)
 
 2019-2020:
 * Project Manager: Deepanshu Utkarsh
@@ -30,26 +30,38 @@ Current:
 ### Windows users!!
 To ensure consistency in our workflows with Mac and Linux users, you will
 need to install the Windows Subsystem for Linux (WSL) before you try the
-setup instructions. Try installing it on your own if you don't have it!
+setup instructions. [Follow the instructions
+here](https://docs.microsoft.com/en-us/windows/wsl/install-win10). Use
+Ubuntu 20.04 as the distro. If you aren't able to enable WSL 2, that is
+okay. 
+
+**Note: If you are using WSL, do the steps below in the WSL terminal.
+Launch the wsl terminal either through the Windows start menu, or by
+typing `wsl` in Powershell.**
 
 ### Steps
  1. Clone this repository. `git clone
     https://github.com/JumboCode/TUTV.git` in your shell or your favorite
-    Git client. I recommend [Gitkraken](https://www.gitkraken.com/). If you
-    do not have `git` installed, try and figure out how to install it on
-    your computer.
+    Git client. I recommend [Gitkraken](https://www.gitkraken.com/) (Note
+    for WSL: if you aren't experienced with git, it might be simpler to
+    stick with the command line interface!). If you do not have `git`
+    installed, try and figure out how to install it on your computer.
 
  2. Install Python dependencies. `pipenv install`. If you don't have
     `pipenv`, try and figure out how to install it. Google 'how to install
     pipenv mac' or 'pipenv WSL' or 'ubuntu pipenv', depending on your OS.
     Learning how to install a missing dependency is a good skill to learn!
 
- 3. Install React dependencies. `cd client` and then, `yarn install`. If
-    you don't have `yarn`, figure out how to install it! Feel free to ask
-    questions about preferred methods, etc.
+ 3. Install React dependencies. `yarn install`. If you don't have `yarn`,
+    figure out how to install it! Feel free to ask questions about
+    preferred methods, etc.
    
  4. You need a `.env` file in the project root for the server to work
-    properly. Reach out to me about the content of this file.
+    properly. Find this file in the #setup-and-workflow Discord channel.
+ 
+ 5. You also need a `sqlite.db` for local login to work. Also find this
+    file in the #setup-and-workflow Discord channel. Place it in the
+    `server` directory. 
 
 ## Starting Local Development
  1. In the project root, start your [virtual
