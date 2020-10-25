@@ -94,7 +94,7 @@ look like:
 
  - We will create one branch per issue, and create pull requests to
    `master` for code reviews. Once code is reviewed, your branch will be
-   merged into `dev` and deleted. 
+   merged into `master` and deleted. 
 
  - We will be using Discord for communication. You will be invited soon, if you
    haven't already.
