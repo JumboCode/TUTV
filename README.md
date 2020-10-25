@@ -5,6 +5,7 @@ Current:
 * Project Manager: [Frank Ma](https://github.com/Frama-99)
 * Designer: Emai Lai
 * Developer: [Xenia Rudchenko](https://github.com/XeniaRud)
+* Developer: [Aidan Barg](https://github.com/abarg12)
 
 2019-2020:
 * Project Manager: Deepanshu Utkarsh
