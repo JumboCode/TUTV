@@ -1,0 +1,52 @@
+.header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 41px;
+  height: 45px;
+  left: 22px;
+  top: 19px;
+}
+
+.headerButton {
+  white-space: nowrap;
+  flex-basis: 150px;
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+.viewItemsPage {
+  background: white;
+  display: flex;
+}
+
+.viewItemsPage > * {
+  margin: 25px;
+}
+
+.checkedItems {
+  width: 602px;
+  height: 738px;
+  left: 792px;
+  top: 229px;
+  background: #d6e5f7;
+  border-radius: 43px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.reqItems {
+  width: 692.83px;
+  height: 738px;
+  left: 44px;
+  top: 229px;
+  background: #a3c5ed;
+}

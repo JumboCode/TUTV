@@ -13,6 +13,7 @@ import MemberDashboard from './pages/MemberDashboard';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import RequestSummary from './pages/admin/RequestSummary';
 import SignIn from './pages/SignIn';
+import ViewProjectItems from 'pages/admin/ViewProjectItems';
 
 const App: React.FC = () => {
   return (
@@ -40,6 +41,9 @@ const App: React.FC = () => {
                 <li>
                   <Link to="/admin/equipment-request">Equipment Request</Link>
                 </li>
+                <li>
+                  <Link to="/admin/view-project-items">View Project Items</Link>
+                </li>
               </ul>
             </nav>
 
@@ -56,6 +60,9 @@ const App: React.FC = () => {
             <Switch>
               <Route path="/admin/dashboard">
                 <AdminDashboard />
+              </Route>
+              <Route path="/admin/view-project-items">
+                <ViewProjectItems />
               </Route>
               <Route path="/catalog">
                 <Catalog />
