@@ -5,7 +5,8 @@ from rest_framework.urlpatterns import format_suffix_patterns
 
 router = routers.DefaultRouter()
 
-# These routes are registered for views defined with Django's ModelViewset
+# These routes are registered for views defined with Django's ModelViewset.
+# They support HTTP GET, PUT, PATCH, DELETE
 router.register(r'users', views.UserViewSet)
 router.register(r'equipment-types', views.EquipmentTypeViewSet)
 router.register(r'equipment-items', views.EquipmentItemViewSet)
