@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './EquipmentBrowser.module.css';
 import Collabspible from 'react-collapsible';
-
+import Button from 'components/Button';
+import { ChevronDown } from 'react-feather';
 import Item from 'types/Item';
-
 import EquipmentGrid from 'components/EquipmentGrid';
 
 const EquipmentBrowser: React.FC = () => {
@@ -14,30 +14,42 @@ const EquipmentBrowser: React.FC = () => {
       .then((response) => setItems(response.data))
       .catch((error) => console.error(error));
   }, []);
-
   return (
     <div>
       <div className={styles.header}>
-        <div className={styles.timepicker}>
-          <div>
-            <div>Checkout Time</div>
-            <input type="datetime-local" />
-          </div>
-          <div>
-            <div>Return Time</div>
-            <input type="datetime-local" />
-          </div>
-        </div>
-        <div>
-          <button>Cancel Request</button>
-          <button>Continue</button>
-        </div>
+        <table className={styles.tableClass}>
+          <tbody>
+            <tr>
+              <th>Project Name</th>
+              <th>Checkout Time</th>
+              <th>Return Time</th>
+            </tr>
+            <tr className={styles.projectreq}>
+              <td className={styles.cellName}>Fake Project Name</td>
+              <td>
+                <input type="datetime-local" />
+              </td>
+              <td>
+                <input type="datetime-local" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <Button variant="gray" className={styles.headerButton}>
+          Cancel Request
+        </Button>
+        <Button className={styles.headerButton}>Continue</Button>
       </div>
       <div>
         <div className={styles.equipmentPage}>
           <div className={styles.wrapper}>
             <Collabspible
-              trigger="Camera &#9660;"
+              trigger={
+                <React.Fragment>
+                  {'Camera'}
+                  <ChevronDown color="white" size={20} />
+                </React.Fragment>
+              }
               triggerTagName="div"
               className={styles.collapsehead}
               openedClassName={styles.collapsehead}
@@ -45,7 +57,12 @@ const EquipmentBrowser: React.FC = () => {
               <EquipmentGrid items={items} />
             </Collabspible>
             <Collabspible
-              trigger="Audio &#9660;"
+              trigger={
+                <React.Fragment>
+                  {'Audio'}
+                  <ChevronDown color="white" size={20} />
+                </React.Fragment>
+              }
               triggerTagName="div"
               className={styles.collapsehead}
               openedClassName={styles.collapsehead}
@@ -53,7 +70,12 @@ const EquipmentBrowser: React.FC = () => {
               <EquipmentGrid items={items} />
             </Collabspible>
             <Collabspible
-              trigger="Lighting &#9660;"
+              trigger={
+                <React.Fragment>
+                  {'Lighting'}
+                  <ChevronDown color="white" size={20} />
+                </React.Fragment>
+              }
               triggerTagName="div"
               className={styles.collapsehead}
               openedClassName={styles.collapsehead}
@@ -61,7 +83,12 @@ const EquipmentBrowser: React.FC = () => {
               <EquipmentGrid items={items} />
             </Collabspible>
             <Collabspible
-              trigger="Misc &#9660;"
+              trigger={
+                <React.Fragment>
+                  {'Misc'}
+                  <ChevronDown color="white" size={20} />
+                </React.Fragment>
+              }
               triggerTagName="div"
               className={styles.collapsehead}
               openedClassName={styles.collapsehead}
@@ -69,9 +96,9 @@ const EquipmentBrowser: React.FC = () => {
               <EquipmentGrid items={items} />
             </Collabspible>
           </div>
-          <div className={styles.selectedEquipment}>
+          <div className={styles.cart}>
             <div>
-              <div>Selected Equipment</div>
+              <div>Equipment Cart</div>
             </div>
           </div>
         </div>
