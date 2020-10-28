@@ -6,6 +6,7 @@ Current:
 * Designer: Emai Lai
 * Developer: [Xenia Rudchenko](https://github.com/XeniaRud)
 * Developer: [Aidan Barg](https://github.com/abarg12)
+* Developer: [Patrick Gavazzi](https://github.com/pgavazzi1)
 
 2019-2020:
 * Project Manager: Deepanshu Utkarsh
