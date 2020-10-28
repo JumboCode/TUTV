@@ -42,3 +42,8 @@ The `fixtures_to_import.json` is generated from the `tutv_unformatted.json`
 file by running the python script `generate_fixtures.py`. If you need to
 change the django models and require a different format for the fixtures,
 modify and rerun this script to produce a valid fixture file.
+
+## Squashing Migrations
+If there are too many migration files and you want to clean them up, you
+can use the `squashmigrations` command. For example, you can do
+`./manage.py squashmigrations api <highest migration ID>`.
