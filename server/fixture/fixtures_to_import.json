@@ -1,0 +1,4310 @@
+[
+  {
+    "model": "sessions.session",
+    "pk": "6u3tfdkwi5cgdyp5lnrlp2n0tx3n0sh1",
+    "fields": {
+      "session_data": "N2Y5ZGJmMDFkNGQzYmEwOTRhMzliYmNkNzZkODI5NzBhZGZmMGM5Mjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjMGUwYTI5NTUwMGZlMmQwYWViY2U2YzRiNDE5ZDY3YzY3MDc5M2MwIn0=",
+      "expire_date": "2019-12-08T23:52:09.908Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "8hedhuhpl2phbbav48j0blyj955yhxes",
+    "fields": {
+      "session_data": "YWE3OGU0ZDliZmRlMzc5NGU1MDdiNGFkYWYxNjUzYzY1NTRhOGUxYzp7Il9hdXRoX3VzZXJfaWQiOiI1IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIzYWQ5MzNiNDEyMThkOGQ3OGIxZmRkOGNkMTNmMmMxMmE4MTFjMjk1In0=",
+      "expire_date": "2019-11-21T23:04:33.775Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "925mby3ftkuu2wluk3k5zc7vlzvumy0k",
+    "fields": {
+      "session_data": "N2Y5ZGJmMDFkNGQzYmEwOTRhMzliYmNkNzZkODI5NzBhZGZmMGM5Mjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjMGUwYTI5NTUwMGZlMmQwYWViY2U2YzRiNDE5ZDY3YzY3MDc5M2MwIn0=",
+      "expire_date": "2019-11-21T23:01:44.721Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "c71yqypo8shg0hlcbn89wkj26lnf4ax2",
+    "fields": {
+      "session_data": "NTVhMjhhZThhOWZhMjg4NDRkZWQ0MWIzMzRmZjQ0NGJjMDY1NWU3Zjp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5Njk0YjkxZjI1ZTE3OWI0ZDQzOWJhZGJmMDEwZjdlZTNkZDNiZjhjIn0=",
+      "expire_date": "2019-11-21T23:01:31.425Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "fwuit7a42f1cyiszumvf6jbrh3ofqx28",
+    "fields": {
+      "session_data": "N2Y5ZGJmMDFkNGQzYmEwOTRhMzliYmNkNzZkODI5NzBhZGZmMGM5Mjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjMGUwYTI5NTUwMGZlMmQwYWViY2U2YzRiNDE5ZDY3YzY3MDc5M2MwIn0=",
+      "expire_date": "2019-12-22T22:24:48.425Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "l3bnk48cj4jr674n847kgbt9n5b0qwjb",
+    "fields": {
+      "session_data": "N2Y5ZGJmMDFkNGQzYmEwOTRhMzliYmNkNzZkODI5NzBhZGZmMGM5Mjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjMGUwYTI5NTUwMGZlMmQwYWViY2U2YzRiNDE5ZDY3YzY3MDc5M2MwIn0=",
+      "expire_date": "2019-11-24T05:29:52.682Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "mqpcuqghf51z6jiyurr8i6u3vdbl2hyo",
+    "fields": {
+      "session_data": "NTVhMjhhZThhOWZhMjg4NDRkZWQ0MWIzMzRmZjQ0NGJjMDY1NWU3Zjp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5Njk0YjkxZjI1ZTE3OWI0ZDQzOWJhZGJmMDEwZjdlZTNkZDNiZjhjIn0=",
+      "expire_date": "2019-11-06T16:44:45.551Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "whmp5omwx9l47yngon8iccmp6dhrl2dv",
+    "fields": {
+      "session_data": "N2Y5ZGJmMDFkNGQzYmEwOTRhMzliYmNkNzZkODI5NzBhZGZmMGM5Mjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjMGUwYTI5NTUwMGZlMmQwYWViY2U2YzRiNDE5ZDY3YzY3MDc5M2MwIn0=",
+      "expire_date": "2019-11-06T16:39:08.344Z"
+    }
+  },
+  { "model": "api.equipmentcategory", "pk": 1, "fields": { "name": "Stand" } },
+  { "model": "api.equipmentcategory", "pk": 2, "fields": { "name": "Clamp" } },
+  { "model": "api.equipmentcategory", "pk": 3, "fields": { "name": "Lens" } },
+  { "model": "api.equipmentcategory", "pk": 4, "fields": { "name": "Cable" } },
+  { "model": "api.equipmentcategory", "pk": 5, "fields": { "name": "Tape" } },
+  {
+    "model": "api.equipmentcategory",
+    "pk": 6,
+    "fields": { "name": "Hard Drive" }
+  },
+  { "model": "api.equipmentcategory", "pk": 7, "fields": { "name": "Tripod" } },
+  {
+    "model": "api.equipmentcategory",
+    "pk": 8,
+    "fields": { "name": "Memory Card" }
+  },
+  {
+    "model": "api.equipmentcategory",
+    "pk": 9,
+    "fields": { "name": "Apple Box" }
+  },
+  {
+    "model": "api.equipmentcategory",
+    "pk": 10,
+    "fields": { "name": "T3i/T5i" }
+  },
+  { "model": "api.equipmentcategory", "pk": 11, "fields": { "name": "Slate" } },
+  {
+    "model": "api.equipmentcategory",
+    "pk": 12,
+    "fields": { "name": "AKG Microphone" }
+  },
+  { "model": "api.equipmentcategory", "pk": 13, "fields": { "name": "Light" } },
+  { "model": "api.equipmentcategory", "pk": 14, "fields": { "name": "T7i" } },
+  {
+    "model": "api.equipmentcategory",
+    "pk": 15,
+    "fields": { "name": "Headphones" }
+  },
+  {
+    "model": "api.equipmentcategory",
+    "pk": 16,
+    "fields": { "name": "Audio Interface" }
+  },
+  {
+    "model": "api.equipmentcategory",
+    "pk": 17,
+    "fields": { "name": "Stabilizer" }
+  },
+  {
+    "model": "api.equipmentcategory",
+    "pk": 18,
+    "fields": { "name": "Shotgun Microphone" }
+  },
+  {
+    "model": "api.equipmentcategory",
+    "pk": 19,
+    "fields": { "name": "Tascam" }
+  },
+  { "model": "api.equipmentcategory", "pk": 20, "fields": { "name": "Bag" } },
+  {
+    "model": "api.equipmentcategory",
+    "pk": 21,
+    "fields": { "name": "Microphone" }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 1,
+    "fields": { "name": "Light Stand (Small Black)", "category": 1 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 2,
+    "fields": { "name": "AKG Mic (D880), Case", "category": 12 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 3,
+    "fields": { "name": "Tripod", "category": 7 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 4,
+    "fields": { "name": "Black Wrap", "category": 13 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 5,
+    "fields": { "name": "SD Card (32GB)", "category": 8 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 6,
+    "fields": { "name": "24mm Lens, Caps, Hood", "category": 3 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 7,
+    "fields": { "name": "MicroSD Adapter, MicroSD (2GB)", "category": 8 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 8,
+    "fields": {
+      "name": "Shotgun Mic (Sennheiser MKE600), Condom, Case",
+      "category": 18
+    }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 9,
+    "fields": {
+      "name": "LED Light Kit (doesn't work with stands)",
+      "category": 13
+    }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 10,
+    "fields": { "name": "AKG Mic (D770)", "category": 12 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 11,
+    "fields": { "name": "On-Camera Mic", "category": 21 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 12,
+    "fields": { "name": "XLR-XLR Cable (15ft)", "category": 21 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 13,
+    "fields": { "name": "LED Panel Battery", "category": 13 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 14,
+    "fields": { "name": "Whiteboard Marker", "category": 11 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 15,
+    "fields": { "name": "Follow Focus", "category": 17 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 16,
+    "fields": { "name": "T7i", "category": 14 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 17,
+    "fields": { "name": "Headphones (JVC)", "category": 15 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 18,
+    "fields": { "name": "Camera Bag", "category": 20 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 19,
+    "fields": { "name": "18-135mm Lens, Caps", "category": 3 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 20,
+    "fields": { "name": "Behringer Audio Interface", "category": 16 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 21,
+    "fields": { "name": "3.5mm-3.5mm Cable (3ft)", "category": 4 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 22,
+    "fields": { "name": "Pop Filter", "category": 21 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 23,
+    "fields": { "name": "Shotgun Mic (AT815b)", "category": 18 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 24,
+    "fields": { "name": "Tascam Remote", "category": 19 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 25,
+    "fields": { "name": "58mm XIT Lens, Caps, Bag", "category": 3 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 26,
+    "fields": { "name": "XLR-XLR Cable (5ft)", "category": 21 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 27,
+    "fields": { "name": "Spot Light", "category": 13 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 28,
+    "fields": { "name": "MXL 770 Mic", "category": 21 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 29,
+    "fields": {
+      "name": "Kino (4ft), 4 Bank Ballast, Yellow Cable",
+      "category": 13
+    }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 30,
+    "fields": { "name": "Tripod Plate", "category": 7 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 31,
+    "fields": { "name": "Tripod Bag", "category": 7 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 32,
+    "fields": { "name": "SD Card (2GB)", "category": 8 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 33,
+    "fields": { "name": "C-3 Condenser Microphone, Case", "category": 21 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 34,
+    "fields": { "name": "Tascam Condom", "category": 19 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 35,
+    "fields": { "name": "Tascam Battery", "category": 19 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 36,
+    "fields": { "name": "Tripod (Benro), Bag", "category": 7 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 37,
+    "fields": { "name": "Clamp (Yellow Tip)", "category": 2 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 38,
+    "fields": { "name": "Shotgun Mic Condom", "category": 18 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 39,
+    "fields": { "name": "SD Card Case", "category": 8 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 40,
+    "fields": { "name": "XLR Splitter Cable", "category": 4 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 41,
+    "fields": { "name": "C-Stand Arm", "category": 1 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 42,
+    "fields": { "name": "Boom Pole", "category": 18 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 43,
+    "fields": { "name": "Gaff Tape", "category": 5 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 44,
+    "fields": { "name": "AKG Mic Condom", "category": 12 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 45,
+    "fields": { "name": "Tascam Remote, Cable", "category": 19 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 46,
+    "fields": { "name": "SD Card (64GB)", "category": 8 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 47,
+    "fields": {
+      "name": "Kino (2ft), 2 Bank Ballast, Red Cable",
+      "category": 13
+    }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 48,
+    "fields": { "name": "Headphones (ATH-M20)", "category": 15 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 49,
+    "fields": { "name": "Headphones (Sony)", "category": 15 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 50,
+    "fields": { "name": "35-80mm Lens, Caps", "category": 3 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 51,
+    "fields": { "name": "Hard Drive (480GB)", "category": 6 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 52,
+    "fields": { "name": "Clamp (Orange Tip)", "category": 2 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 53,
+    "fields": { "name": "Focusrite 2i2 Audio Interface", "category": 16 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 54,
+    "fields": { "name": "Slate (Whiteboard)", "category": 11 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 55,
+    "fields": { "name": "T3i", "category": 10 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 56,
+    "fields": { "name": "Apple Box (Half)", "category": 9 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 57,
+    "fields": { "name": "18-55mm Lens, Caps", "category": 3 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 58,
+    "fields": { "name": "MicroSD Adapter", "category": 8 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 59,
+    "fields": { "name": "SD Card (16GB)", "category": 8 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 60,
+    "fields": { "name": "LED Panel (YN300)", "category": 13 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 61,
+    "fields": { "name": "XLR-TRS Cable (15ft)", "category": 4 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 62,
+    "fields": { "name": "Light Stand (Blue)", "category": 1 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 63,
+    "fields": { "name": "35mm Lens, Caps", "category": 3 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 64,
+    "fields": { "name": "Duct Tape", "category": 5 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 65,
+    "fields": { "name": "Opteka SteadyVid", "category": 17 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 66,
+    "fields": { "name": "Whiteboard Eraser", "category": 11 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 67,
+    "fields": { "name": "100mm Lens, Caps, Hood, Case", "category": 3 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 68,
+    "fields": { "name": "T7i Battery", "category": 14 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 69,
+    "fields": { "name": "MicroSD Adapter, MicroSD (4GB)", "category": 8 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 70,
+    "fields": { "name": "XIT UV Filter, Case", "category": 3 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 71,
+    "fields": { "name": "T5i", "category": 10 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 72,
+    "fields": { "name": "SD Card (8GB)", "category": 8 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 73,
+    "fields": { "name": "Tascam Charger", "category": 19 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 74,
+    "fields": { "name": "3.5mm Splitter Cable", "category": 4 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 75,
+    "fields": { "name": "3.5mm-TRS Adapter", "category": 4 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 76,
+    "fields": { "name": "TRS-XLR Cable (15ft)", "category": 4 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 77,
+    "fields": { "name": "Lav Mic Kit", "category": 21 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 78,
+    "fields": { "name": "Dead Cat", "category": 18 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 79,
+    "fields": { "name": "Headphones (ATH-M20x)", "category": 15 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 80,
+    "fields": { "name": "Reflector Floodlight", "category": 13 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 81,
+    "fields": { "name": "Light Stand (Small Silver)", "category": 1 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 82,
+    "fields": { "name": "Socket Handles", "category": 13 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 83,
+    "fields": { "name": "Tascam, Case", "category": 19 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 84,
+    "fields": { "name": "Stand (Small Blue)", "category": 1 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 85,
+    "fields": { "name": "C-Stand", "category": 1 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 86,
+    "fields": { "name": "Light Stand (Big Black)", "category": 1 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 87,
+    "fields": { "name": "White Flag", "category": 13 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 88,
+    "fields": { "name": "XLR-XLR Cable (10ft)", "category": 21 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 89,
+    "fields": { "name": "XLR Gender Bender Cable", "category": 4 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 90,
+    "fields": { "name": "Clamp (Black Tip)", "category": 2 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 91,
+    "fields": { "name": "50mm Lens, Back Cap, Hood", "category": 3 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 92,
+    "fields": { "name": "C47s", "category": 2 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 93,
+    "fields": { "name": "Hard Drive (256GB)", "category": 6 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 94,
+    "fields": { "name": "T3i/T5i Battery", "category": 10 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 95,
+    "fields": { "name": "MiniXLR-XLR Cable (1ft)", "category": 4 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 96,
+    "fields": { "name": "Hard Drive (2TB)", "category": 6 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 97,
+    "fields": { "name": "Hard Drive (1TB)", "category": 6 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 98,
+    "fields": { "name": "85mm Lens, Caps", "category": 3 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 99,
+    "fields": { "name": "Apple Box (Full)", "category": 9 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 100,
+    "fields": { "name": "Foamcore Bounce", "category": 13 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 101,
+    "fields": { "name": "LED Light Kit", "category": 13 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 102,
+    "fields": { "name": "XLR-3.5mm Cable (1ft)", "category": 4 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 103,
+    "fields": { "name": "Slate (Chalkboard)", "category": 11 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 104,
+    "fields": { "name": "GlideGear Shoulder Rig", "category": 17 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 105,
+    "fields": { "name": "PortaBrace Tascam Case, Strap", "category": 19 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 106,
+    "fields": { "name": "GlideCam 1000 Pro", "category": 17 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 107,
+    "fields": { "name": "Mic Boom Stand", "category": 1 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 108,
+    "fields": { "name": "Fig Rig", "category": 17 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 109,
+    "fields": { "name": "Coax-XLR Cable", "category": 4 }
+  },
+  {
+    "model": "api.equipmenttype",
+    "pk": 110,
+    "fields": { "name": "Shotgun Mic (AT815b), Condom, Case", "category": 18 }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 1,
+    "fields": {
+      "equipment_type": 83,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 2,
+    "fields": {
+      "equipment_type": 83,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 3,
+    "fields": {
+      "equipment_type": 36,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 4,
+    "fields": {
+      "equipment_type": 36,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 5,
+    "fields": {
+      "equipment_type": 31,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 6,
+    "fields": {
+      "equipment_type": 31,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 7,
+    "fields": {
+      "equipment_type": 30,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 8,
+    "fields": {
+      "equipment_type": 30,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 9,
+    "fields": {
+      "equipment_type": 30,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 10,
+    "fields": {
+      "equipment_type": 30,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 11,
+    "fields": {
+      "equipment_type": 30,
+      "id_of_type": 5,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 12,
+    "fields": {
+      "equipment_type": 30,
+      "id_of_type": 6,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 13,
+    "fields": {
+      "equipment_type": 30,
+      "id_of_type": 7,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 14,
+    "fields": {
+      "equipment_type": 30,
+      "id_of_type": 8,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 15,
+    "fields": {
+      "equipment_type": 30,
+      "id_of_type": 9,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 16,
+    "fields": {
+      "equipment_type": 3,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 17,
+    "fields": {
+      "equipment_type": 3,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 18,
+    "fields": {
+      "equipment_type": 3,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 19,
+    "fields": {
+      "equipment_type": 3,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 20,
+    "fields": {
+      "equipment_type": 76,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 21,
+    "fields": {
+      "equipment_type": 70,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 22,
+    "fields": {
+      "equipment_type": 66,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 23,
+    "fields": {
+      "equipment_type": 66,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 24,
+    "fields": {
+      "equipment_type": 14,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 25,
+    "fields": {
+      "equipment_type": 87,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 26,
+    "fields": {
+      "equipment_type": 89,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 27,
+    "fields": {
+      "equipment_type": 40,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 28,
+    "fields": {
+      "equipment_type": 102,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 29,
+    "fields": {
+      "equipment_type": 61,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 30,
+    "fields": {
+      "equipment_type": 61,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 31,
+    "fields": {
+      "equipment_type": 26,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 32,
+    "fields": {
+      "equipment_type": 88,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 33,
+    "fields": {
+      "equipment_type": 88,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 34,
+    "fields": {
+      "equipment_type": 88,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 35,
+    "fields": {
+      "equipment_type": 88,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 36,
+    "fields": {
+      "equipment_type": 12,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 37,
+    "fields": {
+      "equipment_type": 12,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 38,
+    "fields": {
+      "equipment_type": 2,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 39,
+    "fields": {
+      "equipment_type": 2,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 40,
+    "fields": {
+      "equipment_type": 44,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 41,
+    "fields": {
+      "equipment_type": 99,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 42,
+    "fields": {
+      "equipment_type": 99,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 43,
+    "fields": {
+      "equipment_type": 99,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 44,
+    "fields": {
+      "equipment_type": 56,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 45,
+    "fields": {
+      "equipment_type": 4,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 46,
+    "fields": {
+      "equipment_type": 42,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 47,
+    "fields": {
+      "equipment_type": 42,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 48,
+    "fields": {
+      "equipment_type": 42,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 49,
+    "fields": {
+      "equipment_type": 41,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 50,
+    "fields": {
+      "equipment_type": 41,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 51,
+    "fields": {
+      "equipment_type": 41,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 52,
+    "fields": {
+      "equipment_type": 41,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 53,
+    "fields": {
+      "equipment_type": 41,
+      "id_of_type": 5,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 54,
+    "fields": {
+      "equipment_type": 85,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 55,
+    "fields": {
+      "equipment_type": 85,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 56,
+    "fields": {
+      "equipment_type": 85,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 57,
+    "fields": {
+      "equipment_type": 85,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 58,
+    "fields": {
+      "equipment_type": 92,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 59,
+    "fields": {
+      "equipment_type": 18,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 60,
+    "fields": {
+      "equipment_type": 18,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 61,
+    "fields": {
+      "equipment_type": 18,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 62,
+    "fields": {
+      "equipment_type": 18,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 63,
+    "fields": {
+      "equipment_type": 18,
+      "id_of_type": 5,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 64,
+    "fields": {
+      "equipment_type": 18,
+      "id_of_type": 6,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 65,
+    "fields": {
+      "equipment_type": 18,
+      "id_of_type": 7,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 66,
+    "fields": {
+      "equipment_type": 18,
+      "id_of_type": 8,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 67,
+    "fields": {
+      "equipment_type": 18,
+      "id_of_type": 9,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 68,
+    "fields": {
+      "equipment_type": 90,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 69,
+    "fields": {
+      "equipment_type": 90,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 70,
+    "fields": {
+      "equipment_type": 90,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 71,
+    "fields": {
+      "equipment_type": 52,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 72,
+    "fields": {
+      "equipment_type": 52,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 73,
+    "fields": {
+      "equipment_type": 52,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 74,
+    "fields": {
+      "equipment_type": 52,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 75,
+    "fields": {
+      "equipment_type": 52,
+      "id_of_type": 5,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 76,
+    "fields": {
+      "equipment_type": 37,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 77,
+    "fields": {
+      "equipment_type": 109,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 78,
+    "fields": {
+      "equipment_type": 109,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 79,
+    "fields": {
+      "equipment_type": 78,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 80,
+    "fields": {
+      "equipment_type": 78,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 81,
+    "fields": {
+      "equipment_type": 78,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 82,
+    "fields": {
+      "equipment_type": 64,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 83,
+    "fields": {
+      "equipment_type": 108,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 84,
+    "fields": {
+      "equipment_type": 100,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 85,
+    "fields": {
+      "equipment_type": 15,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 86,
+    "fields": {
+      "equipment_type": 43,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 87,
+    "fields": {
+      "equipment_type": 106,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 88,
+    "fields": {
+      "equipment_type": 104,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 89,
+    "fields": {
+      "equipment_type": 104,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 90,
+    "fields": {
+      "equipment_type": 97,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 91,
+    "fields": {
+      "equipment_type": 97,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 92,
+    "fields": {
+      "equipment_type": 97,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 93,
+    "fields": {
+      "equipment_type": 93,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 94,
+    "fields": {
+      "equipment_type": 93,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 95,
+    "fields": {
+      "equipment_type": 93,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 96,
+    "fields": {
+      "equipment_type": 93,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 97,
+    "fields": {
+      "equipment_type": 51,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 98,
+    "fields": {
+      "equipment_type": 51,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 99,
+    "fields": {
+      "equipment_type": 51,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 100,
+    "fields": {
+      "equipment_type": 96,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 101,
+    "fields": {
+      "equipment_type": 96,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 102,
+    "fields": {
+      "equipment_type": 48,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 103,
+    "fields": {
+      "equipment_type": 79,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 104,
+    "fields": {
+      "equipment_type": 17,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 105,
+    "fields": {
+      "equipment_type": 17,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 106,
+    "fields": {
+      "equipment_type": 49,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 107,
+    "fields": {
+      "equipment_type": 77,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 108,
+    "fields": {
+      "equipment_type": 77,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 109,
+    "fields": {
+      "equipment_type": 77,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 110,
+    "fields": {
+      "equipment_type": 77,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 111,
+    "fields": {
+      "equipment_type": 101,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 112,
+    "fields": {
+      "equipment_type": 60,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 113,
+    "fields": {
+      "equipment_type": 13,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 114,
+    "fields": {
+      "equipment_type": 13,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 115,
+    "fields": {
+      "equipment_type": 13,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 116,
+    "fields": {
+      "equipment_type": 13,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 117,
+    "fields": {
+      "equipment_type": 13,
+      "id_of_type": 5,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 118,
+    "fields": {
+      "equipment_type": 13,
+      "id_of_type": 6,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 119,
+    "fields": {
+      "equipment_type": 86,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 120,
+    "fields": {
+      "equipment_type": 86,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 121,
+    "fields": {
+      "equipment_type": 86,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 122,
+    "fields": {
+      "equipment_type": 62,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 123,
+    "fields": {
+      "equipment_type": 62,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 124,
+    "fields": {
+      "equipment_type": 62,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 125,
+    "fields": {
+      "equipment_type": 1,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 126,
+    "fields": {
+      "equipment_type": 1,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 127,
+    "fields": {
+      "equipment_type": 1,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 128,
+    "fields": {
+      "equipment_type": 81,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 129,
+    "fields": {
+      "equipment_type": 81,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 130,
+    "fields": {
+      "equipment_type": 81,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 131,
+    "fields": {
+      "equipment_type": 81,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 132,
+    "fields": {
+      "equipment_type": 81,
+      "id_of_type": 5,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 133,
+    "fields": {
+      "equipment_type": 107,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 134,
+    "fields": {
+      "equipment_type": 107,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 135,
+    "fields": {
+      "equipment_type": 7,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 136,
+    "fields": {
+      "equipment_type": 69,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 137,
+    "fields": {
+      "equipment_type": 58,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 138,
+    "fields": {
+      "equipment_type": 95,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 139,
+    "fields": {
+      "equipment_type": 28,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 140,
+    "fields": {
+      "equipment_type": 11,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 141,
+    "fields": {
+      "equipment_type": 11,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 142,
+    "fields": {
+      "equipment_type": 65,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 143,
+    "fields": {
+      "equipment_type": 65,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 144,
+    "fields": {
+      "equipment_type": 22,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 145,
+    "fields": {
+      "equipment_type": 105,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 146,
+    "fields": {
+      "equipment_type": 105,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 147,
+    "fields": {
+      "equipment_type": 80,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 148,
+    "fields": {
+      "equipment_type": 80,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 149,
+    "fields": {
+      "equipment_type": 80,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 150,
+    "fields": {
+      "equipment_type": 80,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 151,
+    "fields": {
+      "equipment_type": 80,
+      "id_of_type": 5,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 152,
+    "fields": {
+      "equipment_type": 80,
+      "id_of_type": 6,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 153,
+    "fields": {
+      "equipment_type": 32,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 154,
+    "fields": {
+      "equipment_type": 32,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 155,
+    "fields": {
+      "equipment_type": 32,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 156,
+    "fields": {
+      "equipment_type": 72,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 157,
+    "fields": {
+      "equipment_type": 72,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 158,
+    "fields": {
+      "equipment_type": 72,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 159,
+    "fields": {
+      "equipment_type": 59,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 160,
+    "fields": {
+      "equipment_type": 59,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 161,
+    "fields": {
+      "equipment_type": 59,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 162,
+    "fields": {
+      "equipment_type": 59,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 163,
+    "fields": {
+      "equipment_type": 5,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 164,
+    "fields": {
+      "equipment_type": 5,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 165,
+    "fields": {
+      "equipment_type": 5,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 166,
+    "fields": {
+      "equipment_type": 5,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 167,
+    "fields": {
+      "equipment_type": 5,
+      "id_of_type": 5,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 168,
+    "fields": {
+      "equipment_type": 5,
+      "id_of_type": 6,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 169,
+    "fields": {
+      "equipment_type": 5,
+      "id_of_type": 7,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 170,
+    "fields": {
+      "equipment_type": 5,
+      "id_of_type": 8,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 171,
+    "fields": {
+      "equipment_type": 5,
+      "id_of_type": 9,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 172,
+    "fields": {
+      "equipment_type": 5,
+      "id_of_type": 10,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 173,
+    "fields": {
+      "equipment_type": 5,
+      "id_of_type": 11,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 174,
+    "fields": {
+      "equipment_type": 5,
+      "id_of_type": 12,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 175,
+    "fields": {
+      "equipment_type": 5,
+      "id_of_type": 13,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 176,
+    "fields": {
+      "equipment_type": 5,
+      "id_of_type": 14,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 177,
+    "fields": {
+      "equipment_type": 5,
+      "id_of_type": 15,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 178,
+    "fields": {
+      "equipment_type": 46,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 179,
+    "fields": {
+      "equipment_type": 39,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 180,
+    "fields": {
+      "equipment_type": 39,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 181,
+    "fields": {
+      "equipment_type": 39,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 182,
+    "fields": {
+      "equipment_type": 39,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 183,
+    "fields": {
+      "equipment_type": 39,
+      "id_of_type": 5,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 184,
+    "fields": {
+      "equipment_type": 39,
+      "id_of_type": 6,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 185,
+    "fields": {
+      "equipment_type": 39,
+      "id_of_type": 7,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 186,
+    "fields": {
+      "equipment_type": 39,
+      "id_of_type": 8,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 187,
+    "fields": {
+      "equipment_type": 39,
+      "id_of_type": 9,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 188,
+    "fields": {
+      "equipment_type": 39,
+      "id_of_type": 10,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 189,
+    "fields": {
+      "equipment_type": 110,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 190,
+    "fields": {
+      "equipment_type": 110,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 191,
+    "fields": {
+      "equipment_type": 23,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 192,
+    "fields": {
+      "equipment_type": 23,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 193,
+    "fields": {
+      "equipment_type": 23,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 194,
+    "fields": {
+      "equipment_type": 23,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 195,
+    "fields": {
+      "equipment_type": 8,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 196,
+    "fields": {
+      "equipment_type": 8,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 197,
+    "fields": {
+      "equipment_type": 8,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 198,
+    "fields": {
+      "equipment_type": 38,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 199,
+    "fields": {
+      "equipment_type": 38,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 200,
+    "fields": {
+      "equipment_type": 103,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 201,
+    "fields": {
+      "equipment_type": 54,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 202,
+    "fields": {
+      "equipment_type": 54,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 203,
+    "fields": {
+      "equipment_type": 54,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 204,
+    "fields": {
+      "equipment_type": 82,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 205,
+    "fields": {
+      "equipment_type": 82,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 206,
+    "fields": {
+      "equipment_type": 82,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 207,
+    "fields": {
+      "equipment_type": 82,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 208,
+    "fields": {
+      "equipment_type": 82,
+      "id_of_type": 5,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 209,
+    "fields": {
+      "equipment_type": 82,
+      "id_of_type": 6,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 210,
+    "fields": {
+      "equipment_type": 27,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 211,
+    "fields": {
+      "equipment_type": 27,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 212,
+    "fields": {
+      "equipment_type": 27,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 213,
+    "fields": {
+      "equipment_type": 27,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 214,
+    "fields": {
+      "equipment_type": 84,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 215,
+    "fields": {
+      "equipment_type": 84,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 216,
+    "fields": {
+      "equipment_type": 84,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 217,
+    "fields": {
+      "equipment_type": 84,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 218,
+    "fields": {
+      "equipment_type": 55,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 219,
+    "fields": {
+      "equipment_type": 55,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 220,
+    "fields": {
+      "equipment_type": 55,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 221,
+    "fields": {
+      "equipment_type": 55,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 222,
+    "fields": {
+      "equipment_type": 94,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 223,
+    "fields": {
+      "equipment_type": 94,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 224,
+    "fields": {
+      "equipment_type": 94,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 225,
+    "fields": {
+      "equipment_type": 94,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 226,
+    "fields": {
+      "equipment_type": 94,
+      "id_of_type": 5,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 227,
+    "fields": {
+      "equipment_type": 94,
+      "id_of_type": 6,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 228,
+    "fields": {
+      "equipment_type": 94,
+      "id_of_type": 7,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 229,
+    "fields": {
+      "equipment_type": 94,
+      "id_of_type": 8,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 230,
+    "fields": {
+      "equipment_type": 94,
+      "id_of_type": 9,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 231,
+    "fields": {
+      "equipment_type": 94,
+      "id_of_type": 10,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 232,
+    "fields": {
+      "equipment_type": 94,
+      "id_of_type": 11,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 233,
+    "fields": {
+      "equipment_type": 94,
+      "id_of_type": 12,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 234,
+    "fields": {
+      "equipment_type": 94,
+      "id_of_type": 13,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 235,
+    "fields": {
+      "equipment_type": 94,
+      "id_of_type": 14,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 236,
+    "fields": {
+      "equipment_type": 94,
+      "id_of_type": 15,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 237,
+    "fields": {
+      "equipment_type": 94,
+      "id_of_type": 16,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 238,
+    "fields": {
+      "equipment_type": 94,
+      "id_of_type": 17,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 239,
+    "fields": {
+      "equipment_type": 94,
+      "id_of_type": 18,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 240,
+    "fields": {
+      "equipment_type": 94,
+      "id_of_type": 19,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 241,
+    "fields": {
+      "equipment_type": 94,
+      "id_of_type": 20,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 242,
+    "fields": {
+      "equipment_type": 71,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 243,
+    "fields": {
+      "equipment_type": 68,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 244,
+    "fields": {
+      "equipment_type": 68,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 245,
+    "fields": {
+      "equipment_type": 68,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 246,
+    "fields": {
+      "equipment_type": 68,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 247,
+    "fields": {
+      "equipment_type": 68,
+      "id_of_type": 5,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 248,
+    "fields": {
+      "equipment_type": 68,
+      "id_of_type": 6,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 249,
+    "fields": {
+      "equipment_type": 68,
+      "id_of_type": 7,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 250,
+    "fields": {
+      "equipment_type": 68,
+      "id_of_type": 8,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 251,
+    "fields": {
+      "equipment_type": 68,
+      "id_of_type": 9,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 252,
+    "fields": {
+      "equipment_type": 16,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 253,
+    "fields": {
+      "equipment_type": 16,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 254,
+    "fields": {
+      "equipment_type": 16,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 255,
+    "fields": {
+      "equipment_type": 16,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 256,
+    "fields": {
+      "equipment_type": 16,
+      "id_of_type": 5,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 257,
+    "fields": {
+      "equipment_type": 35,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 258,
+    "fields": {
+      "equipment_type": 35,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 259,
+    "fields": {
+      "equipment_type": 35,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 260,
+    "fields": {
+      "equipment_type": 35,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 261,
+    "fields": {
+      "equipment_type": 35,
+      "id_of_type": 5,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 262,
+    "fields": {
+      "equipment_type": 35,
+      "id_of_type": 6,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 263,
+    "fields": {
+      "equipment_type": 35,
+      "id_of_type": 7,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 264,
+    "fields": {
+      "equipment_type": 35,
+      "id_of_type": 8,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 265,
+    "fields": {
+      "equipment_type": 73,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 266,
+    "fields": {
+      "equipment_type": 73,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 267,
+    "fields": {
+      "equipment_type": 73,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 268,
+    "fields": {
+      "equipment_type": 73,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 269,
+    "fields": {
+      "equipment_type": 73,
+      "id_of_type": 5,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 270,
+    "fields": {
+      "equipment_type": 73,
+      "id_of_type": 6,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 271,
+    "fields": {
+      "equipment_type": 34,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 272,
+    "fields": {
+      "equipment_type": 34,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 273,
+    "fields": {
+      "equipment_type": 34,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 274,
+    "fields": {
+      "equipment_type": 34,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 275,
+    "fields": {
+      "equipment_type": 34,
+      "id_of_type": 5,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 276,
+    "fields": {
+      "equipment_type": 34,
+      "id_of_type": 6,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 277,
+    "fields": {
+      "equipment_type": 45,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 278,
+    "fields": {
+      "equipment_type": 24,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 279,
+    "fields": {
+      "equipment_type": 24,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 280,
+    "fields": {
+      "equipment_type": 24,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 281,
+    "fields": {
+      "equipment_type": 24,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 282,
+    "fields": {
+      "equipment_type": 24,
+      "id_of_type": 5,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 283,
+    "fields": {
+      "equipment_type": 83,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 284,
+    "fields": {
+      "equipment_type": 83,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 285,
+    "fields": {
+      "equipment_type": 74,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 286,
+    "fields": {
+      "equipment_type": 74,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 287,
+    "fields": {
+      "equipment_type": 21,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 288,
+    "fields": {
+      "equipment_type": 75,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 289,
+    "fields": {
+      "equipment_type": 57,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 290,
+    "fields": {
+      "equipment_type": 57,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 291,
+    "fields": {
+      "equipment_type": 57,
+      "id_of_type": 3,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 292,
+    "fields": {
+      "equipment_type": 57,
+      "id_of_type": 4,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 293,
+    "fields": {
+      "equipment_type": 57,
+      "id_of_type": 5,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 294,
+    "fields": {
+      "equipment_type": 19,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 295,
+    "fields": {
+      "equipment_type": 19,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 296,
+    "fields": {
+      "equipment_type": 6,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 297,
+    "fields": {
+      "equipment_type": 63,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 298,
+    "fields": {
+      "equipment_type": 50,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 299,
+    "fields": {
+      "equipment_type": 91,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 300,
+    "fields": {
+      "equipment_type": 25,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 301,
+    "fields": {
+      "equipment_type": 25,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 302,
+    "fields": {
+      "equipment_type": 98,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 303,
+    "fields": {
+      "equipment_type": 67,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 304,
+    "fields": {
+      "equipment_type": 10,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 305,
+    "fields": {
+      "equipment_type": 10,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 306,
+    "fields": {
+      "equipment_type": 20,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 307,
+    "fields": {
+      "equipment_type": 33,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 308,
+    "fields": {
+      "equipment_type": 53,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 309,
+    "fields": {
+      "equipment_type": 47,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 310,
+    "fields": {
+      "equipment_type": 47,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 311,
+    "fields": {
+      "equipment_type": 29,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 312,
+    "fields": {
+      "equipment_type": 29,
+      "id_of_type": 2,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "api.equipmentitem",
+    "pk": 313,
+    "fields": {
+      "equipment_type": 9,
+      "id_of_type": 1,
+      "comments": "",
+      "created_at": "2019-11-25T22:54:51.566Z"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add equipment request",
+      "content_type": 9,
+      "codename": "add_equipmentrequest"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change equipment request",
+      "content_type": 9,
+      "codename": "change_equipmentrequest"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete equipment request",
+      "content_type": 9,
+      "codename": "delete_equipmentrequest"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view equipment request",
+      "content_type": 9,
+      "codename": "view_equipmentrequest"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add equipment item",
+      "content_type": 8,
+      "codename": "add_equipmentitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change equipment item",
+      "content_type": 8,
+      "codename": "change_equipmentitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete equipment item",
+      "content_type": 8,
+      "codename": "delete_equipmentitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view equipment item",
+      "content_type": 8,
+      "codename": "view_equipmentitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add equipment type",
+      "content_type": 7,
+      "codename": "add_equipmenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change equipment type",
+      "content_type": 7,
+      "codename": "change_equipmenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete equipment type",
+      "content_type": 7,
+      "codename": "delete_equipmenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view equipment type",
+      "content_type": 7,
+      "codename": "view_equipmenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add equipment category",
+      "content_type": 10,
+      "codename": "add_equipmentcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change equipment category",
+      "content_type": 10,
+      "codename": "change_equipmentcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete equipment category",
+      "content_type": 10,
+      "codename": "delete_equipmentcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view equipment category",
+      "content_type": 10,
+      "codename": "view_equipmentcategory"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$150000$JYdIPXByKq1o$b0rOeSbUApk7ram++VgJtTSnHy7XU/q1iqpegrRuJWE=",
+      "last_login": "2019-12-08T22:24:48.414Z",
+      "is_superuser": true,
+      "username": "jumbocode",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@jumbocode.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2019-10-23T16:34:07.449Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$150000$WK3AS2DQQLW0$fFD7Xe4JcRDz6/LMqxpcNnxgygRtrkCbnDDSyCfrGHk=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "frank",
+      "first_name": "Frank",
+      "last_name": "Ma",
+      "email": "jiayi.ma@tufts.edu",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2019-10-23T16:39:54Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$150000$8ErPDZEe4Zkc$/s2/lkl8NqQoTq6rf3UglcIVbmk6BDULAI/+orM9TA0=",
+      "last_login": "2019-11-07T23:01:31.421Z",
+      "is_superuser": true,
+      "username": "dan",
+      "first_name": "Daniel",
+      "last_name": "Ryaboshapka",
+      "email": "dryabo01@tufts.edu",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2019-10-23T16:42:09Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$150000$YWcMojfo6N05$EmIQXzBy0UF4c6poEUw6EO0n/Mh6cG/qijHhesXJBe4=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "luke",
+      "first_name": "Luke",
+      "last_name": "Taylor",
+      "email": "luke.taylor@tufts.edu",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2019-10-23T16:45:01Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$150000$2pA41E6akfyZ$W8wJCWZrvCo42+sYDLQJZlBsghDS3jE0RMG6s1KxUFE=",
+      "last_login": "2019-11-07T23:04:33Z",
+      "is_superuser": true,
+      "username": "daeseob",
+      "first_name": "Daeseob",
+      "last_name": "Lim",
+      "email": "daeseob.lim@tufts.edu",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2019-11-07T23:02:23Z",
+      "groups": [],
+      "user_permissions": [
+        1,
+        2,
+        3,
+        4,
+        29,
+        30,
+        31,
+        32,
+        25,
+        26,
+        27,
+        28,
+        33,
+        34,
+        35,
+        36,
+        9,
+        10,
+        11,
+        12,
+        5,
+        6,
+        7,
+        8,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    }
+  }
+]
