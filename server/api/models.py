@@ -29,7 +29,7 @@ class EquipmentType(models.Model):
     name = models.CharField(max_length=100)
     category = models.ForeignKey(EquipmentCategory, on_delete=models.CASCADE, related_name='linked_types')
 
-    image = models.ImageField(upload_to='') # is the upload_to attribute correct?
+    image = models.ImageField(upload_to='', null=True) # is the upload_to attribute correct?
     description = models.CharField(max_length=200, blank=True)
     product_url = models.URLField(blank=True)
 
@@ -47,7 +47,7 @@ class EquipmentItem(models.Model):
     etc. (under Canon T3i)
     """
     id_of_type = models.IntegerField(null=True)
-    equipment_type = models.ForeignKey(EquipmentType, on_delete=models.CASCADE, related_name='linked_items', null=True) # Need the null=True here
+    equipment_type = models.ForeignKey(EquipmentType, on_delete=models.CASCADE, related_name='linked_items', null=True) # Need the null=True heres
     comments = models.CharField(max_length=200, blank=True)
     created_at = models.DateTimeField(editable=False)
 
