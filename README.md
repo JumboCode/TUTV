@@ -8,6 +8,7 @@ Current:
 * Developer: [Aidan Barg](https://github.com/abarg12)
 * Developer: [Patrick Gavazzi](https://github.com/pgavazzi1)
 * Developer: [Yong Quan Tan](https://github.com/hermit46)
+* Developer: [Emma Bethel](https://github.com/hermit46)
 
 2019-2020:
 * Project Manager: Deepanshu Utkarsh
