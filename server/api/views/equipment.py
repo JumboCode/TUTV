@@ -37,14 +37,12 @@ class EquipmentRequestViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows Equipment Requests to be viewed or edited.
     """
-
     def get_queryset(self):
-        print(self.request)
         user = self.request.user
-        if user.is_staff == True:
+        if user.is_staff:
             return EquipmentRequest.objects.all()
         else:
-            return EquipmentRequest.objects.filter(user=user)()
+            return EquipmentRequest.objects.filter(user=user)
 
     serializer_class = EquipmentRequestSerializer
 
