@@ -37,13 +37,19 @@ class EquipmentRequestViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows Equipment Requests to be viewed or edited.
     """
+
     def get_queryset(self):
         user = self.request.user
-        if user.is_staff:
+        # When user is not logged in, return nothing
+        if not user.is_authenticated:
+            print("Not logged in")
+            return
+        elif user.is_staff or user.is_superuser:
             return EquipmentRequest.objects.all()
         else:
             return EquipmentRequest.objects.filter(user=user)
-
+        
+    print('ikvwbt')
     serializer_class = EquipmentRequestSerializer
 
 def get_availability(request):
