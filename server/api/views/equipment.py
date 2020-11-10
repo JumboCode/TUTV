@@ -38,11 +38,12 @@ class EquipmentRequestViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows Equipment Requests to be viewed or edited.
     """
+    # Confirm that user is logged in
     permission_classes = [IsAuthenticated]
     
     def get_queryset(self):
         user = self.request.user
-        # When user is not logged in, return nothing
+        # Filter Results based off of if a user or admin is requesting
         if user.is_staff or user.is_superuser:
             return EquipmentRequest.objects.all()
         else:
