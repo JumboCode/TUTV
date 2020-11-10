@@ -43,8 +43,6 @@ class EquipmentRequestViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         user = self.request.user
         # When user is not logged in, return nothing
-        #if not user.is_authenticated:
-        
         if user.is_staff or user.is_superuser:
             return EquipmentRequest.objects.all()
         else:
