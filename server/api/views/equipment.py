@@ -1,6 +1,7 @@
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
 
 from api.models import *
 from rest_framework import viewsets
@@ -37,19 +38,18 @@ class EquipmentRequestViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows Equipment Requests to be viewed or edited.
     """
-
+    permission_classes = [IsAuthenticated]
+    
     def get_queryset(self):
         user = self.request.user
         # When user is not logged in, return nothing
-        if not user.is_authenticated:
-            print("Not logged in")
-            return
-        elif user.is_staff or user.is_superuser:
+        #if not user.is_authenticated:
+        
+        if user.is_staff or user.is_superuser:
             return EquipmentRequest.objects.all()
         else:
             return EquipmentRequest.objects.filter(user=user)
-        
-    print('ikvwbt')
+    
     serializer_class = EquipmentRequestSerializer
 
 def get_availability(request):
