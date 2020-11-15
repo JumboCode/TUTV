@@ -9,6 +9,7 @@ router = routers.DefaultRouter()
 # They support HTTP GET, PUT, PATCH, DELETE
 router.register(r'users', views.UserViewSet)
 router.register(r'equipment-types', views.EquipmentTypeViewSet)
+router.register(r'equipment-types-time', views.EquipmentTypeTimeViewSet)
 router.register(r'equipment-items', views.EquipmentItemViewSet)
 router.register(r'equipment-categories', views.EquipmentCategoryViewSet)
 router.register(r'equipment-requests', views.EquipmentRequestViewSet)

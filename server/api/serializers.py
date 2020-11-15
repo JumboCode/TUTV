@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 from .models import *
+from api.views.equipment import check_availability
 
 """
 The HyperlinkedModelSerializer class is similar to the ModelSerializer
@@ -48,10 +49,30 @@ class EquipmentTypeSerializer(serializers.HyperlinkedModelSerializer):
         model = EquipmentType
         fields = "__all__"
 
+class EquipmentTypeSerializer(serializers.HyperlinkedModelSerializer):
+    items = EquipmentItemSerializerTime(many=True, required=False, read_only=True)
+
+    class Meta:
+        model = EquipmentType
+        fields = "__all__"
 
 """
 Serializers to support serializing EquipmentItem objects
 """
+        
+class EquipmentItemSerializerTime(serializers.HyperlinkedModelSerializer):
+    available = serializers.SerializerMethodField('is_available')
+
+    def is_available(self):
+        if check_availability(self.context.get("request")):
+            return True 
+        else:
+            return False
+
+    class Meta:
+        model = EquipmentItem
+        fields = ['name', 'id', 'url', 'available']
+
 class EquipmentTypeSerializerSimple(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = EquipmentType
