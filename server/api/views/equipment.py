@@ -1,6 +1,7 @@
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
 from api.models import *
 from rest_framework import viewsets
@@ -36,8 +37,34 @@ class EquipmentItemViewSet(viewsets.ModelViewSet):
 class EquipmentRequestViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows Equipment Requests to be viewed or edited.
+    Filters the equipment requests so that only those associated with the 
+        current user are shown.
     """
+    # Confirm that user is logged in
+    permission_classes = [IsAuthenticated]
+    
+    serializer_class = EquipmentRequestSerializer
+    # get_queryset is necessary for accessing the request member of this class
+    def get_queryset(self):
+        # filtering for EquipmentRequest objects associated with the
+        # current user
+        queryset = EquipmentRequest.objects.filter(user=self.request.user)
+        return queryset
+    
+    
+
+class EquipmentRequestViewSetAdmin(viewsets.ModelViewSet):
+    """
+    API endpoint that allows Equipment Requests to be viewed or edited.
+    This endpoint is only accessible by admin users and it returns 
+        all EquipmentRequest objects
+    """
+    # Confirm that user is logged in, and that user is an administrator
+    permission_classes = [IsAuthenticated, IsAdminUser]
+    
+    # Return all EquipmentRequests for admin
     queryset = EquipmentRequest.objects.all()
+
     serializer_class = EquipmentRequestSerializer
 
 def get_availability(request):
