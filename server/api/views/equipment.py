@@ -64,7 +64,7 @@ class EquipmentRequestViewSetAdmin(viewsets.ModelViewSet):
     
     # Return all EquipmentRequests for admin
     queryset = EquipmentRequest.objects.all()
-    
+
     serializer_class = EquipmentRequestSerializer
 
 def get_availability(request):
