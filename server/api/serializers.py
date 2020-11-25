@@ -12,7 +12,7 @@ than primary keys.
 """
 Serializers to support seralizing User and Group objects
 """
-class UserSerializer(serializers.HyperlinkedModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['email', 'first_name', 'last_name', 'groups', 'is_staff', 'linked_requests']
