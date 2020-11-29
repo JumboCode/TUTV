@@ -104,41 +104,41 @@ class EquipmentRequestSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+"""
+Parameters: Takes in a request object (request) and also an equipment's id (eid)
+Returns: True or False based on the availability of the equipment item in the 
+    provided timeframe (request object)
 
-
+Assumes a properly formatted request parameter and does not return an error
+    if it is invalid (instead returns false).
+"""
 def check_availability(request, eid):
     request_out = request.GET.get('out')
     request_in = request.GET.get('in')
     equipment_item_id = eid
     if None in (request_out, request_in, equipment_item_id):
         return False
-        #return JsonResponse("Incorrect query format. Format is ?out={}&in={}&id={}", status=status.HTTP_400_BAD_REQUEST, safe=False)
-    print("item_id:", equipment_item_id)
-    print("request_out:", request_out)
-    print("request_in:", request_in)
-    print()
+    
     request_out_fmt = datetime.datetime.strptime(request_out, "%Y-%m-%dT%H:%M:%S%z")
     request_in_fmt = datetime.datetime.strptime(request_in, "%Y-%m-%dT%H:%M:%S%z")
     
     # Check if the item ID provided exists
     if EquipmentItem.objects.filter(id = equipment_item_id).count() == 0:
         return False
-        #return JsonResponse("Equipment not found", status=status.HTTP_400_BAD_REQUEST, safe=False)
     equipment_item = EquipmentItem.objects.get(pk=equipment_item_id)
     
     # Check if request out is earlier than request in
     if request_out_fmt >= request_in_fmt:
         return False
-        # raise TypeError("")
-        # return JsonResponse("Request out cannot be later than request in", status=status.HTTP_400_BAD_REQUEST, safe=False)
-
 
     # Return true if equipment is available during the specified time and
     # false otherwise
     # if request_out happens within the equipment request period
     #   or if request_in happens within the equipment request period
+    # or if the request_out and request_in surround the equipment request period
     for equipment_request in equipment_item.linked_requests.all():
-        if ((request_out_fmt >= equipment_request.request_out and request_out_fmt <= equipment_request.request_in) 
-            or (request_in_fmt <= equipment_request.request_in and request_in_fmt >= equipment_request.request_out)):
+        if ((request_out_fmt > equipment_request.request_out and request_out_fmt < equipment_request.request_in) 
+            or (request_in_fmt < equipment_request.request_in and request_in_fmt > equipment_request.request_out)
+            or (request_out_fmt <= equipment_request.request_out and request_in_fmt >= equipment_request.request_in)):
             return False
     return True
