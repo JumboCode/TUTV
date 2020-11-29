@@ -109,33 +109,7 @@ def get_availability(request):
     return JsonResponse(True, safe=False)
 
 
-def check_availability(request):
-    request_out = request.GET.get('out')
-    request_in = request.GET.get('in')
-    equipment_item_id = request.GET.get('id')
-    if None in (request_out, request_in, equipment_item_id):
-        return JsonResponse("Incorrect query format. Format is ?out={}&in={}&id={}", status=status.HTTP_400_BAD_REQUEST, safe=False)
-    
-    request_out_fmt = datetime.datetime.strptime(request_out, "%Y-%m-%dT%H:%M:%S%z")
-    request_in_fmt = datetime.datetime.strptime(request_in, "%Y-%m-%dT%H:%M:%S%z")
-    
-    # Check if the item ID provided exists
-    # if EquipmentItem.objects.filter(id = equipment_item_id).count() == 0:
-    #    return JsonResponse("Equipment not found", status=status.HTTP_400_BAD_REQUEST, safe=False)
-    # equipment_item = EquipmentItem.objects.get(pk=equipment_item_id)
-    
-    # Check if request out is earlier than request in
-    if request_out_fmt > request_in_fmt:
-        # raise TypeError("")
-        return JsonResponse("Request out cannot be later than request in", status=status.HTTP_400_BAD_REQUEST, safe=False)
 
-
-    # Return true if equipment is available during the specified time and
-    # false otherwise
-    for equipment_request in equipment_item.linked_requests.all():
-        if (request_out_fmt < equipment_request.request_out) or (request_in_fmt > equipment_request.request_in):
-            return False
-    return True
 """
 Partially update a request to reflect its signed out status
 Reference: https://stackoverflow.com/questions/50129567/django-rest-update-one-field
