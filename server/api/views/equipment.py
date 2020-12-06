@@ -31,6 +31,9 @@ class EquipmentTypeTimeViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows Equipment Types to be viewed or edited and filters for time
     """
+    # Confirm that user is logged in
+    permission_classes = [IsAuthenticated]
+
     queryset = EquipmentType.objects.all()
     serializer_class = EquipmentTypeTimeSerializer
 
