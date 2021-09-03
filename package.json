@@ -53,7 +53,7 @@
     "react": "^16.9.0",
     "react-app-polyfill": "^1.0.4",
     "react-collapsible": "^2.7.0",
-    "react-dev-utils": "^9.1.0",
+    "react-dev-utils": "^11.0.4",
     "react-dom": "^16.9.0",
     "react-feather": "^2.0.3",
     "react-router-dom": "^5.1.2",
