@@ -11,6 +11,8 @@ before_install:
   - npm install -g yarn
   # Then the local Yarn 2 should be available and get used
   - yarn -v
+  - yarn set version latest
+  - yarn -v
 
 # Use custom install step as Travis by default uses the --frozen-lockfile flag, which is deprecated
 install: yarn
