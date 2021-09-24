@@ -13,7 +13,7 @@ django-heroku = "*"
 djangorestframework = "*"
 pillow = "*"
 whitenoise = "*"
-djangorestframework-simplejwt = "*"
+djangorestframework-simplejwt = "==4.6.0"
 django-cors-headers = "*"
 
 [requires]
