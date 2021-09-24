@@ -1,22 +1,3 @@
-cache:
-  # Yarn 2 does not store dependencies in node_modules anymore, at least not by default.
-  # If you are using the node-modules plugin, remove the `npm: false` line.
-  npm: false
-  # Yarn 2 caches to the local .yarn directory, not the Travis default `$HOME/.yarn` 
-  directories:
-    - ./.yarn/cache
-
-before_install:
-  # Upgrade Yarn 1.x: https://classic.yarnpkg.com/en/docs/install
-  - npm install -g yarn
-  # Then the local Yarn 2 should be available and get used
-  - yarn -v
-  - yarn set version latest
-  - yarn -v
-
-# Use custom install step as Travis by default uses the --frozen-lockfile flag, which is deprecated
-install: yarn
-
 matrix:
   include:
     - language: python
