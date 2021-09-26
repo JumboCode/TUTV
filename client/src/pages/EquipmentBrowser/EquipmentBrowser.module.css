@@ -1,5 +1,4 @@
 .header {
-  background: #eceff8;
   display: flex;
   flex-flow: row;
   align-items: center;
@@ -45,40 +44,6 @@
   justify-content: center;
   flex-grow: 1;
   flex-basis: 30%;
-}
-
-.collapsehead {
-  background: #3279d5;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  padding: 6px 10px 0;
-  color: white;
-  cursor: pointer;
-  margin: 11px;
-}
-
-/* the "trigger" section of the Collapsible */
-.collapsehead :global(.Collapsible__trigger) {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 6px;
-}
-
-.collapsehead :global(.Collapsible__trigger) svg {
-  transition: transform 0.25s;
-}
-
-/* Animate flipping the icon when the Collapsible is open */
-.collapsehead :global(.Collapsible__trigger.is-open) svg {
-  transform: rotate(-180deg);
-}
-
-/* Add some space between the bottom of the content and the bottom of the container so that the blue border goes all the way around (this is a nitpicky detail) */
-.collapsehead :global(.Collapsible__contentInner) {
-  margin-bottom: 10px;
 }
 
 .wrapper {
