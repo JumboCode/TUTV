@@ -1,27 +1,30 @@
 import React from 'react';
 import styles from './EquipmentBrowser.module.css';
-import Button from 'components/Button';
+import Button from '@mui/material/Button';
 import Item from 'types/Item';
 import EquipmentGrid from 'components/EquipmentGrid';
 
 import TextField from '@mui/material/TextField';
 import DateTimePicker from '@mui/lab/DateTimePicker';
 
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Box from '@mui/material/Box';
+import Tab from '@mui/material/Tab';
+import TabContext from '@mui/lab/TabContext';
+import TabList from '@mui/lab/TabList';
+import TabPanel from '@mui/lab/TabPanel';
 
 const EquipmentBrowser: React.FC = () => {
   const [items, setItems] = React.useState<Array<Item>>([]);
+  const [value, setValue] = React.useState<Date | null>(new Date());
+  const [tabValue, setTabValue] = React.useState<string>('camera');
+
   React.useEffect(() => {
     fetch('https://tutv-mock.now.sh/api/v1/equipment/')
       .then((response) => response.json())
       .then((response) => setItems(response.data))
       .catch((error) => console.error(error));
   }, []);
-  const [value, setValue] = React.useState<Date | null>(new Date());
+
   return (
     <div>
       <div className={styles.header}>
@@ -51,66 +54,52 @@ const EquipmentBrowser: React.FC = () => {
             </tr>
           </tbody>
         </table>
-        <Button variant="gray" className={styles.headerButton}>
-          Cancel Request
-        </Button>
-        <Button className={styles.headerButton}>Continue</Button>
+        <Button variant="outlined">Cancel Request</Button>
+        <Button variant="contained">Continue</Button>
       </div>
       <div>
         <div className={styles.equipmentPage}>
           <div className={styles.wrapper}>
-            <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>Camera and Lenses</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography>Items should be displayed below:</Typography>
-                <EquipmentGrid items={items} />
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel2a-content"
-                id="panel2a-header"
-              >
-                <Typography>Audio</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography>Items should be displayed below:</Typography>
-                <EquipmentGrid items={items} />
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel3a-content"
-                id="panel3a-header"
-              >
-                <Typography>Lighting</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography>Items should be displayed below:</Typography>
-                <EquipmentGrid items={items} />
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel3a-content"
-                id="panel3a-header"
-              >
-                <Typography>Misc</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography>Items should be displayed below:</Typography>
-                <EquipmentGrid items={items} />
-              </AccordionDetails>
-            </Accordion>
+            <Box sx={{ width: '100%', typography: 'body1' }}>
+              <TabContext value={tabValue}>
+                <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                  <TabList
+                    onChange={(event, newValue) => setTabValue(newValue)}
+                  >
+                    <Tab label="Camera" value="camera" />
+                    <Tab label="Lenses" value="lenses" />
+                    <Tab label="Audio" value="audio" />
+                    <Tab label="Lighting" value="lighting" />
+                    <Tab label="Stablizers" value="stablizers" />
+                    <Tab label="Misc" value="misc" />
+                  </TabList>
+                </Box>
+                <TabPanel value="camera">
+                  Items should be displayed below:
+                  <EquipmentGrid items={items} />
+                </TabPanel>
+                <TabPanel value="lenses">
+                  Items should be displayed below:
+                  <EquipmentGrid items={items} />
+                </TabPanel>
+                <TabPanel value="audio">
+                  Items should be displayed below:
+                  <EquipmentGrid items={items} />
+                </TabPanel>
+                <TabPanel value="lighting">
+                  Items should be displayed below:
+                  <EquipmentGrid items={items} />
+                </TabPanel>
+                <TabPanel value="stablizers">
+                  Items should be displayed below:
+                  <EquipmentGrid items={items} />
+                </TabPanel>
+                <TabPanel value="misc">
+                  Items should be displayed below:
+                  <EquipmentGrid items={items} />
+                </TabPanel>
+              </TabContext>
+            </Box>
           </div>
           <div className={styles.cart}>
             <div>
