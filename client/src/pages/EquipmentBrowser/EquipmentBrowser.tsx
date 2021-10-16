@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './EquipmentBrowser.module.css';
 import Button from '@mui/material/Button';
-import Item from 'types/Item';
+import EquipmentCategory from 'types/Equipment';
 import EquipmentGrid from 'components/EquipmentGrid';
 
 import TextField from '@mui/material/TextField';
@@ -14,14 +14,23 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 
 const EquipmentBrowser: React.FC = () => {
-  const [items, setItems] = React.useState<Array<Item>>([]);
+  const [equipment, setEquipment] = React.useState<Array<EquipmentCategory>>(
+    []
+  );
   const [value, setValue] = React.useState<Date | null>(new Date());
   const [tabValue, setTabValue] = React.useState<string>('camera');
 
   React.useEffect(() => {
-    fetch('https://tutv-mock.now.sh/api/v1/equipment/')
-      .then((response) => response.json())
-      .then((response) => setItems(response.data))
+    fetch('http://localhost:8000/api/v1/equipment-categories/')
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw response;
+      })
+      .then((data) => {
+        setEquipment(data);
+      })
       .catch((error) => console.error(error));
   }, []);
 
@@ -66,38 +75,20 @@ const EquipmentBrowser: React.FC = () => {
                   <TabList
                     onChange={(event, newValue) => setTabValue(newValue)}
                   >
-                    <Tab label="Camera" value="camera" />
-                    <Tab label="Lenses" value="lenses" />
-                    <Tab label="Audio" value="audio" />
-                    <Tab label="Lighting" value="lighting" />
-                    <Tab label="Stablizers" value="stablizers" />
-                    <Tab label="Misc" value="misc" />
+                    {equipment.map((category: EquipmentCategory) => {
+                      return (
+                        <Tab label={category.name} value={category.name} />
+                      );
+                    })}
                   </TabList>
                 </Box>
-                <TabPanel value="camera">
-                  Items should be displayed below:
-                  <EquipmentGrid items={items} />
-                </TabPanel>
-                <TabPanel value="lenses">
-                  Items should be displayed below:
-                  <EquipmentGrid items={items} />
-                </TabPanel>
-                <TabPanel value="audio">
-                  Items should be displayed below:
-                  <EquipmentGrid items={items} />
-                </TabPanel>
-                <TabPanel value="lighting">
-                  Items should be displayed below:
-                  <EquipmentGrid items={items} />
-                </TabPanel>
-                <TabPanel value="stablizers">
-                  Items should be displayed below:
-                  <EquipmentGrid items={items} />
-                </TabPanel>
-                <TabPanel value="misc">
-                  Items should be displayed below:
-                  <EquipmentGrid items={items} />
-                </TabPanel>
+                {equipment.map((category: EquipmentCategory) => {
+                  return (
+                    <TabPanel value={category.name}>
+                      <EquipmentGrid items={category.types}></EquipmentGrid>
+                    </TabPanel>
+                  );
+                })}
               </TabContext>
             </Box>
           </div>
