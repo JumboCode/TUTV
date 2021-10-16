@@ -22,6 +22,9 @@ class EquipmentCategory(models.Model):
     def __str__(self):
         return self.name
 
+    def types(self):
+        return self.linked_types.all()
+
 
 class EquipmentType(models.Model):
     """
@@ -42,7 +45,7 @@ class EquipmentType(models.Model):
         return f"Category: {self.name}"
 
     def items(self):
-        return self.linked_items.all
+        return self.linked_items.all()
 
 
 class EquipmentItem(models.Model):
@@ -69,7 +72,7 @@ class EquipmentItem(models.Model):
     def instances(self):
         return self.linked_instances.all()
 
-    def num_items(self):
+    def num_instances(self):
         return len(self.linked_instances.all())
 
 

@@ -28,7 +28,7 @@ class UserSerializer(serializers.ModelSerializer):
         depth = 1  # To include details of linked_requests
 
 
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
+class GroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
         fields = ["admin", "user"]
@@ -50,17 +50,25 @@ class EquipmentInstanceSerializer(serializers.ModelSerializer):
         # depth = 2
 
 
-class EquipmentItemSerializer(serializers.HyperlinkedModelSerializer):
+class EquipmentItemSerializer(serializers.ModelSerializer):
     """
     Serializers to support seralizing EquipmentItem objects
     """
 
     class Meta:
         model = EquipmentItem
-        fields = ["id", "name", "description", "image", "product_url"]
+        fields = [
+            "id",
+            "name",
+            "description",
+            "image",
+            "product_url",
+            "equipment_type_FK",
+            "num_instances",
+        ]
 
 
-class EquipmentTypeSerializer(serializers.HyperlinkedModelSerializer):
+class EquipmentTypeSerializer(serializers.ModelSerializer):
     """
     Serializers to support seralizing EquipmentType objects
     """
@@ -69,10 +77,10 @@ class EquipmentTypeSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = EquipmentType
-        fields = ["id", "name", "description", "items"]
+        fields = ["id", "name", "description", "equipment_category_FK", "items"]
 
 
-class EquipmentCategorySerializer(serializers.HyperlinkedModelSerializer):
+class EquipmentCategorySerializer(serializers.ModelSerializer):
     """
     Serializers to support serializing EquipmentCategory objects
     """
