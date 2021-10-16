@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './EquipmentGrid.module.css';
-import Item from 'types/Item';
+import styles from './EquipmentItemGrid.module.css';
+import { EquipmentItem } from 'types/Equipment';
 
-interface EquipmentGridProps {
-  items: Array<Item>;
+interface EquipmentItemGridProps {
+  items: EquipmentItem[];
 }
 
-const EquipmentGrid: React.FC<EquipmentGridProps> = ({ items }) => {
+const EquipmentItemGrid: React.FC<EquipmentItemGridProps> = ({ items }) => {
   return (
     <div className={styles.equipmentGrid}>
       {items.map((item) => (
@@ -24,4 +24,4 @@ const EquipmentGrid: React.FC<EquipmentGridProps> = ({ items }) => {
   );
 };
 
-export default EquipmentGrid;
+export default EquipmentItemGrid;

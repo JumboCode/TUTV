@@ -5,6 +5,7 @@ name = "pypi"
 
 [dev-packages]
 autopep8 = "*"
+black = "*"
 
 [packages]
 django = "*"
@@ -18,3 +19,6 @@ django-cors-headers = "*"
 
 [requires]
 python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true

@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './EquipmentBrowser.module.css';
 import Button from '@mui/material/Button';
-import EquipmentCategory from 'types/Equipment';
-import EquipmentGrid from 'components/EquipmentGrid';
+import { EquipmentCategory } from 'types/Equipment';
+import EquipmentTypeAccordion from 'components/EquipmentTypeAccordion';
 
 import TextField from '@mui/material/TextField';
 import DateTimePicker from '@mui/lab/DateTimePicker';
@@ -85,7 +85,9 @@ const EquipmentBrowser: React.FC = () => {
                 {equipment.map((category: EquipmentCategory) => {
                   return (
                     <TabPanel value={category.name}>
-                      <EquipmentGrid items={category.types}></EquipmentGrid>
+                      <EquipmentTypeAccordion
+                        types={category.types}
+                      ></EquipmentTypeAccordion>
                     </TabPanel>
                   );
                 })}
