@@ -18,7 +18,7 @@ code {
 }
 
 .content {
-  margin: 0 auto; /* this will center the page */
-  width: 960px; /*  use your width here */
+  margin: 0 auto; /* centers the page */
+  width: 90vw;
   margin-top: 50px;
 }

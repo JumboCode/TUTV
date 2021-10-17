@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './EquipmentBrowser.module.css';
-import Button from '@mui/material/Button';
 import { EquipmentCategory } from 'types/Equipment';
 import EquipmentTypeAccordion from 'components/EquipmentTypeAccordion';
-
+import Cart from 'components/Cart';
+import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import DateTimePicker from '@mui/lab/DateTimePicker';
+import Typography from '@mui/material/Typography';
 
 import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
@@ -18,7 +19,7 @@ const EquipmentBrowser: React.FC = () => {
     []
   );
   const [value, setValue] = React.useState<Date | null>(new Date());
-  const [tabValue, setTabValue] = React.useState<string>('camera');
+  const [tabValue, setTabValue] = React.useState<string>('Camera');
 
   React.useEffect(() => {
     fetch('http://localhost:8000/api/v1/equipment-categories/')
@@ -35,40 +36,34 @@ const EquipmentBrowser: React.FC = () => {
   }, []);
 
   return (
-    <div>
-      <div className={styles.header}>
-        <table className={styles.tableClass}>
-          <tbody>
-            <tr className={styles.projectreq}>
-              <td>
-                <DateTimePicker
-                  renderInput={(props) => <TextField {...props} />}
-                  label="Checkout Time"
-                  value={value}
-                  onChange={(newValue) => {
-                    setValue(newValue);
-                  }}
-                />
-              </td>
-              <td>
-                <DateTimePicker
-                  renderInput={(props) => <TextField {...props} />}
-                  label="Return Time"
-                  value={value}
-                  onChange={(newValue) => {
-                    setValue(newValue);
-                  }}
-                />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <Button variant="outlined">Cancel Request</Button>
-        <Button variant="contained">Continue</Button>
-      </div>
-      <div>
-        <div className={styles.equipmentPage}>
-          <div className={styles.wrapper}>
+    <Grid container spacing={2}>
+      <Grid item xs={9}>
+        <Grid container spacing={2}>
+          <Grid item xs={4}>
+            <Typography variant="h6">Checking out for:</Typography>
+            <Typography variant="body1">Cult 3zza</Typography>
+          </Grid>
+          <Grid item xs={4}>
+            <DateTimePicker
+              renderInput={(props) => <TextField {...props} />}
+              label="Checkout Time"
+              value={value}
+              onChange={(newValue) => {
+                setValue(newValue);
+              }}
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <DateTimePicker
+              renderInput={(props) => <TextField {...props} />}
+              label="Return Time"
+              value={value}
+              onChange={(newValue) => {
+                setValue(newValue);
+              }}
+            />
+          </Grid>
+          <Grid item xs={12}>
             <Box sx={{ width: '100%', typography: 'body1' }}>
               <TabContext value={tabValue}>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -84,7 +79,10 @@ const EquipmentBrowser: React.FC = () => {
                 </Box>
                 {equipment.map((category: EquipmentCategory) => {
                   return (
-                    <TabPanel value={category.name}>
+                    <TabPanel
+                      value={category.name}
+                      sx={{ height: '73vh', overflow: 'scroll' }}
+                    >
                       <EquipmentTypeAccordion
                         types={category.types}
                       ></EquipmentTypeAccordion>
@@ -93,15 +91,13 @@ const EquipmentBrowser: React.FC = () => {
                 })}
               </TabContext>
             </Box>
-          </div>
-          <div className={styles.cart}>
-            <div>
-              <div>Equipment Cart</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          </Grid>
+        </Grid>
+      </Grid>
+      <Grid item xs={3}>
+        <Cart />
+      </Grid>
+    </Grid>
   );
 };
 
