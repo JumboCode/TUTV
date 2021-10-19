@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { useStore, StoreProvider } from './store';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { StoreProvider } from './store';
 import LoginShield from 'components/LoginShield';
 
 // Components for pages of the app

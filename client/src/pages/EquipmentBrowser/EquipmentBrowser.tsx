@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './EquipmentBrowser.module.css';
 import { EquipmentCategory } from 'types/Equipment';
 import EquipmentTypeAccordion from 'components/EquipmentTypeAccordion';
 import Cart from 'components/Cart';
@@ -72,7 +71,11 @@ const EquipmentBrowser: React.FC = () => {
                   >
                     {equipment.map((category: EquipmentCategory) => {
                       return (
-                        <Tab label={category.name} value={category.name} />
+                        <Tab
+                          key={category.name}
+                          label={category.name}
+                          value={category.name}
+                        />
                       );
                     })}
                   </TabList>
@@ -80,6 +83,7 @@ const EquipmentBrowser: React.FC = () => {
                 {equipment.map((category: EquipmentCategory) => {
                   return (
                     <TabPanel
+                      key={category.name}
                       value={category.name}
                       sx={{ height: '73vh', overflow: 'scroll' }}
                     >

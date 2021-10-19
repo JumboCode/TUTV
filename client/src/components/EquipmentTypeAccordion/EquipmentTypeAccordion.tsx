@@ -19,7 +19,7 @@ const EquipmentTypeAccordion: React.FC<EquipmentTypeAccordionProps> = ({
   return (
     <div>
       {types.map((type) => (
-        <Accordion defaultExpanded>
+        <Accordion defaultExpanded key={type.name}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
             <Typography>{type.name}</Typography>
           </AccordionSummary>
