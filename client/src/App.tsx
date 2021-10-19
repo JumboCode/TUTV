@@ -15,42 +15,55 @@ import Navbar from './components/Navbar';
 
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const App: React.FC = () => {
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#3e8ede',
+      },
+      secondary: {
+        main: '#2c2c2c',
+      },
+    },
+  });
   return (
-    <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <Router>
-        <StoreProvider>
-          <LoginShield fallback={<SignIn />}>
-            <Navbar />
-            <div className="App">
-              <div className="content">
-                <Switch>
-                  <Route path="/admin/dashboard">
-                    <AdminDashboard />
-                  </Route>
-                  <Route path="/catalog">
-                    <Catalog />
-                  </Route>
-                  <Route path="/equipmentbrowser">
-                    <EquipmentBrowser />
-                  </Route>
-                  <Route path="/memberdashboard">
-                    <MemberDashboard />
-                  </Route>
-                  <Route path="/admin/equipment-request">
-                    <RequestSummary />
-                  </Route>
-                  <Route path="/">
-                    <Home />
-                  </Route>
-                </Switch>
+    <ThemeProvider theme={theme}>
+      <LocalizationProvider dateAdapter={AdapterDateFns}>
+        <Router>
+          <StoreProvider>
+            <LoginShield fallback={<SignIn />}>
+              <Navbar />
+              <div className="App">
+                <div className="content">
+                  <Switch>
+                    <Route path="/admin/dashboard">
+                      <AdminDashboard />
+                    </Route>
+                    <Route path="/catalog">
+                      <Catalog />
+                    </Route>
+                    <Route path="/equipmentbrowser">
+                      <EquipmentBrowser />
+                    </Route>
+                    <Route path="/memberdashboard">
+                      <MemberDashboard />
+                    </Route>
+                    <Route path="/admin/equipment-request">
+                      <RequestSummary />
+                    </Route>
+                    <Route path="/">
+                      <Home />
+                    </Route>
+                  </Switch>
+                </div>
               </div>
-            </div>
-          </LoginShield>
-        </StoreProvider>
-      </Router>
-    </LocalizationProvider>
+            </LoginShield>
+          </StoreProvider>
+        </Router>
+      </LocalizationProvider>
+    </ThemeProvider>
   );
 };
 
