@@ -1,12 +1,19 @@
 import React from 'react';
-import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import { Add, Remove } from '@mui/icons-material';
 
-const Counter: React.FC = () => {
-  const [count, setCount] = React.useState(0);
+interface CounterProps {
+  startingCount?: number;
+  maxCount?: number;
+}
+
+const Counter: React.FC<CounterProps> = ({
+  startingCount = 0,
+  maxCount = 100,
+}) => {
+  const [count, setCount] = React.useState(startingCount);
 
   const handleIncrement = () => {
     setCount(count + 1);
@@ -17,7 +24,7 @@ const Counter: React.FC = () => {
   };
 
   const canDecrement = count > 0;
-  const canIncrement = count < 10;
+  const canIncrement = count < maxCount;
 
   return (
     <Box

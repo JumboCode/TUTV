@@ -1,41 +1,22 @@
 import React from 'react';
-import styles from './Button.module.css';
+import {
+  default as MUIButton,
+  ButtonProps as MUIButtonProps,
+} from '@mui/material/Button';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends MUIButtonProps {
   children?: React.ReactNode;
-  variant?: 'blue' | 'gray';
-  compact?: boolean;
-  pill?: boolean;
-  className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({
-  children,
-  variant = 'blue',
-  compact = false,
-  pill = false,
-  className = '',
-  ...rest
-}) => {
-  let styleClass = styles.blue;
-
-  switch (variant) {
-    case 'blue':
-      styleClass = styles.blue;
-      break;
-    case 'gray':
-      styleClass = styles.gray;
-  }
-
+const Button: React.FC<ButtonProps> = ({ children, sx, ...rest }) => {
   return (
-    <button
-      className={`${styles.btn} ${styleClass} ${compact && styles.compact} ${
-        pill && styles.pill
-      } ${className}`}
+    <MUIButton
+      variant="contained"
+      sx={{ borderRadius: '50px', ...sx }}
       {...rest}
     >
       {children}
-    </button>
+    </MUIButton>
   );
 };
 
