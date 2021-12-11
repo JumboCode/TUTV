@@ -23,7 +23,7 @@ const Counter: React.FC = () => {
     <Box
       sx={{
         marginTop: '10px',
-        display: 'flex',
+        display: 'inline-flex',
         flexDirection: 'row',
         alignItems: 'center',
         border: '1px solid',
@@ -41,11 +41,10 @@ const Counter: React.FC = () => {
       <Typography
         variant="body1"
         sx={{
-          minWidth: '30px',
-          minHeight: '30px',
+          minWidth: '20px',
+          minHeight: '20px',
           textAlign: 'center',
           verticalAlign: 'middle',
-          paddingTop: '3px',
         }}
       >
         {count}
