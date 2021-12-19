@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
@@ -7,13 +7,22 @@ import { Add, Remove } from '@mui/icons-material';
 interface CounterProps {
   startingCount?: number;
   maxCount?: number;
+  onChange?: (arg0: number) => void;
 }
 
 const Counter: React.FC<CounterProps> = ({
   startingCount = 0,
   maxCount = 100,
+  onChange,
 }) => {
-  const [count, setCount] = React.useState(startingCount);
+  const [count, setCount] = useState(startingCount);
+
+  // need to add [count] as a dependency so that we don't run into infinite loop
+  useEffect(() => {
+    if (onChange) {
+      onChange(count);
+    }
+  }, [count]);
 
   const handleIncrement = () => {
     setCount(count + 1);

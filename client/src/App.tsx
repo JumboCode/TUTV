@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { StoreProvider } from './store';
 import LoginShield from 'components/LoginShield';
+import { Provider as ReduxProvider } from 'react-redux';
+import reduxStore from './redux/store';
 
 // Components for pages of the app
 import Home from './pages/Home';
@@ -32,35 +34,37 @@ const App: React.FC = () => {
     <ThemeProvider theme={theme}>
       <LocalizationProvider dateAdapter={AdapterDateFns}>
         <Router>
-          <StoreProvider>
-            <LoginShield fallback={<SignIn />}>
-              <Navbar />
-              <div className="App">
-                <div className="content">
-                  <Switch>
-                    <Route path="/admin/dashboard">
-                      <AdminDashboard />
-                    </Route>
-                    <Route path="/catalog">
-                      <Catalog />
-                    </Route>
-                    <Route path="/equipmentbrowser">
-                      <EquipmentBrowser />
-                    </Route>
-                    <Route path="/memberdashboard">
-                      <MemberDashboard />
-                    </Route>
-                    <Route path="/admin/equipment-request">
-                      <RequestSummary />
-                    </Route>
-                    <Route path="/">
-                      <Home />
-                    </Route>
-                  </Switch>
+          <ReduxProvider store={reduxStore}>
+            <StoreProvider>
+              <LoginShield fallback={<SignIn />}>
+                <Navbar />
+                <div className="App">
+                  <div className="content">
+                    <Switch>
+                      <Route path="/admin/dashboard">
+                        <AdminDashboard />
+                      </Route>
+                      <Route path="/catalog">
+                        <Catalog />
+                      </Route>
+                      <Route path="/equipmentbrowser">
+                        <EquipmentBrowser />
+                      </Route>
+                      <Route path="/memberdashboard">
+                        <MemberDashboard />
+                      </Route>
+                      <Route path="/admin/equipment-request">
+                        <RequestSummary />
+                      </Route>
+                      <Route path="/">
+                        <Home />
+                      </Route>
+                    </Switch>
+                  </div>
                 </div>
-              </div>
-            </LoginShield>
-          </StoreProvider>
+              </LoginShield>
+            </StoreProvider>
+          </ReduxProvider>
         </Router>
       </LocalizationProvider>
     </ThemeProvider>

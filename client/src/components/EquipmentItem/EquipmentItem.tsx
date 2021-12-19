@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { EquipmentItem } from 'types/Equipment';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -6,12 +6,17 @@ import Paper from '@mui/material/Paper';
 import Counter from 'components/Counter';
 import Button from 'components/Button';
 
+import { useSelector, useDispatch } from 'react-redux';
+import { addToCart, removeFromCart, adjustQty } from '../../redux';
 interface EquipmentItemProps {
   item: EquipmentItem;
 }
 
 const EquipmentItemCard: React.FC<EquipmentItemProps> = ({ item }) => {
-  const [amountInCart, setAmountInCart] = useState(0);
+  const cartItems = useSelector((state: any) => {
+    return state.cart.cartItems;
+  });
+  const dispatch = useDispatch();
 
   return (
     <Paper
@@ -42,10 +47,23 @@ const EquipmentItemCard: React.FC<EquipmentItemProps> = ({ item }) => {
       >
         <Typography variant="body1">{item.name}</Typography>
         <Typography variant="body2">{item.num_instances} remaining</Typography>
-        {amountInCart > 0 ? (
-          <Counter startingCount={1} maxCount={item.num_instances} />
+        {item.id in cartItems ? (
+          <Counter
+            startingCount={cartItems[item.id]}
+            maxCount={item.num_instances}
+            onChange={(qty: number) => {
+              if (qty === 0) {
+                dispatch(removeFromCart(item.id));
+              } else {
+                dispatch(adjustQty(item.id, qty));
+              }
+            }}
+          />
         ) : (
-          <Button onClick={() => setAmountInCart(1)} sx={{ width: '100%' }}>
+          <Button
+            onClick={() => dispatch(addToCart(item.id))}
+            sx={{ width: '100%' }}
+          >
             Add to Cart
           </Button>
         )}
