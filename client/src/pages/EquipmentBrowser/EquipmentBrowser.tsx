@@ -21,7 +21,7 @@ const EquipmentBrowser: React.FC = () => {
   const [tabValue, setTabValue] = React.useState<string>('Camera');
 
   React.useEffect(() => {
-    fetch('http://localhost:8000/api/v1/equipment-categories/')
+    fetch(new URL('/api/v1/equipment-categories/', window.location.origin).href)
       .then((response) => {
         if (response.ok) {
           return response.json();
