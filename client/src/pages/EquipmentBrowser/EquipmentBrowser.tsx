@@ -1,6 +1,6 @@
 import React from 'react';
 import { EquipmentCategory } from 'types/Equipment';
-import EquipmentTypeAccordion from 'components/EquipmentTypeAccordion';
+import EquipmentTypes from 'components/EquipmentTypes';
 import Cart from 'components/Cart';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
@@ -87,9 +87,7 @@ const EquipmentBrowser: React.FC = () => {
                       value={category.name}
                       sx={{ height: '73vh', overflow: 'scroll' }}
                     >
-                      <EquipmentTypeAccordion
-                        types={category.types}
-                      ></EquipmentTypeAccordion>
+                      <EquipmentTypes types={category.types}></EquipmentTypes>
                     </TabPanel>
                   );
                 })}

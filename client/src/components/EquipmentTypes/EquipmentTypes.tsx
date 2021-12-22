@@ -9,13 +9,11 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import EquipmentItemGrid from 'components/EquipmentItemGrid';
 
-interface EquipmentTypeAccordionProps {
+interface EquipmentTypesProps {
   types: EquipmentType[];
 }
 
-const EquipmentTypeAccordion: React.FC<EquipmentTypeAccordionProps> = ({
-  types,
-}) => {
+const EquipmentTypes: React.FC<EquipmentTypesProps> = ({ types }) => {
   return (
     <div>
       {types.map((type) => (
@@ -33,4 +31,4 @@ const EquipmentTypeAccordion: React.FC<EquipmentTypeAccordionProps> = ({
   );
 };
 
-export default EquipmentTypeAccordion;
+export default EquipmentTypes;
