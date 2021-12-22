@@ -1,8 +1,8 @@
 import React from 'react';
 import { EquipmentItem } from 'types/Equipment';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Paper from '@mui/material/Paper';
 import Counter from 'components/Counter';
 import Button from 'components/Button';
 
@@ -10,17 +10,20 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addToCart, removeFromCart, adjustQty } from '../../redux';
 interface EquipmentItemProps {
   item: EquipmentItem;
+  cartDisplay?: boolean;
 }
 
-const EquipmentItemCard: React.FC<EquipmentItemProps> = ({ item }) => {
+const EquipmentItemCard: React.FC<EquipmentItemProps> = ({
+  item,
+  cartDisplay = false,
+}) => {
   const cartItems = useSelector((state: any) => {
     return state.cart.cartItems;
   });
   const dispatch = useDispatch();
 
   return (
-    <Paper
-      variant="outlined"
+    <Box
       key={item.name}
       sx={{
         padding: '10px',
@@ -30,48 +33,51 @@ const EquipmentItemCard: React.FC<EquipmentItemProps> = ({ item }) => {
         justifyContent: 'space-between',
         alignItems: 'center',
         alignContent: 'center',
-        height: '100%',
       }}
     >
       <img
         src={item.image || 'https://via.placeholder.com/150'}
         alt="TODO: support alt text"
-        width="50%"
+        width="40%"
       />
       <Stack
-        spacing={0.2}
+        spacing={0.5}
         sx={{
-          padding: '10px',
+          paddingLeft: '20px',
           alignSelf: 'center',
-          width: '50%',
+          width: '60%',
         }}
       >
         <Typography variant="body1">{item.name}</Typography>
-        <Typography variant="body2" sx={{ paddingBottom: '5px' }}>
-          {item.num_instances} remaining
-        </Typography>
-        {item.id in cartItems ? (
-          <Counter
-            startingCount={cartItems[item.id].qty}
-            maxCount={item.num_instances}
-            onChange={(qty: number) => {
-              if (qty === 0) {
-                dispatch(removeFromCart(item.id));
-              } else {
-                dispatch(adjustQty(item.id, qty));
-              }
-            }}
-          />
-        ) : (
-          <Button
-            onClick={() => dispatch(addToCart(item))}
-            sx={{ fontSize: '12px', width: '100%' }}
-          >
-            Add to Cart
-          </Button>
+        {!cartDisplay && (
+          <Typography variant="body2">
+            {item.num_instances} remaining
+          </Typography>
         )}
+        <Box sx={{ width: '115px' }}>
+          {item.id in cartItems ? (
+            <Counter
+              currentCount={cartItems[item.id].qty}
+              maxCount={item.num_instances}
+              onChange={(qty: number) => {
+                if (qty === 0) {
+                  dispatch(removeFromCart(item.id));
+                } else {
+                  dispatch(adjustQty(item.id, qty));
+                }
+              }}
+            />
+          ) : (
+            <Button
+              onClick={() => dispatch(addToCart(item))}
+              sx={{ fontSize: '12px', width: '100%' }}
+            >
+              Add to Cart
+            </Button>
+          )}
+        </Box>
       </Stack>
-    </Paper>
+    </Box>
   );
 };
 

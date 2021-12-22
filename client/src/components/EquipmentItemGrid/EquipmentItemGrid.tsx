@@ -1,5 +1,6 @@
 import React from 'react';
 import { EquipmentItem } from 'types/Equipment';
+import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import EquipmentItemCard from 'components/EquipmentItem';
 interface EquipmentItemGridProps {
@@ -12,7 +13,9 @@ const EquipmentItemGrid: React.FC<EquipmentItemGridProps> = ({ items }) => {
       {items &&
         items.map((item) => (
           <Grid item xs={12} md={4} xl={3}>
-            <EquipmentItemCard item={item} />
+            <Paper variant="elevation">
+              <EquipmentItemCard item={item} />
+            </Paper>
           </Grid>
         ))}
     </Grid>

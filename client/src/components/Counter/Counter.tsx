@@ -6,35 +6,18 @@ import IconButton from '@mui/material/IconButton';
 import { Add, Remove } from '@mui/icons-material';
 
 interface CounterProps {
-  startingCount?: number;
+  currentCount?: number;
   maxCount?: number;
   onChange?: (arg0: number) => void;
 }
 
 const Counter: React.FC<CounterProps> = ({
-  startingCount = 0,
+  currentCount = 0,
   maxCount = 100,
   onChange,
 }) => {
-  const [count, setCount] = useState(startingCount);
-
-  // need to add [count] as a dependency so that we don't run into infinite loop
-  useEffect(() => {
-    if (onChange) {
-      onChange(count);
-    }
-  }, [count]);
-
-  const handleIncrement = () => {
-    setCount(count + 1);
-  };
-
-  const handleDecrement = () => {
-    setCount(count - 1);
-  };
-
-  const canDecrement = count > 0;
-  const canIncrement = count < maxCount;
+  const canDecrement = currentCount > 0;
+  const canIncrement = currentCount < maxCount;
 
   return (
     <Box
@@ -48,7 +31,7 @@ const Counter: React.FC<CounterProps> = ({
         <IconButton
           color="warning"
           disabled={!canDecrement}
-          onClick={handleDecrement}
+          onClick={() => onChange && onChange(currentCount - 1)}
           sx={{ width: '30px', height: '30px' }}
         >
           <Remove />
@@ -60,12 +43,12 @@ const Counter: React.FC<CounterProps> = ({
             verticalAlign: 'middle',
           }}
         >
-          {count}
+          {currentCount}
         </Typography>
         <IconButton
           color="primary"
           disabled={!canIncrement}
-          onClick={handleIncrement}
+          onClick={() => onChange && onChange(currentCount + 1)}
           sx={{ width: '30px', height: '30px' }}
         >
           <Add />

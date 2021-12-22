@@ -22,3 +22,8 @@ export interface EquipmentItem {
   equipment_type_FK?: number;
   num_instances?: number;
 }
+
+export interface CartItem {
+  item: EquipmentItem;
+  qty: number;
+}

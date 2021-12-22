@@ -3,10 +3,19 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
+import Stack from '@mui/material/Stack';
+import Divider from '@mui/material/Divider';
+import EquipmentItemCard from 'components/EquipmentItem/EquipmentItem';
+import { CartItem } from 'types/Equipment';
 
-import styles from './Cart.module.css';
+import { useSelector, useDispatch, RootStateOrAny } from 'react-redux';
 
 const Cart: React.FC = () => {
+  const cartItems: { [itemID: number]: CartItem } = useSelector(
+    (state: RootStateOrAny) => {
+      return state.cart.cartItems;
+    }
+  );
   return (
     <Paper
       elevation={3}
@@ -15,18 +24,28 @@ const Cart: React.FC = () => {
         justifyContent: 'flex-start',
         padding: '10px',
         flexDirection: 'column',
-        minHeight: '85vh',
+        height: '85vh',
       }}
     >
-      <div className={styles.title}>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Equipment Cart
-        </Typography>
-      </div>
+      <Typography variant="h6" sx={{ textAlign: 'center', margin: '10px' }}>
+        Equipment Cart
+      </Typography>
+      <Stack
+        spacing={0.5}
+        divider={<Divider />}
+        sx={{ flexGrow: 1, overflow: 'scroll', marginBottom: '5px' }}
+      >
+        {cartItems &&
+          Object.entries(cartItems).map(([itemID, cartItem]) => (
+            <EquipmentItemCard item={cartItem.item} cartDisplay />
+          ))}
+      </Stack>
       <Button
         variant="contained"
         sx={{
-          marginTop: 'auto',
+          alignSelf: 'end',
+          width: '100%',
+          borderRadius: '20px',
         }}
       >
         Check Out

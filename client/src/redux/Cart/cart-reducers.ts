@@ -1,13 +1,10 @@
 import * as actionTypes from './cart-types';
 import { cloneDeep } from 'lodash';
-import { EquipmentItem } from 'types/Equipment';
+import { CartItem } from 'types/Equipment';
 
 export interface CartState {
   cartItems: {
-    [itemID: number]: {
-      item: EquipmentItem;
-      qty: number;
-    };
+    [itemID: number]: CartItem;
   };
 }
 
