@@ -52,7 +52,7 @@ const EquipmentItemCard: React.FC<EquipmentItemProps> = ({ item }) => {
         </Typography>
         {item.id in cartItems ? (
           <Counter
-            startingCount={cartItems[item.id]}
+            startingCount={cartItems[item.id].qty}
             maxCount={item.num_instances}
             onChange={(qty: number) => {
               if (qty === 0) {
@@ -64,7 +64,7 @@ const EquipmentItemCard: React.FC<EquipmentItemProps> = ({ item }) => {
           />
         ) : (
           <Button
-            onClick={() => dispatch(addToCart(item.id))}
+            onClick={() => dispatch(addToCart(item))}
             sx={{ fontSize: '12px', width: '100%' }}
           >
             Add to Cart
