@@ -1,2 +1,2 @@
-release: python server/manage.py migrate && python manage.py loaddata server/fixture/fixtures_2021.json
+release: python server/manage.py migrate
 web: gunicorn --pythonpath server tutvwebsite.wsgi
