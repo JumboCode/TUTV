@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
@@ -30,6 +31,11 @@ const Cart: React.FC = () => {
       <Typography variant="h6" sx={{ textAlign: 'center', margin: '10px' }}>
         Equipment Cart
       </Typography>
+      {Object.keys(cartItems).length === 0 && (
+        <Typography sx={{ alignSelf: 'center', justifySelf: 'center' }}>
+          It's lonely here...
+        </Typography>
+      )}
       <Stack
         spacing={0.5}
         divider={<Divider />}
@@ -41,6 +47,7 @@ const Cart: React.FC = () => {
           ))}
       </Stack>
       <Button
+        disabled={Object.keys(cartItems).length === 0}
         variant="contained"
         sx={{
           alignSelf: 'end',
