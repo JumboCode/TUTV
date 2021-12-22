@@ -11,7 +11,7 @@ const EquipmentItemGrid: React.FC<EquipmentItemGridProps> = ({ items }) => {
     <Grid container spacing={2}>
       {items &&
         items.map((item) => (
-          <Grid item xs={12} md={6} xl={4}>
+          <Grid item xs={12} md={4} xl={3}>
             <EquipmentItemCard item={item} />
           </Grid>
         ))}

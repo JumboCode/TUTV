@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import { Add, Remove } from '@mui/icons-material';
@@ -38,40 +39,38 @@ const Counter: React.FC<CounterProps> = ({
   return (
     <Box
       sx={{
-        marginTop: '10px',
-        display: 'inline-flex',
-        flexDirection: 'row',
-        alignItems: 'center',
         border: '1px solid',
         borderColor: 'primary.main',
         borderRadius: '20px',
       }}
     >
-      <IconButton
-        color="warning"
-        disabled={!canDecrement}
-        onClick={handleDecrement}
-      >
-        <Remove />
-      </IconButton>
-      <Typography
-        variant="body1"
-        sx={{
-          minWidth: '20px',
-          minHeight: '20px',
-          textAlign: 'center',
-          verticalAlign: 'middle',
-        }}
-      >
-        {count}
-      </Typography>
-      <IconButton
-        color="primary"
-        disabled={!canIncrement}
-        onClick={handleIncrement}
-      >
-        <Add />
-      </IconButton>
+      <Stack direction="row" justifyContent="space-around" alignItems="center">
+        <IconButton
+          color="warning"
+          disabled={!canDecrement}
+          onClick={handleDecrement}
+          sx={{ width: '30px', height: '30px' }}
+        >
+          <Remove />
+        </IconButton>
+        <Typography
+          variant="body1"
+          sx={{
+            textAlign: 'center',
+            verticalAlign: 'middle',
+          }}
+        >
+          {count}
+        </Typography>
+        <IconButton
+          color="primary"
+          disabled={!canIncrement}
+          onClick={handleIncrement}
+          sx={{ width: '30px', height: '30px' }}
+        >
+          <Add />
+        </IconButton>
+      </Stack>
     </Box>
   );
 };

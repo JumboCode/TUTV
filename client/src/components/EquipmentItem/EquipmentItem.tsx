@@ -1,7 +1,7 @@
 import React from 'react';
 import { EquipmentItem } from 'types/Equipment';
 import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
 import Counter from 'components/Counter';
 import Button from 'components/Button';
@@ -38,7 +38,8 @@ const EquipmentItemCard: React.FC<EquipmentItemProps> = ({ item }) => {
         alt="TODO: support alt text"
         width="50%"
       />
-      <Box
+      <Stack
+        spacing={0.2}
         sx={{
           padding: '10px',
           alignSelf: 'center',
@@ -46,7 +47,9 @@ const EquipmentItemCard: React.FC<EquipmentItemProps> = ({ item }) => {
         }}
       >
         <Typography variant="body1">{item.name}</Typography>
-        <Typography variant="body2">{item.num_instances} remaining</Typography>
+        <Typography variant="body2" sx={{ paddingBottom: '5px' }}>
+          {item.num_instances} remaining
+        </Typography>
         {item.id in cartItems ? (
           <Counter
             startingCount={cartItems[item.id]}
@@ -62,12 +65,12 @@ const EquipmentItemCard: React.FC<EquipmentItemProps> = ({ item }) => {
         ) : (
           <Button
             onClick={() => dispatch(addToCart(item.id))}
-            sx={{ width: '100%' }}
+            sx={{ fontSize: '12px', width: '100%' }}
           >
             Add to Cart
           </Button>
         )}
-      </Box>
+      </Stack>
     </Paper>
   );
 };

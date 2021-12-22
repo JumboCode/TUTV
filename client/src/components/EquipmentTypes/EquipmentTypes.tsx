@@ -1,11 +1,9 @@
 import React from 'react';
 import { EquipmentType } from 'types/Equipment';
 
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
+import Stack from '@mui/material/Stack';
+import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import EquipmentItemGrid from 'components/EquipmentItemGrid';
 
@@ -15,19 +13,16 @@ interface EquipmentTypesProps {
 
 const EquipmentTypes: React.FC<EquipmentTypesProps> = ({ types }) => {
   return (
-    <div>
+    <Stack spacing={3}>
       {types.map((type) => (
-        <Accordion defaultExpanded key={type.name}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography>{type.name}</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>{type.description}</Typography>
-            <EquipmentItemGrid items={type.items}></EquipmentItemGrid>
-          </AccordionDetails>
-        </Accordion>
+        <Stack spacing={0.2}>
+          <Typography variant="h5">{type.name}</Typography>
+          <Typography variant="subtitle1">{type.description}</Typography>
+          <Divider />
+          <EquipmentItemGrid items={type.items}></EquipmentItemGrid>
+        </Stack>
       ))}
-    </div>
+    </Stack>
   );
 };
 
