@@ -47,7 +47,7 @@ def main():
     fixtures = []
 
     # read in the old data
-    f = open("tutv_unformatted.json", "r")
+    f = open("old_app_data.json", "r")
     json_parsed_f = json.load(f)
     f.close()
 
