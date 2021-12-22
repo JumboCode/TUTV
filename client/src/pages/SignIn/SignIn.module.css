@@ -32,19 +32,6 @@
   font-size: large;
 }
 
-.signInButton {
-  /* font-size: medium;
-  color: white;
-  background-color: cornflowerblue;
-  border-radius: 15px; */
-  align-self: center;
-  top: 72px;
-  /* padding: 5px 35px;
-  margin: 10px;
-  size: small;
-  max-width: 30%; */
-}
-
 .pageTitle {
   font-family: Roboto;
   font-style: normal;

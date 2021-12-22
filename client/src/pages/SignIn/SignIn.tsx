@@ -53,15 +53,10 @@ const SignIn: React.FC = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <div className={styles.forgotPass}>{'Forgot Password?'}</div>
-        <Button
-          className={styles.signInButton}
-          type="submit"
-          pill
-          onClick={(e) => attemptSignIn()}
-        >
+        <Button type="submit" onClick={(e) => attemptSignIn()}>
           Sign In
         </Button>
+        <div className={styles.forgotPass}>{'Forgot Password?'}</div>
       </div>
       <div className={styles.email}>
         {"Don't have an account? Email TUTV.studios@gmail.com"}

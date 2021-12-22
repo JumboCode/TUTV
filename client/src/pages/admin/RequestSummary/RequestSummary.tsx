@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './RequestSummary.module.css';
-import Item from 'types/Item';
+import Item from 'types/Equipment';
 
 import Button from 'components/Button';
-import EquipmentGrid from 'components/EquipmentGrid';
+import EquipmentGrid from 'components/EquipmentItemGrid';
 
 const RequestSummary: React.FC = () => {
   const [items, setItems] = React.useState<Array<Item>>([]);

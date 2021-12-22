@@ -5,16 +5,21 @@ name = "pypi"
 
 [dev-packages]
 autopep8 = "*"
+black = "*"
 
 [packages]
-django = "*"
-gunicorn = "*"
-django-heroku = "*"
-djangorestframework = "*"
-pillow = "*"
-whitenoise = "*"
+django = "==3.2.7"
+gunicorn = "==20.1.0"
+django-heroku = "==0.3.1"
+djangorestframework = "==3.12.4"
+pillow = "==8.3.2"
+whitenoise = "==5.3.0"
 djangorestframework-simplejwt = "==4.6.0"
-django-cors-headers = "*"
+django-cors-headers = "==3.8.0"
+pytz = "==2021.1"
 
 [requires]
 python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true

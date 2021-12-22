@@ -1,109 +1,105 @@
 import React from 'react';
-import styles from './EquipmentBrowser.module.css';
-import Collabspible from 'react-collapsible';
-import Button from 'components/Button';
-import { ChevronDown } from 'react-feather';
-import Item from 'types/Item';
-import EquipmentGrid from 'components/EquipmentGrid';
+import { EquipmentCategory } from 'types/Equipment';
+import EquipmentTypes from 'components/EquipmentTypes';
+import Cart from 'components/Cart';
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+import DateTimePicker from '@mui/lab/DateTimePicker';
+import Typography from '@mui/material/Typography';
+
+import Box from '@mui/material/Box';
+import Tab from '@mui/material/Tab';
+import TabContext from '@mui/lab/TabContext';
+import TabList from '@mui/lab/TabList';
+import TabPanel from '@mui/lab/TabPanel';
 
 const EquipmentBrowser: React.FC = () => {
-  const [items, setItems] = React.useState<Array<Item>>([]);
+  const [equipment, setEquipment] = React.useState<Array<EquipmentCategory>>(
+    []
+  );
+  const [value, setValue] = React.useState<Date | null>(new Date());
+  const [tabValue, setTabValue] = React.useState<string>('Camera');
+
   React.useEffect(() => {
-    fetch('https://tutv-mock.now.sh/api/v1/equipment/')
-      .then((response) => response.json())
-      .then((response) => setItems(response.data))
+    fetch(new URL('/api/v1/equipment-categories/', window.location.origin).href)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw response;
+      })
+      .then((data) => {
+        setEquipment(data);
+      })
       .catch((error) => console.error(error));
   }, []);
+
   return (
-    <div>
-      <div className={styles.header}>
-        <table className={styles.tableClass}>
-          <tbody>
-            <tr>
-              <th>Project Name</th>
-              <th>Checkout Time</th>
-              <th>Return Time</th>
-            </tr>
-            <tr className={styles.projectreq}>
-              <td className={styles.cellName}>Fake Project Name</td>
-              <td>
-                <input type="datetime-local" />
-              </td>
-              <td>
-                <input type="datetime-local" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <Button variant="gray" className={styles.headerButton}>
-          Cancel Request
-        </Button>
-        <Button className={styles.headerButton}>Continue</Button>
-      </div>
-      <div>
-        <div className={styles.equipmentPage}>
-          <div className={styles.wrapper}>
-            <Collabspible
-              trigger={
-                <React.Fragment>
-                  {'Camera'}
-                  <ChevronDown color="white" size={20} />
-                </React.Fragment>
-              }
-              triggerTagName="div"
-              className={styles.collapsehead}
-              openedClassName={styles.collapsehead}
-            >
-              <EquipmentGrid items={items} />
-            </Collabspible>
-            <Collabspible
-              trigger={
-                <React.Fragment>
-                  {'Audio'}
-                  <ChevronDown color="white" size={20} />
-                </React.Fragment>
-              }
-              triggerTagName="div"
-              className={styles.collapsehead}
-              openedClassName={styles.collapsehead}
-            >
-              <EquipmentGrid items={items} />
-            </Collabspible>
-            <Collabspible
-              trigger={
-                <React.Fragment>
-                  {'Lighting'}
-                  <ChevronDown color="white" size={20} />
-                </React.Fragment>
-              }
-              triggerTagName="div"
-              className={styles.collapsehead}
-              openedClassName={styles.collapsehead}
-            >
-              <EquipmentGrid items={items} />
-            </Collabspible>
-            <Collabspible
-              trigger={
-                <React.Fragment>
-                  {'Misc'}
-                  <ChevronDown color="white" size={20} />
-                </React.Fragment>
-              }
-              triggerTagName="div"
-              className={styles.collapsehead}
-              openedClassName={styles.collapsehead}
-            >
-              <EquipmentGrid items={items} />
-            </Collabspible>
-          </div>
-          <div className={styles.cart}>
-            <div>
-              <div>Equipment Cart</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Grid container spacing={2}>
+      <Grid item xs={9}>
+        <Grid container spacing={2}>
+          <Grid item xs={4}>
+            <Typography variant="h6">Checking out for:</Typography>
+            <Typography variant="body1">Cult 3zza</Typography>
+          </Grid>
+          <Grid item xs={4}>
+            <DateTimePicker
+              renderInput={(props) => <TextField {...props} />}
+              label="Checkout Time"
+              value={value}
+              onChange={(newValue) => {
+                setValue(newValue);
+              }}
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <DateTimePicker
+              renderInput={(props) => <TextField {...props} />}
+              label="Return Time"
+              value={value}
+              onChange={(newValue) => {
+                setValue(newValue);
+              }}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <Box sx={{ width: '100%', typography: 'body1' }}>
+              <TabContext value={tabValue}>
+                <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                  <TabList
+                    onChange={(event, newValue) => setTabValue(newValue)}
+                  >
+                    {equipment.map((category: EquipmentCategory) => {
+                      return (
+                        <Tab
+                          key={category.name}
+                          label={category.name}
+                          value={category.name}
+                        />
+                      );
+                    })}
+                  </TabList>
+                </Box>
+                {equipment.map((category: EquipmentCategory) => {
+                  return (
+                    <TabPanel
+                      key={category.name}
+                      value={category.name}
+                      sx={{ height: '73vh', overflow: 'scroll' }}
+                    >
+                      <EquipmentTypes types={category.types}></EquipmentTypes>
+                    </TabPanel>
+                  );
+                })}
+              </TabContext>
+            </Box>
+          </Grid>
+        </Grid>
+      </Grid>
+      <Grid item xs={3}>
+        <Cart />
+      </Grid>
+    </Grid>
   );
 };
 
