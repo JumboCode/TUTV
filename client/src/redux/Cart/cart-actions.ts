@@ -28,3 +28,21 @@ export const adjustQty = (itemID: number, value: number) => {
     },
   };
 };
+
+export const setCheckoutTime = (time: Date) => {
+  return {
+    type: ActionTypes.SET_CHECKOUT_TIME,
+    payload: {
+      time: time,
+    },
+  };
+};
+
+export const setReturnTime = (time: Date) => {
+  return {
+    type: ActionTypes.SET_RETURN_TIME,
+    payload: {
+      time: time,
+    },
+  };
+};

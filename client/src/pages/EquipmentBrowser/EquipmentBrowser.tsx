@@ -13,12 +13,18 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 
+import { useSelector, useDispatch } from 'react-redux';
+import { setCheckoutTime, setReturnTime } from '../../redux';
+
 const EquipmentBrowser: React.FC = () => {
   const [equipment, setEquipment] = React.useState<Array<EquipmentCategory>>(
     []
   );
-  const [value, setValue] = React.useState<Date | null>(new Date());
   const [tabValue, setTabValue] = React.useState<string>('Camera');
+  const [checkoutTime, returnTime] = useSelector((state: any) => {
+    return [state.cart.checkoutTime, state.cart.returnTime];
+  });
+  const dispatch = useDispatch();
 
   React.useEffect(() => {
     fetch(new URL('/api/v1/equipment-categories/', window.location.origin).href)
@@ -46,20 +52,26 @@ const EquipmentBrowser: React.FC = () => {
             <DateTimePicker
               renderInput={(props) => <TextField {...props} />}
               label="Checkout Time"
-              value={value}
-              onChange={(newValue) => {
-                setValue(newValue);
+              value={checkoutTime}
+              onChange={(newCheckoutTime) => {
+                dispatch(setCheckoutTime(newCheckoutTime));
               }}
+              minDateTime={new Date()}
             />
           </Grid>
           <Grid item xs={4}>
             <DateTimePicker
               renderInput={(props) => <TextField {...props} />}
               label="Return Time"
-              value={value}
-              onChange={(newValue) => {
-                setValue(newValue);
+              value={returnTime}
+              onChange={(newReturnTime) => {
+                dispatch(setReturnTime(newReturnTime));
               }}
+              minDateTime={checkoutTime || new Date()}
+              maxDateTime={
+                checkoutTime &&
+                new Date(checkoutTime).setDate(checkoutTime.getDate() + 2)
+              }
             />
           </Grid>
           <Grid item xs={12}>

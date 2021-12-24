@@ -1,1 +1,7 @@
-export { addToCart, removeFromCart, adjustQty } from './Cart/cart-actions';
+export {
+  addToCart,
+  removeFromCart,
+  adjustQty,
+  setCheckoutTime,
+  setReturnTime,
+} from './Cart/cart-actions';

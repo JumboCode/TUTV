@@ -6,10 +6,14 @@ export interface CartState {
   cartItems: {
     [itemID: number]: CartItem;
   };
+  checkoutTime: Date | null;
+  returnTime: Date | null;
 }
 
 const INITIAL_STATE: CartState = {
   cartItems: {},
+  checkoutTime: null,
+  returnTime: null,
 };
 
 // note that we don't modify the old state object; we create a new one and
@@ -34,6 +38,12 @@ const cartReducer = (state: CartState = INITIAL_STATE, action: any) => {
       let itemID = action.payload.id;
       newCartItems[itemID].qty = action.payload.qty;
       return { ...state, cartItems: newCartItems };
+    }
+    case actionTypes.SET_CHECKOUT_TIME: {
+      return { ...state, checkoutTime: action.payload.time };
+    }
+    case actionTypes.SET_RETURN_TIME: {
+      return { ...state, returnTime: action.payload.time };
     }
     default:
       return state;
