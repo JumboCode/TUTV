@@ -6,4 +6,6 @@ from .models import *
 admin.site.register(EquipmentInstance)
 admin.site.register(EquipmentItem)
 admin.site.register(EquipmentType)
+admin.site.register(EquipmentCategory)
 admin.site.register(EquipmentRequest)
+admin.site.register(EquipmentRequestItemQty)
