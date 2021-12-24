@@ -1,23 +1,27 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import { EquipmentCategory } from 'types/Equipment';
 import EquipmentTypes from 'components/EquipmentTypes';
 import Cart from 'components/Cart';
 import Grid from '@mui/material/Grid';
-import TextField from '@mui/material/TextField';
-import DateTimePicker from '@mui/lab/DateTimePicker';
-import Typography from '@mui/material/Typography';
+import Stack from '@mui/material/Stack';
+import IconButton from '@mui/material/IconButton';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
+import RequestInfo from 'components/RequestInfo';
+
+import { useSelector } from 'react-redux';
 
 const EquipmentBrowser: React.FC = () => {
   const [equipment, setEquipment] = React.useState<Array<EquipmentCategory>>(
     []
   );
-  const [value, setValue] = React.useState<Date | null>(new Date());
   const [tabValue, setTabValue] = React.useState<string>('Camera');
 
   React.useEffect(() => {
@@ -38,29 +42,13 @@ const EquipmentBrowser: React.FC = () => {
     <Grid container spacing={2}>
       <Grid item xs={9}>
         <Grid container spacing={2}>
-          <Grid item xs={4}>
-            <Typography variant="h6">Checking out for:</Typography>
-            <Typography variant="body1">Cult 3zza</Typography>
-          </Grid>
-          <Grid item xs={4}>
-            <DateTimePicker
-              renderInput={(props) => <TextField {...props} />}
-              label="Checkout Time"
-              value={value}
-              onChange={(newValue) => {
-                setValue(newValue);
-              }}
-            />
-          </Grid>
-          <Grid item xs={4}>
-            <DateTimePicker
-              renderInput={(props) => <TextField {...props} />}
-              label="Return Time"
-              value={value}
-              onChange={(newValue) => {
-                setValue(newValue);
-              }}
-            />
+          <Grid item xs={12}>
+            <Stack direction="row" spacing={3}>
+              <IconButton component={Link} to={'/newrequest'}>
+                <ArrowBackIcon />
+              </IconButton>
+              <RequestInfo orientation="row" readOnly></RequestInfo>
+            </Stack>
           </Grid>
           <Grid item xs={12}>
             <Box sx={{ width: '100%', typography: 'body1' }}>
