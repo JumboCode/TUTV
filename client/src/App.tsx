@@ -8,6 +8,7 @@ import reduxStore from './redux/store';
 // Components for pages of the app
 import Home from './pages/Home';
 import Catalog from './pages/Catalog';
+import NewRequest from './pages/NewRequest';
 import EquipmentBrowser from './pages/EquipmentBrowser';
 import MemberDashboard from './pages/MemberDashboard';
 import AdminDashboard from './pages/admin/AdminDashboard';
@@ -38,29 +39,30 @@ const App: React.FC = () => {
             <StoreProvider>
               <LoginShield fallback={<SignIn />}>
                 <Navbar />
-                <div className="App">
-                  <div className="content">
-                    <Switch>
-                      <Route path="/admin/dashboard">
-                        <AdminDashboard />
-                      </Route>
-                      <Route path="/catalog">
-                        <Catalog />
-                      </Route>
-                      <Route path="/equipmentbrowser">
-                        <EquipmentBrowser />
-                      </Route>
-                      <Route path="/memberdashboard">
-                        <MemberDashboard />
-                      </Route>
-                      <Route path="/admin/equipment-request">
-                        <RequestSummary />
-                      </Route>
-                      <Route path="/">
-                        <Home />
-                      </Route>
-                    </Switch>
-                  </div>
+                <div className="content">
+                  <Switch>
+                    <Route path="/admin/dashboard">
+                      <AdminDashboard />
+                    </Route>
+                    <Route path="/catalog">
+                      <Catalog />
+                    </Route>
+                    <Route path="/equipmentbrowser">
+                      <EquipmentBrowser />
+                    </Route>
+                    <Route path="/newrequest">
+                      <NewRequest />
+                    </Route>
+                    <Route path="/memberdashboard">
+                      <MemberDashboard />
+                    </Route>
+                    <Route path="/admin/equipment-request">
+                      <RequestSummary />
+                    </Route>
+                    <Route path="/">
+                      <Home />
+                    </Route>
+                  </Switch>
                 </div>
               </LoginShield>
             </StoreProvider>

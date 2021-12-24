@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
@@ -9,7 +8,7 @@ import Divider from '@mui/material/Divider';
 import EquipmentItemCard from 'components/EquipmentItem/EquipmentItem';
 import { CartItem } from 'types/Equipment';
 
-import { useSelector, useDispatch, RootStateOrAny } from 'react-redux';
+import { useSelector, RootStateOrAny } from 'react-redux';
 
 const Cart: React.FC = () => {
   const cartItems: { [itemID: number]: CartItem } = useSelector(

@@ -18,7 +18,9 @@ code {
 }
 
 .content {
-  margin: 0 auto; /* centers the page */
-  width: 90vw;
-  margin-top: 50px;
+  margin: 50px 5% 0 5%; /* centers the page */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
