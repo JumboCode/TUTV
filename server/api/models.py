@@ -109,10 +109,10 @@ class EquipmentRequest(models.Model):
     """
     These fields are filled when the request is first created.
     """
-    timestamp = models.DateTimeField(auto_now_add=True, null=True)
-    project = models.CharField(max_length=200, null=True)
-    request_out = models.DateTimeField(null=True)
-    request_in = models.DateTimeField(null=True)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    project = models.CharField(max_length=200)
+    request_out = models.DateTimeField()
+    request_in = models.DateTimeField()
 
     # The "through" table allows us to provide additional information on the
     # many-to-many relationship. https://www.youtube.com/watch?v=-HuTlmEVOgU

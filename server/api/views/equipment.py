@@ -61,6 +61,7 @@ class EquipmentRequestViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
 
     serializer_class = EquipmentRequestSerializer
+
     # get_queryset is necessary for accessing the request member of this class
     def get_queryset(self):
         # filtering for EquipmentRequest objects associated with the
@@ -97,8 +98,10 @@ def get_availability(request):
             safe=False,
         )
 
-    request_out_fmt = datetime.datetime.strptime(request_out, "%Y-%m-%dT%H:%M:%S%z")
-    request_in_fmt = datetime.datetime.strptime(request_in, "%Y-%m-%dT%H:%M:%S%z")
+    request_out_fmt = datetime.datetime.strptime(
+        request_out, "%Y-%m-%dT%H:%M:%S%z")
+    request_in_fmt = datetime.datetime.strptime(
+        request_in, "%Y-%m-%dT%H:%M:%S%z")
 
     # Check if the item ID provided exists
     if EquipmentInstance.objects.filter(id=equipment_item_id).count() == 0:
@@ -130,6 +133,10 @@ def get_availability(request):
 Partially update a request to reflect its signed out status
 Reference: https://stackoverflow.com/questions/50129567/django-rest-update-one-field
 """
+
+# class new_request(APIView):
+#     def post(self, request, format=None):
+#         serializer = EquipmentRequestSerializer(data=request.data)
 
 
 class sign_out_request(APIView):
@@ -185,17 +192,3 @@ class return_request(APIView):
             return Response(serializer.data)
         # return a meaningful error response
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-"""Deprecated"""
-"""
-class EquipmentTypeList(APIView):
-    def get(self, request, format=None):
-        equipments = EquipmentType.objects.all()
-        serializer = EquipmentTypeSerializer(equipments, many=True, context={'request': request})
-        return Response(serializer.data)
-
-def list_equipment(request, format=None):
-    all_equipment = list(EquipmentType.objects.values())
-    return JsonResponse(all_equipment, safe=False)
-"""
