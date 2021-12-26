@@ -16,6 +16,7 @@ import EquipmentTypes from 'components/EquipmentTypes';
 import Cart from 'components/Cart';
 
 import { EquipmentCategory } from 'types/Equipment';
+import { useApiRequest } from 'api';
 
 const EquipmentBrowser: React.FC = () => {
   const [equipment, setEquipment] = React.useState<Array<EquipmentCategory>>(
@@ -23,14 +24,9 @@ const EquipmentBrowser: React.FC = () => {
   );
   const [tabValue, setTabValue] = React.useState<string>('Camera');
 
+  const getEquipment = useApiRequest('equipment-categories');
   React.useEffect(() => {
-    fetch(new URL('/api/v1/equipment-categories/', window.location.origin).href)
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        }
-        throw response;
-      })
+    getEquipment()
       .then((data) => {
         setEquipment(data);
       })

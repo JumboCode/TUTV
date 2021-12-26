@@ -10,6 +10,7 @@ import RequestInfo from 'components/RequestInfo';
 import { CartItem } from 'types/Equipment';
 
 import { RootStateOrAny, useSelector } from 'react-redux';
+import { useApiRequest } from 'api';
 
 const RequestSummary = () => {
   const [projectName, checkoutTime, returnTime, cartItems]: [
@@ -26,32 +27,21 @@ const RequestSummary = () => {
     ];
   });
 
-  const onSubmitRequest = () => {
-    fetch(new URL('/api/v1/equipment-requests/', window.location.origin).href, {
-      method: 'POST',
-      mode: 'cors',
-      cache: 'no-cache',
-      credentials: 'same-origin',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      redirect: 'follow',
-      referrer: 'no-referrer',
-      body: JSON.stringify({
-        project: projectName,
-        request_out: checkoutTime,
-        request_in: returnTime,
-        equipment_items: Object.entries(cartItems).map(([itemID, cartItem]) => {
-          return { item: itemID, quantity: cartItem.qty };
-        }),
+  const submitRequest = useApiRequest('equipment-requests', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      project: projectName,
+      request_out: checkoutTime,
+      request_in: returnTime,
+      equipment_items: Object.entries(cartItems).map(([itemID, cartItem]) => {
+        return { item: itemID, quantity: cartItem.qty };
       }),
-    })
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        }
-        throw response;
-      })
+    }),
+  });
+
+  const onSubmitRequest = () => {
+    submitRequest()
       .then((data) => {
         // redirect to error page if POST failed
         console.log(data);
