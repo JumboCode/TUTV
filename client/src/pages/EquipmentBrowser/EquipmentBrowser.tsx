@@ -1,22 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { EquipmentCategory } from 'types/Equipment';
-import EquipmentTypes from 'components/EquipmentTypes';
-import Cart from 'components/Cart';
+import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
-import IconButton from '@mui/material/IconButton';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-
-import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
-import RequestInfo from 'components/RequestInfo';
+import IconButton from '@mui/material/IconButton';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
-import { useSelector } from 'react-redux';
+import RequestInfo from 'components/RequestInfo';
+import EquipmentTypes from 'components/EquipmentTypes';
+import Cart from 'components/Cart';
+
+import { EquipmentCategory } from 'types/Equipment';
 
 const EquipmentBrowser: React.FC = () => {
   const [equipment, setEquipment] = React.useState<Array<EquipmentCategory>>(

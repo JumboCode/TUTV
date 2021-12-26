@@ -9,14 +9,55 @@ import RequestInfo from 'components/RequestInfo';
 
 import { CartItem } from 'types/Equipment';
 
-import { useSelector } from 'react-redux';
+import { RootStateOrAny, useSelector } from 'react-redux';
 
 const RequestSummary = () => {
-  const cartItems: { [itemID: number]: CartItem } = useSelector(
-    (state: RootStateOrAny) => {
-      return state.cart.cartItems;
-    }
-  );
+  const [projectName, checkoutTime, returnTime, cartItems]: [
+    string,
+    Date,
+    Date,
+    { [itemID: number]: CartItem }
+  ] = useSelector((state: RootStateOrAny) => {
+    return [
+      state.cart.projectName,
+      state.cart.checkoutTime,
+      state.cart.returnTime,
+      state.cart.cartItems,
+    ];
+  });
+
+  const onSubmitRequest = () => {
+    fetch(new URL('/api/v1/equipment-requests/', window.location.origin).href, {
+      method: 'POST',
+      mode: 'cors',
+      cache: 'no-cache',
+      credentials: 'same-origin',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      redirect: 'follow',
+      referrer: 'no-referrer',
+      body: JSON.stringify({
+        project: projectName,
+        request_out: checkoutTime,
+        request_in: returnTime,
+        equipment_items: Object.entries(cartItems).map(([itemID, cartItem]) => {
+          return { item: itemID, quantity: cartItem.qty };
+        }),
+      }),
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw response;
+      })
+      .then((data) => {
+        // redirect to error page if POST failed
+        console.log(data);
+      })
+      .catch((error) => console.error(error));
+  };
 
   return (
     <Stack sx={{ width: '50%' }} spacing={2}>
@@ -52,7 +93,12 @@ const RequestSummary = () => {
             </Stack>
           ))}
       </Stack>
-      <Button variant="contained" component={Link} to={'/request/confirmation'}>
+      <Button
+        variant="contained"
+        onClick={onSubmitRequest}
+        component={Link}
+        to={'/request/confirmation'}
+      >
         Submit Request
       </Button>
     </Stack>
