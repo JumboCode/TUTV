@@ -17,7 +17,11 @@ DATABASES = {
     }
 }
 
-MIDDLEWARE = MIDDLEWARE + ['tutvwebsite.middleware.dev_cors_middleware']
+# Adds CORS headers for local testing only to allow the frontend, which is
+# served on localhost:3000, to access the API, which is served on
+# localhost:8000.
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
+CORS_ALLOW_CREDENTIALS = True
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # TODO: set MEDIA_URL to something?
