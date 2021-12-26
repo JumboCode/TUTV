@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
@@ -53,6 +54,8 @@ const Cart: React.FC = () => {
           width: '100%',
           borderRadius: '20px',
         }}
+        component={Link}
+        to={'/request/summary'}
       >
         Check Out
       </Button>
