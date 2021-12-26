@@ -150,7 +150,7 @@ class EquipmentRequest(models.Model):
     )
 
     def __str__(self):
-        return f"({self.status}) Request made by {self.user.username} for {self.project}"
+        return f"({self.status}) Request made by {self.user.username if self.user else 'unknown user'} for {self.project}"
 
 
 class EquipmentRequestItemQty(models.Model):
