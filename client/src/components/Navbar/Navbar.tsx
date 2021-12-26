@@ -42,11 +42,14 @@ const Navbar: React.FC = () => {
           <Link style={linkStyle} to="/catalog">
             Catalog
           </Link>
-          <Link style={linkStyle} to="/equipmentbrowser">
+          <Link style={linkStyle} to="/request/new">
+            New Request
+          </Link>
+          <Link style={linkStyle} to="/request/browser">
             Browser
           </Link>
-          <Link style={linkStyle} to="/newrequest">
-            New Request
+          <Link style={linkStyle} to="/request/summary">
+            Admin Equipment Request
           </Link>
           <Link style={linkStyle} to="/memberdashboard">
             Member Dashboard
@@ -54,9 +57,7 @@ const Navbar: React.FC = () => {
           {/* <Link style={linkStyle} to="/admin/dashboard">
             Admin Dashboard
           </Link>
-          <Link style={linkStyle} to="/admin/equipment-request">
-            Admin Equipment Request
-          </Link> */}
+          */}
           <Button variant="contained" color="secondary" onClick={logout}>
             Log out
           </Button>
