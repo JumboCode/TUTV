@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.deletion import CASCADE
 from django.utils import timezone
 
 from django.contrib.auth.models import User
@@ -41,9 +42,6 @@ class EquipmentType(models.Model):
     def __str__(self):
         return self.name
 
-    def __str__(self):
-        return f"Category: {self.name}"
-
     def items(self):
         return self.linked_items.all()
 
@@ -67,7 +65,7 @@ class EquipmentItem(models.Model):
     product_url = models.URLField(blank=True)
 
     def __str__(self):
-        return f"Equipment Type: {self.name}"
+        return self.name
 
     def instances(self):
         return self.linked_instances.all()
@@ -91,42 +89,56 @@ class EquipmentInstance(models.Model):
     )  # Need the null=True heres
     id_of_item = models.IntegerField(null=True)
     comments = models.CharField(max_length=200, blank=True)
-    created_at = models.DateTimeField(editable=False)
+    created_at = models.DateTimeField(auto_now_add=True, editable=False)
 
     def __str__(self):
         if hasattr(self.equipment_item_FK, "name"):
-            return f"Equipment Item: {self.equipment_item_FK.name} #{self.id_of_item} of {self.equipment_item_FK.num_items()}"  # Need fixing
+            return f"{self.equipment_item_FK.name} #{self.id_of_item} of {self.equipment_item_FK.num_instances()}"
         else:
-            return f"Equipment Item: null equipment type name #{self.id_of_item}"
-
-    def save(self, *args, **kwargs):
-        # Runs on first create (model will have id after its initial creation)
-        if not self.id:
-            self.created_at = timezone.now()
-            # self.id_of_type = self.equipment_type.num_items()
-        # Let default save handler do its thing at the end
-        return super(EquipmentInstance, self).save(*args, **kwargs)
+            return f"(No equipment item name) #{self.id_of_item}"
 
     def assoc_requests(self):
         return self.linked_requests.all()
 
 
 class EquipmentRequest(models.Model):
-    timestamp = models.DateTimeField(auto_now_add=True, null=True)
-    request_out = models.DateTimeField(null=True)
-    request_in = models.DateTimeField(null=True)
-    # no on_delete option possible. What happens when an item is deleted?
+    """
+    A request that involves many equipment instances.
+    """
+
+    """
+    These fields are filled when the request is first created.
+    """
+    timestamp = models.DateTimeField(auto_now_add=True)
+    project = models.CharField(max_length=200)
+    request_out = models.DateTimeField()
+    request_in = models.DateTimeField()
+
+    # The "through" table allows us to provide additional information on the
+    # many-to-many relationship. https://www.youtube.com/watch?v=-HuTlmEVOgU
     equipment_items = models.ManyToManyField(
-        EquipmentInstance, related_name="linked_requests"
-    )
-    # when the referenced object is deleted (i.e. the User), do not delete the request, but rather
-    # set the ForeignKey to null. This is only possible if null is True.
+        EquipmentItem, through="EquipmentRequestItemQty")
+
+    # SET_NULL means that when a user is deleted (the referenced object), we set
+    # the FK here to NULL (rather than delete this request). This is only
+    # possible if null is True for this field.
     user = models.ForeignKey(
         User, related_name="linked_requests", on_delete=models.SET_NULL, null=True
     )
 
+    """
+    These fields are filled until the request is fulfilled by a board member.
+    """
+    # we need to keep track of both items (with quantity) and instances since
+    # the instances aren't available to us until the request is fulfilled by a
+    # board member.
+    equipment_instances = models.ManyToManyField(
+        EquipmentInstance, related_name="linked_requests", blank=True
+    )
     actual_out = models.DateTimeField(null=True, blank=True)
     actual_in = models.DateTimeField(null=True, blank=True)
+    approving_board_member = models.ForeignKey(
+        User, related_name="linked_approvals", on_delete=models.SET_NULL, null=True, blank=True)
 
     class Status(models.TextChoices):
         REQUESTED = "Requested"
@@ -136,3 +148,26 @@ class EquipmentRequest(models.Model):
     status = models.CharField(
         max_length=10, choices=Status.choices, default=Status.REQUESTED
     )
+
+    def __str__(self):
+        return f"({self.status}) Request made by {self.user.username} for {self.project}"
+
+
+class EquipmentRequestItemQty(models.Model):
+    """
+    Intermediate table for adding quantity information for the many-to-many
+    relationship between EquipmentRequest and EquipmentItem. 
+    """
+    # CASCADE means that when the request is deleted, delete this request item
+    # quantity entry as well
+    request = models.ForeignKey(EquipmentRequest, on_delete=CASCADE)
+    item = models.ForeignKey(EquipmentItem, on_delete=CASCADE)
+    quantity = models.IntegerField()
+
+    # this ensures that for every request, there is only one quantity entry per
+    # item
+    class Meta:
+        unique_together = ("request", "item")
+
+    def __str__(self):
+        return f"{self.request} - {self.item} x{self.quantity}"
