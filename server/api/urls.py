@@ -15,7 +15,8 @@ router.register(r"equipment-categories", views.EquipmentCategoryViewSet)
 router.register(
     r"equipment-requests", views.EquipmentRequestViewSet, basename="EquipmentRequest"
 )
-router.register(r"equipment-requests-admin", views.EquipmentRequestViewSetAdmin)
+router.register(r"admin/all-equipment-requests",
+                views.EquipmentRequestViewSetAdmin)
 
 urlpatterns = [
     *router.urls,

@@ -69,6 +69,14 @@ class EquipmentRequestViewSet(viewsets.ModelViewSet):
         queryset = EquipmentRequest.objects.filter(user=self.request.user)
         return queryset
 
+    # override the create method to auto-populate the user making the request
+    # the serializer.save() method will essentially call either create or update
+    # on the serializer. The additional argument we pass in here will be added
+    # as part of the "validated_data" argument that create() receives in the
+    # serializer
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
 
 class EquipmentRequestViewSetAdmin(viewsets.ModelViewSet):
     """
