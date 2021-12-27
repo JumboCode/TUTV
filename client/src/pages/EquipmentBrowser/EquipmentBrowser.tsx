@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
@@ -39,9 +40,12 @@ const EquipmentBrowser: React.FC = () => {
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Stack direction="row" spacing={3}>
-              <IconButton component={Link} to={'/newrequest'}>
+              <IconButton component={Link} to={'/request/new'}>
                 <ArrowBackIcon />
               </IconButton>
+              <Typography variant="h5" sx={{ alignSelf: 'center' }}>
+                Equipment Browser
+              </Typography>
               <RequestInfo orientation="row" readOnly></RequestInfo>
             </Stack>
           </Grid>

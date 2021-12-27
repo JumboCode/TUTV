@@ -5,6 +5,9 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+
 import RequestInfo from 'components/RequestInfo';
 
 import { CartItem } from 'types/Equipment';
@@ -51,7 +54,14 @@ const RequestSummary = () => {
 
   return (
     <Stack sx={{ width: '50%' }} spacing={2}>
-      <Typography variant="h5">Request Summary</Typography>
+      <Stack direction="row" spacing={3}>
+        <IconButton component={Link} to={'/request/browser'}>
+          <ArrowBackIcon />
+        </IconButton>
+        <Typography variant="h5" sx={{ alignSelf: 'center' }}>
+          Request Summary
+        </Typography>
+      </Stack>
       <Typography variant="subtitle1">
         This is a spaceholder for any missing equipment reminders (e.g. a tripod
         is checked out with no tripod plate).
