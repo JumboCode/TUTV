@@ -12,7 +12,7 @@ import NewRequest from './pages/NewRequest';
 import EquipmentBrowser from './pages/EquipmentBrowser';
 import MemberDashboard from './pages/MemberDashboard';
 import AdminDashboard from './pages/admin/AdminDashboard';
-import RequestSummary from './pages/admin/RequestSummary';
+import RequestSummary from './pages/RequestSummary';
 import SignIn from './pages/SignIn';
 import Navbar from './components/Navbar';
 
@@ -47,16 +47,16 @@ const App: React.FC = () => {
                     <Route path="/catalog">
                       <Catalog />
                     </Route>
-                    <Route path="/equipmentbrowser">
-                      <EquipmentBrowser />
-                    </Route>
-                    <Route path="/newrequest">
-                      <NewRequest />
-                    </Route>
                     <Route path="/memberdashboard">
                       <MemberDashboard />
                     </Route>
-                    <Route path="/admin/equipment-request">
+                    <Route path="/request/new">
+                      <NewRequest />
+                    </Route>
+                    <Route path="/request/browser">
+                      <EquipmentBrowser />
+                    </Route>
+                    <Route path="/request/summary">
                       <RequestSummary />
                     </Route>
                     <Route path="/">

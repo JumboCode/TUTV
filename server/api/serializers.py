@@ -114,7 +114,6 @@ class EquipmentRequestSerializer(serializers.ModelSerializer):
     # mode. The naming gets a bit confusing here with the through Model; this
     # post is helpful:
     # https://stackoverflow.com/questions/17256724/include-intermediary-through-model-in-responses-in-django-rest-framework
-    #
     equipment_items = EquipmentRequestItemQtySerializer(
         source="equipmentrequestitemqty_set", many=True)
 
@@ -133,4 +132,4 @@ class EquipmentRequestSerializer(serializers.ModelSerializer):
         for item_qty in item_qty_data:
             EquipmentRequestItemQty.objects.create(request=request, **item_qty)
 
-        return request
+        return request  # we need to return the serialized object

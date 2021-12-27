@@ -30,7 +30,7 @@ const NewRequest = () => {
         disabled={!projectName || !checkoutTime || !returnTime}
         variant="contained"
         component={Link}
-        to={'/equipmentbrowser'}
+        to={'/request/browser'}
       >
         Browse Equipment
       </Button>

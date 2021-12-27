@@ -1,10 +1,11 @@
 import React from 'react';
-import { EquipmentItem } from 'types/Equipment';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Counter from 'components/Counter';
 import Button from 'components/Button';
+
+import { EquipmentItem } from 'types/Equipment';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart, removeFromCart, adjustQty } from '../../redux';
