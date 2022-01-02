@@ -14,6 +14,20 @@ interface RequestCardProps {
 }
 
 const RequestCard: React.FC<RequestCardProps> = ({ request }) => {
+  const requestStatusToColor = {
+    Requested: 'warning',
+    Confirmed: 'success',
+    'Signed Out': 'primary',
+    Overdue: 'error',
+    Returned: 'secondary',
+    Cancelled: 'secondary',
+  };
+  if (
+    request.status === 'Signed Out' &&
+    new Date(request.request_in) < new Date()
+  ) {
+    request.status = 'Overdue';
+  }
   return (
     <Paper sx={{ padding: '20px', borderRadius: '10px' }} elevation={6}>
       <Stack spacing={0.5}>
@@ -39,7 +53,18 @@ const RequestCard: React.FC<RequestCardProps> = ({ request }) => {
             justifyContent: 'space-between',
           }}
         >
-          <Typography variant="body1">Status: {request.status}</Typography>
+          <Box
+            sx={{
+              color: 'white',
+              backgroundColor: requestStatusToColor[request.status] + '.light',
+              border: '1px solid',
+              borderColor: requestStatusToColor[request.status] + '.dark',
+              borderRadius: '20px',
+              padding: '0 8px',
+            }}
+          >
+            <Typography variant="body2">Status: {request.status}</Typography>
+          </Box>
           <Typography variant="body1">
             Due: {new Date(request.request_in).toLocaleString()}
           </Typography>
@@ -74,16 +99,18 @@ const RequestCard: React.FC<RequestCardProps> = ({ request }) => {
               </Stack>
             ))}
         </Stack>
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'flex-end',
-          }}
-        >
-          <Button>Modify Request</Button>
-          <Button variant="contained">Cancel Request</Button>
-        </Box>
+        {(request.status === 'Requested' || request.status === 'Confirmed') && (
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'flex-end',
+            }}
+          >
+            <Button>Modify Request</Button>
+            <Button variant="contained">Cancel Request</Button>
+          </Box>
+        )}
       </Stack>
     </Paper>
   );
