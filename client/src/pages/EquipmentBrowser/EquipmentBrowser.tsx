@@ -11,6 +11,7 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import IconButton from '@mui/material/IconButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import CircularProgress from '@mui/material/CircularProgress';
 
 import RequestInfo from 'components/RequestInfo';
 import EquipmentTypes from 'components/EquipmentTypes';
@@ -20,16 +21,16 @@ import { EquipmentCategory } from 'types/Equipment';
 import { useApiRequest } from 'api';
 
 const EquipmentBrowser: React.FC = () => {
-  const [equipment, setEquipment] = React.useState<Array<EquipmentCategory>>(
-    []
-  );
+  const [equipment, setEquipment] = React.useState<EquipmentCategory[]>([]);
   const [tabValue, setTabValue] = React.useState<string>('Camera');
+  const [isLoading, setIsLoading] = React.useState(true);
 
   const getEquipment = useApiRequest('equipment-categories');
   React.useEffect(() => {
     getEquipment()
       .then((data) => {
         setEquipment(data);
+        setIsLoading(false);
       })
       .catch((error) => console.error(error));
   }, []);
@@ -49,37 +50,43 @@ const EquipmentBrowser: React.FC = () => {
               <RequestInfo orientation="row" readOnly></RequestInfo>
             </Stack>
           </Grid>
-          <Grid item xs={12}>
-            <Box sx={{ width: '100%', typography: 'body1' }}>
-              <TabContext value={tabValue}>
-                <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                  <TabList
-                    onChange={(event, newValue) => setTabValue(newValue)}
-                  >
-                    {equipment.map((category: EquipmentCategory) => {
-                      return (
-                        <Tab
-                          key={category.name}
-                          label={category.name}
-                          value={category.name}
-                        />
-                      );
-                    })}
-                  </TabList>
-                </Box>
-                {equipment.map((category: EquipmentCategory) => {
-                  return (
-                    <TabPanel
-                      key={category.name}
-                      value={category.name}
-                      sx={{ height: '73vh', overflow: 'scroll' }}
+          <Grid item xs={12} sx={{ display: 'flex', flexDirection: 'column' }}>
+            {isLoading ? (
+              <Box sx={{ alignSelf: 'center' }}>
+                <CircularProgress />
+              </Box>
+            ) : (
+              <Box sx={{ width: '100%', typography: 'body1' }}>
+                <TabContext value={tabValue}>
+                  <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                    <TabList
+                      onChange={(event, newValue) => setTabValue(newValue)}
                     >
-                      <EquipmentTypes types={category.types}></EquipmentTypes>
-                    </TabPanel>
-                  );
-                })}
-              </TabContext>
-            </Box>
+                      {equipment.map((category: EquipmentCategory) => {
+                        return (
+                          <Tab
+                            key={category.name}
+                            label={category.name}
+                            value={category.name}
+                          />
+                        );
+                      })}
+                    </TabList>
+                  </Box>
+                  {equipment.map((category: EquipmentCategory) => {
+                    return (
+                      <TabPanel
+                        key={category.name}
+                        value={category.name}
+                        sx={{ height: '73vh', overflow: 'scroll' }}
+                      >
+                        <EquipmentTypes types={category.types}></EquipmentTypes>
+                      </TabPanel>
+                    );
+                  })}
+                </TabContext>
+              </Box>
+            )}
           </Grid>
         </Grid>
       </Grid>

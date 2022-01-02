@@ -1,3 +1,4 @@
+from typing import OrderedDict
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 from .models import *
@@ -97,9 +98,16 @@ class EquipmentRequestItemQtySerializer(serializers.ModelSerializer):
     """
     Serializers to support serializing EquipmentRequestItemQty objects
     """
+    # both fields are needed so that when posting, the client only needs to
+    # provide the id of the item in the request. However, when getting, we also
+    # get the full info of the item so that the dashboard can display them.
+    item_id = serializers.PrimaryKeyRelatedField(
+        source="item", queryset=EquipmentItem.objects.all())
+    item = EquipmentItemSerializer(read_only=True)
+
     class Meta:
         model = EquipmentRequestItemQty
-        fields = ('item', 'quantity')
+        fields = ('item_id', 'item', 'quantity')
 
 
 class EquipmentRequestSerializer(serializers.ModelSerializer):

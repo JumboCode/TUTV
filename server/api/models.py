@@ -142,8 +142,10 @@ class EquipmentRequest(models.Model):
 
     class Status(models.TextChoices):
         REQUESTED = "Requested"
+        CONFIRMED = "Confirmed"
         SIGNEDOUT = "Signed Out"
         RETURNED = "Returned"
+        CANCELLED = "Cancelled"
 
     status = models.CharField(
         max_length=10, choices=Status.choices, default=Status.REQUESTED
