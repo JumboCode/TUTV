@@ -50,41 +50,43 @@ const EquipmentBrowser: React.FC = () => {
               <RequestInfo orientation="row" readOnly></RequestInfo>
             </Stack>
           </Grid>
-          <Grid item xs={12}>
-            <Box sx={{ width: '100%', typography: 'body1' }}>
-              <TabContext value={tabValue}>
-                <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                  <TabList
-                    onChange={(event, newValue) => setTabValue(newValue)}
-                  >
-                    {equipment.map((category: EquipmentCategory) => {
-                      return (
-                        <Tab
-                          key={category.name}
-                          label={category.name}
-                          value={category.name}
-                        />
-                      );
-                    })}
-                  </TabList>
-                </Box>
-                {equipment.map((category: EquipmentCategory) => {
-                  return (
-                    <TabPanel
-                      key={category.name}
-                      value={category.name}
-                      sx={{ height: '73vh', overflow: 'scroll' }}
+          <Grid item xs={12} sx={{ display: 'flex', flexDirection: 'column' }}>
+            {isLoading ? (
+              <Box sx={{ alignSelf: 'center' }}>
+                <CircularProgress />
+              </Box>
+            ) : (
+              <Box sx={{ width: '100%', typography: 'body1' }}>
+                <TabContext value={tabValue}>
+                  <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                    <TabList
+                      onChange={(event, newValue) => setTabValue(newValue)}
                     >
-                      {isLoading ? (
-                        <CircularProgress />
-                      ) : (
+                      {equipment.map((category: EquipmentCategory) => {
+                        return (
+                          <Tab
+                            key={category.name}
+                            label={category.name}
+                            value={category.name}
+                          />
+                        );
+                      })}
+                    </TabList>
+                  </Box>
+                  {equipment.map((category: EquipmentCategory) => {
+                    return (
+                      <TabPanel
+                        key={category.name}
+                        value={category.name}
+                        sx={{ height: '73vh', overflow: 'scroll' }}
+                      >
                         <EquipmentTypes types={category.types}></EquipmentTypes>
-                      )}
-                    </TabPanel>
-                  );
-                })}
-              </TabContext>
-            </Box>
+                      </TabPanel>
+                    );
+                  })}
+                </TabContext>
+              </Box>
+            )}
           </Grid>
         </Grid>
       </Grid>
