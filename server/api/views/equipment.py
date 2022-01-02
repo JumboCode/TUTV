@@ -140,10 +140,6 @@ Partially update a request to reflect its signed out status
 Reference: https://stackoverflow.com/questions/50129567/django-rest-update-one-field
 """
 
-# class new_request(APIView):
-#     def post(self, request, format=None):
-#         serializer = EquipmentRequestSerializer(data=request.data)
-
 
 class sign_out_request(APIView):
     def patch(self, request, request_id):

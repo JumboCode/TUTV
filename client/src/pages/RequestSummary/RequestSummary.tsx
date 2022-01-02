@@ -15,7 +15,7 @@ import { CartItem } from 'types/Equipment';
 import { RootStateOrAny, useSelector } from 'react-redux';
 import { useApiRequest } from 'api';
 
-const RequestSummary = () => {
+const RequestSummary: React.FC = () => {
   const [projectName, checkoutTime, returnTime, cartItems]: [
     string,
     Date,
