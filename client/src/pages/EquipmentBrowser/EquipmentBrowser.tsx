@@ -20,9 +20,7 @@ import { EquipmentCategory } from 'types/Equipment';
 import { useApiRequest } from 'api';
 
 const EquipmentBrowser: React.FC = () => {
-  const [equipment, setEquipment] = React.useState<Array<EquipmentCategory>>(
-    []
-  );
+  const [equipment, setEquipment] = React.useState<EquipmentCategory[]>([]);
   const [tabValue, setTabValue] = React.useState<string>('Camera');
 
   const getEquipment = useApiRequest('equipment-categories');
