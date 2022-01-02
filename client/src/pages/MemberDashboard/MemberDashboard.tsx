@@ -14,18 +14,34 @@ import { useApiRequest } from 'api';
 import RequestCard from 'components/RequestCard';
 
 const MemberDashboard: React.FC = () => {
-  const [requests, setRequests] = React.useState<EquipmentRequest[]>([]);
+  const [activeRequests, setActiveRequests] = React.useState<
+    EquipmentRequest[]
+  >([]);
+  const [inactiveRequests, setInactiveRequests] = React.useState<
+    EquipmentRequest[]
+  >([]);
+  const [showInactiveRequests, setShowInactiveRequests] = React.useState(false);
   const getRequests = useApiRequest('equipment-requests');
   React.useEffect(() => {
     getRequests()
-      .then((data) => {
-        setRequests(data);
+      .then((requests) => {
+        const activeRequests: EquipmentRequest[] = [];
+        const inactiveRequests: EquipmentRequest[] = [];
+        requests.forEach((request: EquipmentRequest) => {
+          if (request.status === 'Returned' || request.status === 'Cancelled') {
+            inactiveRequests.push(request);
+          } else {
+            activeRequests.push(request);
+          }
+        });
+        setActiveRequests(activeRequests);
+        setInactiveRequests(inactiveRequests);
       })
       .catch((error) => console.error(error));
   }, []);
 
   return (
-    <Stack spacing={2} sx={{ minWidth: '50%' }}>
+    <Stack spacing={2} sx={{ minWidth: '50%', marginBottom: '50px' }}>
       <Box
         sx={{
           display: 'flex',
@@ -36,7 +52,7 @@ const MemberDashboard: React.FC = () => {
         <Typography variant="h5">My Requests</Typography>
         <Button
           variant="contained"
-          sx={{ alignSelf: 'flex-end', width: '175px' }}
+          sx={{ alignSelf: 'flex-end' }}
           component={Link}
           to={'/request/new'}
           startIcon={<AddIcon />}
@@ -44,12 +60,18 @@ const MemberDashboard: React.FC = () => {
           New Request
         </Button>
       </Box>
-      {requests.map((request: EquipmentRequest) => (
+      {activeRequests.map((request: EquipmentRequest) => (
         <RequestCard request={request}></RequestCard>
       ))}
       <Divider>
-        <Button>View Inactive Requests</Button>
+        <Button onClick={() => setShowInactiveRequests(!showInactiveRequests)}>
+          {!showInactiveRequests ? 'Show' : 'Hide'} Inactive Requests
+        </Button>
       </Divider>
+      {showInactiveRequests &&
+        inactiveRequests.map((request: EquipmentRequest) => (
+          <RequestCard request={request}></RequestCard>
+        ))}
     </Stack>
   );
 };
