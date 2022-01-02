@@ -7,6 +7,7 @@ import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
 import AddIcon from '@mui/icons-material/Add';
+import CircularProgress from '@mui/material/CircularProgress';
 
 import { EquipmentRequest } from 'types/Request';
 
@@ -21,6 +22,8 @@ const MemberDashboard: React.FC = () => {
     EquipmentRequest[]
   >([]);
   const [showInactiveRequests, setShowInactiveRequests] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(true);
+
   const getRequests = useApiRequest('equipment-requests');
   React.useEffect(() => {
     getRequests()
@@ -36,6 +39,7 @@ const MemberDashboard: React.FC = () => {
         });
         setActiveRequests(activeRequests);
         setInactiveRequests(inactiveRequests);
+        setIsLoading(false);
       })
       .catch((error) => console.error(error));
   }, []);
@@ -60,18 +64,38 @@ const MemberDashboard: React.FC = () => {
           New Request
         </Button>
       </Box>
-      {activeRequests.map((request: EquipmentRequest) => (
-        <RequestCard request={request}></RequestCard>
-      ))}
-      <Divider>
-        <Button onClick={() => setShowInactiveRequests(!showInactiveRequests)}>
-          {!showInactiveRequests ? 'Show' : 'Hide'} Inactive Requests
-        </Button>
-      </Divider>
-      {showInactiveRequests &&
-        inactiveRequests.map((request: EquipmentRequest) => (
-          <RequestCard request={request}></RequestCard>
-        ))}
+      {isLoading ? (
+        <Box sx={{ alignSelf: 'center' }}>
+          <CircularProgress />
+        </Box>
+      ) : activeRequests.length === 0 && inactiveRequests.length === 0 ? (
+        <Box sx={{ alignSelf: 'center' }}>
+          <Typography variant="body1">
+            You don't have any equipment request yet...
+          </Typography>
+        </Box>
+      ) : (
+        <Stack spacing={2}>
+          {activeRequests.length !== 0 &&
+            activeRequests.map((request: EquipmentRequest) => (
+              <RequestCard request={request}></RequestCard>
+            ))}
+          {activeRequests.length !== 0 && inactiveRequests.length !== 0 && (
+            <Divider>
+              <Button
+                onClick={() => setShowInactiveRequests(!showInactiveRequests)}
+              >
+                {!showInactiveRequests ? 'Show' : 'Hide'} Inactive Requests
+              </Button>
+            </Divider>
+          )}
+          {((activeRequests.length === 0 && inactiveRequests.length !== 0) ||
+            showInactiveRequests) &&
+            inactiveRequests.map((request: EquipmentRequest) => (
+              <RequestCard request={request}></RequestCard>
+            ))}
+        </Stack>
+      )}
     </Stack>
   );
 };
