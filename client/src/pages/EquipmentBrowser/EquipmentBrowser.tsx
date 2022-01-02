@@ -11,6 +11,7 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import IconButton from '@mui/material/IconButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import CircularProgress from '@mui/material/CircularProgress';
 
 import RequestInfo from 'components/RequestInfo';
 import EquipmentTypes from 'components/EquipmentTypes';
@@ -22,12 +23,14 @@ import { useApiRequest } from 'api';
 const EquipmentBrowser: React.FC = () => {
   const [equipment, setEquipment] = React.useState<EquipmentCategory[]>([]);
   const [tabValue, setTabValue] = React.useState<string>('Camera');
+  const [isLoading, setIsLoading] = React.useState(true);
 
   const getEquipment = useApiRequest('equipment-categories');
   React.useEffect(() => {
     getEquipment()
       .then((data) => {
         setEquipment(data);
+        setIsLoading(false);
       })
       .catch((error) => console.error(error));
   }, []);
@@ -72,7 +75,11 @@ const EquipmentBrowser: React.FC = () => {
                       value={category.name}
                       sx={{ height: '73vh', overflow: 'scroll' }}
                     >
-                      <EquipmentTypes types={category.types}></EquipmentTypes>
+                      {isLoading ? (
+                        <CircularProgress />
+                      ) : (
+                        <EquipmentTypes types={category.types}></EquipmentTypes>
+                      )}
                     </TabPanel>
                   );
                 })}
