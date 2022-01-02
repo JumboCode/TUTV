@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -35,6 +36,8 @@ const MemberDashboard: React.FC = () => {
         <Button
           variant="contained"
           sx={{ alignSelf: 'flex-end', width: '150px' }}
+          component={Link}
+          to={'/request/new'}
         >
           New Request
         </Button>
