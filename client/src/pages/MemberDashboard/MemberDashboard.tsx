@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
+import AddIcon from '@mui/icons-material/Add';
 
 import { EquipmentRequest } from 'types/Request';
 
@@ -35,9 +36,10 @@ const MemberDashboard: React.FC = () => {
         <Typography variant="h5">My Requests</Typography>
         <Button
           variant="contained"
-          sx={{ alignSelf: 'flex-end', width: '150px' }}
+          sx={{ alignSelf: 'flex-end', width: '175px' }}
           component={Link}
           to={'/request/new'}
+          startIcon={<AddIcon />}
         >
           New Request
         </Button>

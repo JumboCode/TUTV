@@ -6,6 +6,8 @@ import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
 
 import { EquipmentRequest } from 'types/Request';
 
@@ -100,16 +102,22 @@ const RequestCard: React.FC<RequestCardProps> = ({ request }) => {
             ))}
         </Stack>
         {(request.status === 'Requested' || request.status === 'Confirmed') && (
-          <Box
+          <Stack
+            direction="row"
+            spacing={1}
             sx={{
               display: 'flex',
               flexDirection: 'row',
               justifyContent: 'flex-end',
             }}
           >
-            <Button>Modify Request</Button>
-            <Button variant="contained">Cancel Request</Button>
-          </Box>
+            <Button variant="outlined" color="error" startIcon={<DeleteIcon />}>
+              Cancel
+            </Button>
+            <Button variant="contained" startIcon={<EditIcon />}>
+              Modify
+            </Button>
+          </Stack>
         )}
       </Stack>
     </Paper>
