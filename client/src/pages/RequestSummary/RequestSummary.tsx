@@ -15,7 +15,7 @@ import { CartItem } from 'types/Equipment';
 import { RootStateOrAny, useSelector } from 'react-redux';
 import { useApiRequest } from 'api';
 
-const RequestSummary = () => {
+const RequestSummary: React.FC = () => {
   const [projectName, checkoutTime, returnTime, cartItems]: [
     string,
     Date,
@@ -38,7 +38,7 @@ const RequestSummary = () => {
       request_out: checkoutTime,
       request_in: returnTime,
       equipment_items: Object.entries(cartItems).map(([itemID, cartItem]) => {
-        return { item: itemID, quantity: cartItem.qty };
+        return { item_id: itemID, quantity: cartItem.qty };
       }),
     }),
   });
@@ -46,10 +46,13 @@ const RequestSummary = () => {
   const onSubmitRequest = () => {
     submitRequest()
       .then((data) => {
-        // redirect to error page if POST failed
+        // TODO: redirect to error page if POST failed
         console.log(data);
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        alert('Something bad happened');
+        console.error(error);
+      });
   };
 
   return (

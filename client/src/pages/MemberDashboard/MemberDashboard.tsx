@@ -1,110 +1,102 @@
 import React from 'react';
-import styles from './MemberDashboard.module.css';
-import Button from 'components/Button';
+import { Link } from 'react-router-dom';
+
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Stack from '@mui/material/Stack';
+import Divider from '@mui/material/Divider';
+import Box from '@mui/material/Box';
+import AddIcon from '@mui/icons-material/Add';
+import CircularProgress from '@mui/material/CircularProgress';
+
+import { EquipmentRequest } from 'types/Request';
+
+import { useApiRequest } from 'api';
+import RequestCard from 'components/RequestCard';
 
 const MemberDashboard: React.FC = () => {
+  const [activeRequests, setActiveRequests] = React.useState<
+    EquipmentRequest[]
+  >([]);
+  const [inactiveRequests, setInactiveRequests] = React.useState<
+    EquipmentRequest[]
+  >([]);
+  const [showInactiveRequests, setShowInactiveRequests] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  const getRequests = useApiRequest('equipment-requests');
+  React.useEffect(() => {
+    getRequests()
+      .then((requests) => {
+        const activeRequests: EquipmentRequest[] = [];
+        const inactiveRequests: EquipmentRequest[] = [];
+        requests.forEach((request: EquipmentRequest) => {
+          if (request.status === 'Returned' || request.status === 'Cancelled') {
+            inactiveRequests.push(request);
+          } else {
+            activeRequests.push(request);
+          }
+        });
+        setActiveRequests(activeRequests);
+        setInactiveRequests(inactiveRequests);
+        setIsLoading(false);
+      })
+      .catch((error) => console.error(error));
+  }, []);
+
   return (
-    <div className={styles.backdrop}>
-      <div className={styles.header}>
-        <div>TUTV Equipment Checkout</div>
-        <Button>New Request</Button>
-      </div>
-      <div>
-        <div className={styles.requestheader}>
-          <div>My current requests</div>
-          <input type="string" placeholder="Search" />
-        </div>
-        <hr />
-        <table className={styles.tableClass}>
-          <tbody>
-            <tr>
-              <th>Project Name</th>
-              <th>Checkout Time</th>
-              <th>Return Time</th>
-              <th>Status</th>
-            </tr>
-            <tr className={styles.projectreq}>
-              <td className={styles.cellName}>Fake Current Project Name 1</td>
-              <td className={styles.cellTime}>02/23/20 5:00pm</td>
-              <td className={styles.cellTime}>03/23/20 5:00pm</td>
-              <td className={styles.cellPend}>Pending</td>
-              <td>
-                <Button variant="gray" compact>
-                  View
-                </Button>
-              </td>
-              <td>
-                <Button variant="gray" compact>
-                  Edit
-                </Button>
-              </td>
-            </tr>
-            <tr className={styles.projectreq}>
-              <td className={styles.cellName}>Fake Current Project Name 2</td>
-              <td className={styles.cellTime}>02/24/20 3:00pm</td>
-              <td className={styles.cellTime}>03/24/20 4:00pm</td>
-              <td className={styles.cellApp}>Approved</td>
-              <td>
-                <Button variant="gray" compact>
-                  View
-                </Button>
-              </td>
-              <td>
-                <Button variant="gray" compact>
-                  Edit
-                </Button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div>
-        <div className={styles.requestheader}>My past requests</div>
-        <hr />
-        <table className={styles.tableClass}>
-          <tbody>
-            <tr>
-              <th>Project Name</th>
-              <th>Checkout Time</th>
-              <th>Return Time</th>
-              <th>Status</th>
-            </tr>
-            <tr className={styles.projectreq}>
-              <td className={styles.cellName}>Fake Past Project Name 1</td>
-              <td className={styles.cellTime}>02/20/20 12:00pm</td>
-              <td className={styles.cellTime}>03/20/20 1:00pm</td>
-              <td className={styles.cellRet}>Returned</td>
-              <td>
-                <Button variant="gray" compact>
-                  View
-                </Button>
-              </td>
-              <td>
-                <Button variant="gray" compact>
-                  Edit
-                </Button>
-              </td>
-            </tr>
-            <tr className={styles.projectreq}>
-              <td className={styles.cellName}>Fake Past Project Name 2</td>
-              <td className={styles.cellTime}>01/19/20 3:00pm</td>
-              <td className={styles.cellTime}>02/15/20 4:00pm</td>
-              <td className={styles.cellRet}>Returned</td>
-              <td>
-                <Button variant="gray" compact>
-                  View
-                </Button>
-              </td>
-              <td>
-                <Button variant="gray" compact>
-                  Edit
-                </Button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    <Stack spacing={2} sx={{ minWidth: '50%', marginBottom: '50px' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+        }}
+      >
+        <Typography variant="h5">My Requests</Typography>
+        <Button
+          variant="contained"
+          sx={{ alignSelf: 'flex-end' }}
+          component={Link}
+          to={'/request/new'}
+          startIcon={<AddIcon />}
+        >
+          New Request
+        </Button>
+      </Box>
+      {isLoading ? (
+        <Box sx={{ alignSelf: 'center' }}>
+          <CircularProgress />
+        </Box>
+      ) : activeRequests.length === 0 && inactiveRequests.length === 0 ? (
+        <Box sx={{ alignSelf: 'center' }}>
+          <Typography variant="body1">
+            You don't have any equipment request yet...
+          </Typography>
+        </Box>
+      ) : (
+        <Stack spacing={2}>
+          {activeRequests.length !== 0 &&
+            activeRequests.map((request: EquipmentRequest) => (
+              <RequestCard request={request}></RequestCard>
+            ))}
+          {activeRequests.length !== 0 && inactiveRequests.length !== 0 && (
+            <Divider>
+              <Button
+                onClick={() => setShowInactiveRequests(!showInactiveRequests)}
+              >
+                {!showInactiveRequests ? 'Show' : 'Hide'} Inactive Requests
+              </Button>
+            </Divider>
+          )}
+          {((activeRequests.length === 0 && inactiveRequests.length !== 0) ||
+            showInactiveRequests) &&
+            inactiveRequests.map((request: EquipmentRequest) => (
+              <RequestCard request={request}></RequestCard>
+            ))}
+        </Stack>
+      )}
+    </Stack>
   );
 };
 

@@ -20,7 +20,7 @@ const NewRequest = () => {
 
   return (
     <Stack sx={{ width: '50%' }} spacing={2}>
-      <Typography variant="h5">Make a new request</Typography>
+      <Typography variant="h5">Make a New Request</Typography>
       <Typography variant="subtitle1">
         Remember that you cannot make a request less than 2 days in advance. You
         also cannot take out equipment for more than 2 days.

@@ -1,10 +1,14 @@
-from rest_framework import status
+import datetime
+
+from django.http import JsonResponse
+from django.shortcuts import get_object_or_404
+
+from rest_framework import status, viewsets
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
 from api.models import *
-from rest_framework import viewsets
 from api.serializers import *
 
 import datetime
@@ -19,6 +23,7 @@ EquipmentCategorySerializerWithTime => pass into EquipmentTypeSerializerWithTime
 pass into EquipmentItemSerializerWithTime => EquipmentItemSerializerWithTime uses
 SerializerMethodField to dynamically get num_available
 """
+
 class EquipmentCategoryViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows Equipment Categories to be viewed or edited.
@@ -170,10 +175,6 @@ def get_availability(request):
 Partially update a request to reflect its signed out status
 Reference: https://stackoverflow.com/questions/50129567/django-rest-update-one-field
 """
-
-# class new_request(APIView):
-#     def post(self, request, format=None):
-#         serializer = EquipmentRequestSerializer(data=request.data)
 
 
 class sign_out_request(APIView):
