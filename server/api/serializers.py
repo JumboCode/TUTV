@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 from .models import *
+import datetime
 
 """
 The HyperlinkedModelSerializer class is similar to the ModelSerializer
@@ -67,6 +68,52 @@ class EquipmentItemSerializer(serializers.ModelSerializer):
             "num_instances",
         ]
 
+class EquipmentItemSerializerWithTime(serializers.ModelSerializer):
+    """
+    Helper class for EquipmentCategorySerializerWithTime
+    Has logic to find the number of item instances available based
+        on the time parameters in the GET request
+    """
+    num_available = serializers.SerializerMethodField('get_num_available')
+    def get_num_available(self, obj):
+        available_count = 0
+        item_inst = obj.instances()
+        n = obj.num_instances()
+        time_out_string = self.context.get('request_out')
+        time_in_string = self.context.get('request_in')
+        time_out = datetime.datetime.strptime(time_out_string, "%Y-%m-%dT%H:%M:%S%z")
+        time_in = datetime.datetime.strptime(time_in_string, "%Y-%m-%dT%H:%M:%S%z")
+
+        for i in range(n):
+            instance = item_inst[i]
+            requests = instance.assoc_requests()
+            time_conflict = False
+
+            # logic to see if existing request overlaps with GET request time
+            for assoc_request in requests:
+                if (assoc_request.request_out <= time_out):
+                    if (assoc_request.request_in >= time_out):
+                        time_conflict = True
+                if (assoc_request.request_out > time_out):
+                    if (assoc_request.request_out <= time_in):
+                        time_conflict = True
+            
+            if not time_conflict:
+                available_count += 1
+        return available_count
+    
+    class Meta:
+        model = EquipmentItem
+        fields = [
+            "id",
+            "name",
+            "description",
+            "image",
+            "product_url",
+            "equipment_type_FK",
+            "num_instances",
+            "num_available",
+        ]
 
 class EquipmentTypeSerializer(serializers.ModelSerializer):
     """
@@ -80,6 +127,22 @@ class EquipmentTypeSerializer(serializers.ModelSerializer):
         fields = ["id", "name", "description",
                   "equipment_category_FK", "items"]
 
+class EquipmentTypeSerializerWithTime(serializers.ModelSerializer):
+    """
+    Helper class for EquipmentCategorySerializerWithTime
+    Redefined __init__ allows for context to be passed through
+    """
+    items = EquipmentItemSerializerWithTime(many=True, read_only=True)
+
+    class Meta:        
+        model = EquipmentType
+        fields = ["id", "name", "description",
+                  "equipment_category_FK", "items"]
+        depth = 1
+        
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['items'].context.update(self.context)
 
 class EquipmentCategorySerializer(serializers.ModelSerializer):
     """
@@ -92,6 +155,20 @@ class EquipmentCategorySerializer(serializers.ModelSerializer):
         model = EquipmentCategory
         fields = ["id", "name", "description", "types"]
 
+class EquipmentCategorySerializerWithTime(serializers.ModelSerializer):
+    """
+    Serialize EquipmentCategory restricted by time availability of request
+    """
+    types = EquipmentTypeSerializerWithTime(many=True, read_only=True)
+
+    class Meta:
+        model = EquipmentCategory
+        fields = ["id", "name", "description", "types"]
+        depth = 2
+        
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['types'].context.update(self.context)
 
 class EquipmentRequestItemQtySerializer(serializers.ModelSerializer):
     """
