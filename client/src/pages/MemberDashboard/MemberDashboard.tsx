@@ -41,6 +41,7 @@ const MemberDashboard: React.FC = () => {
         setInactiveRequests(inactiveRequests);
         setIsLoading(false);
       })
+      // TODO: better error handling
       .catch((error) => console.error(error));
   }, []);
 

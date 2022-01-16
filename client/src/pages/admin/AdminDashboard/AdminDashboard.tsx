@@ -1,101 +1,58 @@
 import React from 'react';
-import styles from './AdminDashboard.module.css';
+import { Link } from 'react-router-dom';
 
-export interface RequestInfo {
-  name: string;
-  checkoutTime: Date;
-  returnTime: Date;
-  status: 'pending' | 'approved' | 'checked out' | 'returned';
-}
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Stack from '@mui/material/Stack';
+import Divider from '@mui/material/Divider';
+import Box from '@mui/material/Box';
+import CircularProgress from '@mui/material/CircularProgress';
+
+import { useApiRequest } from 'api';
+
+import { EquipmentRequest } from 'types/Request';
+import RequestCard from 'components/RequestCard';
 
 const AdminDashboard: React.FC = () => {
-  const rowFromRequestInfo = ({
-    name,
-    checkoutTime,
-    returnTime,
-    status,
-  }: RequestInfo) => {
-    return (
-      <tr className={styles.projectDetails} key={name}>
-        <td>{name}</td>
-        <td>{checkoutTime.toDateString()}</td>
-        <td>{returnTime.toDateString()}</td>
-        <td>{status}</td>
-        <td>
-          <button>View</button>
-        </td>
-      </tr>
-    );
-  };
+  const [requests, setRequests] = React.useState<EquipmentRequest[]>([]);
+  const [isLoading, setIsLoading] = React.useState(true);
 
-  const currentRequests: RequestInfo[] = [
-    {
-      name: 'O hey',
-      checkoutTime: new Date(),
-      returnTime: new Date(),
-      status: 'pending',
-    },
-    {
-      name: 'O hey',
-      checkoutTime: new Date(),
-      returnTime: new Date(),
-      status: 'pending',
-    },
-  ];
-  // All past requests will be returned requests
-  const pastRequests: RequestInfo[] = [
-    {
-      name: 'O hey',
-      checkoutTime: new Date(),
-      returnTime: new Date(),
-      status: 'returned',
-    },
-    {
-      name: 'O hey 2',
-      checkoutTime: new Date(),
-      returnTime: new Date(),
-      status: 'returned',
-    },
-    {
-      name: 'O hey',
-      checkoutTime: new Date(),
-      returnTime: new Date(),
-      status: 'returned',
-    },
-  ];
+  // TODO: Apply filtering
+  const getRequests = useApiRequest('equipment-requests');
+  React.useEffect(() => {
+    getRequests()
+      .then((requests) => {
+        setRequests(requests);
+        setIsLoading(false);
+      })
+      // TODO: better error handling
+      .catch((error) => console.error(error));
+  }, []);
 
   return (
-    <div>
-      <h1>Welcome Back, Admin</h1>
-      <div className={styles.pageContainer}>
-        <h2>Active Requests</h2>
-        <table>
-          <tbody>
-            <tr className={styles.requestHeader}>
-              <th>Project Name</th>
-              <th>Checkout Time</th>
-              <th>Return Time</th>
-              <th>Status</th>
-              <th> </th>
-            </tr>
-            {currentRequests.map(rowFromRequestInfo)}
-          </tbody>
-        </table>
-        <h2>My Past Requests</h2>
-        <table>
-          <tbody>
-            <tr className={styles.requestHeader}>
-              <th>Project Name</th>
-              <th>Checkout Time</th>
-              <th>Return Time</th>
-              <th>Status</th>
-              <th> </th>
-            </tr>
-            {pastRequests.map(rowFromRequestInfo)}
-          </tbody>
-        </table>
-      </div>
-    </div>
+    <Stack spacing={2} sx={{ minWidth: '50%', marginBottom: '50px' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+        }}
+      >
+        <Typography variant="h5">Member Requests</Typography>
+      </Box>
+      {isLoading ? (
+        <Box sx={{ alignSelf: 'center' }}>
+          <CircularProgress />
+        </Box>
+      ) : (
+        <Stack spacing={2}>
+          {requests.length !== 0 &&
+            requests.map((request: EquipmentRequest) => (
+              <RequestCard request={request}></RequestCard>
+            ))}
+        </Stack>
+      )}
+    </Stack>
   );
 };
 

@@ -54,10 +54,9 @@ const Navbar: React.FC = () => {
           <Link style={linkStyle} to="/memberdashboard">
             Member Dashboard
           </Link>
-          {/* <Link style={linkStyle} to="/admin/dashboard">
+          <Link style={linkStyle} to="/admin/dashboard">
             Admin Dashboard
           </Link>
-          */}
           <Button variant="contained" color="secondary" onClick={logout}>
             Log out
           </Button>
