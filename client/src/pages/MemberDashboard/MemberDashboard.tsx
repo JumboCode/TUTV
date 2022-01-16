@@ -10,6 +10,7 @@ import AddIcon from '@mui/icons-material/Add';
 import CircularProgress from '@mui/material/CircularProgress';
 
 import { EquipmentRequest } from 'types/Request';
+import { setOverdueRequests, getRequestSortFn } from 'utils/Request';
 
 import { useApiRequest } from 'api';
 import RequestCard from 'components/RequestCard';
@@ -28,6 +29,9 @@ const MemberDashboard: React.FC = () => {
   React.useEffect(() => {
     getRequests()
       .then((requests) => {
+        setOverdueRequests(requests);
+        requests.sort(getRequestSortFn('status'));
+
         const activeRequests: EquipmentRequest[] = [];
         const inactiveRequests: EquipmentRequest[] = [];
         requests.forEach((request: EquipmentRequest) => {

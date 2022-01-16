@@ -10,26 +10,12 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 
 import { EquipmentRequest } from 'types/Request';
-
+import { requestStatusToColor } from 'utils/Request';
 interface RequestCardProps {
   request: EquipmentRequest;
 }
 
 const RequestCard: React.FC<RequestCardProps> = ({ request }) => {
-  const requestStatusToColor = {
-    Requested: 'warning',
-    Confirmed: 'success',
-    'Signed Out': 'primary',
-    Overdue: 'error',
-    Returned: 'secondary',
-    Cancelled: 'secondary',
-  };
-  if (
-    request.status === 'Signed Out' &&
-    new Date(request.request_in) < new Date()
-  ) {
-    request.status = 'Overdue';
-  }
   return (
     <Paper sx={{ padding: '20px', borderRadius: '10px' }} elevation={6}>
       <Stack spacing={0.5}>
