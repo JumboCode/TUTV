@@ -91,7 +91,7 @@ const AdminDashboard: React.FC = () => {
         <Stack spacing={2}>
           {requests.length !== 0 &&
             requests.map((request: EquipmentRequest) => (
-              <RequestCard request={request}></RequestCard>
+              <RequestCard request={request} adminView></RequestCard>
             ))}
         </Stack>
       )}

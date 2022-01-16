@@ -8,14 +8,19 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 import { EquipmentRequest } from 'types/Request';
 import { requestStatusToColor } from 'utils/Request';
 interface RequestCardProps {
   request: EquipmentRequest;
+  adminView?: boolean;
 }
 
-const RequestCard: React.FC<RequestCardProps> = ({ request }) => {
+const RequestCard: React.FC<RequestCardProps> = ({
+  request,
+  adminView = false,
+}) => {
   return (
     <Paper sx={{ padding: '20px', borderRadius: '10px' }} elevation={6}>
       <Stack spacing={0.5}>
@@ -100,9 +105,14 @@ const RequestCard: React.FC<RequestCardProps> = ({ request }) => {
             <Button variant="outlined" color="error" startIcon={<DeleteIcon />}>
               Cancel
             </Button>
-            <Button variant="contained" startIcon={<EditIcon />}>
+            <Button variant="outlined" startIcon={<EditIcon />}>
               Modify
             </Button>
+            {adminView && (
+              <Button variant="contained" endIcon={<KeyboardArrowRightIcon />}>
+                Start Checkout
+              </Button>
+            )}
           </Stack>
         )}
       </Stack>
