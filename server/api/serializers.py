@@ -123,35 +123,6 @@ class EquipmentTypeSerializer(serializers.ModelSerializer):
 
     items = EquipmentItemSerializer(many=True, read_only=True)
 
-<<<<<<< HEAD
-=======
-
-"""
-Serializers to support serializing EquipmentItem objects
-"""
-        
-class EquipmentItemSerializerTime(serializers.HyperlinkedModelSerializer):
-    available = serializers.SerializerMethodField('is_available')
-
-    def is_available(self, obj):
-        if check_availability(self.context.get("request"), obj.id):
-            return True 
-        else:
-            return False
-
-    class Meta:
-        model = EquipmentItem
-        fields = ['id', 'url', 'available']
-
-class EquipmentTypeTimeSerializer(serializers.HyperlinkedModelSerializer):
-    items = EquipmentItemSerializerTime(many=True, required=False, read_only=True)
-
-    class Meta:
-        model = EquipmentType
-        fields = "__all__"
-
-class EquipmentTypeSerializerSimple(serializers.HyperlinkedModelSerializer):
->>>>>>> cfd1019de3201abbfa30e1469f98f4e0256a0efc
     class Meta:
         model = EquipmentType
         fields = ["id", "name", "description",

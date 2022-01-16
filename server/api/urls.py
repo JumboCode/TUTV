@@ -7,7 +7,6 @@ router = routers.DefaultRouter()
 
 # These routes are registered for views defined with Django's ModelViewset.
 # They support HTTP GET, PUT, PATCH, DELETE
-<<<<<<< HEAD
 router.register(r"users", views.UserViewSet)
 router.register(r"equipment-instances", views.EquipmentInstanceViewSet)
 router.register(r"equipment-items", views.EquipmentItemViewSet)
@@ -18,15 +17,6 @@ router.register(
 )
 router.register(r"admin/all-equipment-requests",
                 views.EquipmentRequestViewSetAdmin)
-=======
-router.register(r'users', views.UserViewSet)
-router.register(r'equipment-types', views.EquipmentTypeViewSet)
-router.register(r'equipment-types-time', views.EquipmentTypeTimeViewSet)
-router.register(r'equipment-items', views.EquipmentItemViewSet)
-router.register(r'equipment-categories', views.EquipmentCategoryViewSet)
-router.register(r'equipment-requests', views.EquipmentRequestViewSet,basename='EquipmentRequest')
-router.register(r'equipment-requests-admin', views.EquipmentRequestViewSetAdmin)
->>>>>>> cfd1019de3201abbfa30e1469f98f4e0256a0efc
 
 urlpatterns = [
     *router.urls,
