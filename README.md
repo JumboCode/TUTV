@@ -1,22 +1,5 @@
 # TUTV
 
-## Contributors
-Current:
-* Project Manager: [Frank Ma](https://github.com/Frama-99)
-* Designer: Emai Lai
-* Developer: [Xenia Rudchenko](https://github.com/XeniaRud)
-* Developer: [Aidan Barg](https://github.com/abarg12)
-* Developer: [Patrick Gavazzi](https://github.com/pgavazzi1)
-* Developer: [Yong Quan Tan](https://github.com/hermit46)
-* Developer: [Matt Ung](https://github.com/Matt-Ung)
-
-2019-2020:
-* Project Manager: Deepanshu Utkarsh
-* Developer: Luke Taylor
-* Developer: Alon Jacobson
-* Developer: Isabella Urdahl
-* Developer: Daeseob Lim
-
 ## Setup
 
 ### Before you begin:
@@ -116,3 +99,29 @@ look like:
    https://www.fusionbox.com/blog/detail/create-react-app-and-django/624/
  - Most of this page was written by Deepanshu Utkarsh, with updates from
    Frank Ma. 
+
+
+## Contributors
+Current:
+* PM/Developer: [Frank Ma](https://github.com/Frama-99)
+* Developer: [Aidan Barg](https://github.com/abarg12)
+
+2020-2021
+* PM/Developer: [Frank Ma](https://github.com/Frama-99)
+* Designer: Emai Lai
+* Developer: [Aidan Barg](https://github.com/abarg12)
+* Developer: [Xenia Rudchenko](https://github.com/XeniaRud)
+* Developer: [Patrick Gavazzi](https://github.com/pgavazzi1)
+* Developer: [Yong Quan Tan](https://github.com/hermit46)
+* Developer: [Matt Ung](https://github.com/Matt-Ung)
+* Developer: Emma Bethel
+
+2019-2020:
+* Project Manager: Deepanshu Utkarsh
+* Designer: Emai Lai
+* Developer: Luke Taylor
+* Developer: Xenia Rudchenko
+* Developer: Alon Jacobson
+* Developer: Frank Ma
+* Developer: Isabella Urdahl
+* Developer: Daeseob Lim
