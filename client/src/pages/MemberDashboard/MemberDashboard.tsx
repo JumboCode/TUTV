@@ -46,7 +46,15 @@ const MemberDashboard: React.FC = () => {
   }, []);
 
   return (
-    <Stack spacing={2} sx={{ minWidth: '50%', marginBottom: '50px' }}>
+    <Stack
+      spacing={2}
+      sx={{
+        width: '800px',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginBottom: '50px',
+      }}
+    >
       <Box
         sx={{
           display: 'flex',
