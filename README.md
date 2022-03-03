@@ -42,7 +42,7 @@ running the following:
 
 ```
 sudo apt update && upgrade
-sudo apt install python3 python3-pip ipython3
+sudo apt install python3-pip
 ```
 
 ### Pipenv
@@ -62,7 +62,7 @@ echo 'export PATH="${HOME}/.local/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-`.bashrc` should be replaced with the config file of whichever file you are
+`.bashrc` should be replaced with the config file of whichever shell you are
 using. On MacOS, this might be `.zshrc`.
 
 More instructions [can be found
@@ -167,6 +167,10 @@ correctly. Check if all commands in step 5 above have been run.
 
 3.  Open a new tab/window in your terminal, with the repository root as your
     working directory. Start the frontend development server in this tab: `cd client` and then, `yarn start`.
+
+    If you encounter an error, make sure that node version you have installed is
+
+    16.
 
 4.  The previous step should have opened
     [http://127.0.0.1:3000](http://127.0.0.1:3000) in a browser window. If not,
