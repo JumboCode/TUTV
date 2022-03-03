@@ -24,6 +24,14 @@ here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 I personally prefer the `git` CLI along with extensions in VSCode. If you like,
 you can also use a Git GUI client like GitHub Desktop, GitKraken, or SourceTree.
 
+If this is your first time using Git, you also need to configure the name and
+email associated with your commits. You can do this by running the following:
+
+```
+git config --global user.name "FIRST_NAME LAST_NAME"
+git config --global user.email "MY_NAME@example.com"
+```
+
 ### Python
 
 The backend of the TUTV website is built in Python with Django. If you are on
