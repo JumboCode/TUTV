@@ -84,7 +84,7 @@ Then install NodeJS version 16 (**note: do not install the latest**) by running
 the following:
 
 ```
-nvm install node
+nvm install 16
 ```
 
 ### Yarn
@@ -168,9 +168,7 @@ correctly. Check if all commands in step 5 above have been run.
 3.  Open a new tab/window in your terminal, with the repository root as your
     working directory. Start the frontend development server in this tab: `cd client` and then, `yarn start`.
 
-    If you encounter an error, make sure that node version you have installed is
-
-    16.
+    If you encounter an error, make sure that node version you have installed is 16.
 
 4.  The previous step should have opened
     [http://127.0.0.1:3000](http://127.0.0.1:3000) in a browser window. If not,
