@@ -11,6 +11,18 @@ from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from api.models import *
 from api.serializers import *
 
+import datetime
+
+from django.http import JsonResponse
+
+from django.shortcuts import get_object_or_404
+
+"""
+request in EquipmentCategoryViewSet => context object => pass into
+EquipmentCategorySerializerWithTime => pass into EquipmentTypeSerializerWithTime =>
+pass into EquipmentItemSerializerWithTime => EquipmentItemSerializerWithTime uses
+SerializerMethodField to dynamically get num_available
+"""
 
 class EquipmentCategoryViewSet(viewsets.ModelViewSet):
     """
@@ -18,7 +30,31 @@ class EquipmentCategoryViewSet(viewsets.ModelViewSet):
     """
 
     queryset = EquipmentCategory.objects.all()
-    serializer_class = EquipmentCategorySerializer
+    
+    # Pass the GET request time parameters as context if they are present
+    def get_serializer_context(self, *args, **kwargs):
+        req_args = self.request.query_params
+
+        # Check if time out and time in parameters are provided, if so
+        # then use a separate serializer to retrieve only available items
+        if ((req_args.get('out') == None) or (req_args.get('in') == None)):
+            return None
+        else: 
+            return {
+                    'request_out': req_args.get('out'),
+                    'request_in' : req_args.get('in')
+            }
+
+    # Use the time serializer if time parameters passed in GET request
+    def get_serializer_class(self):
+        req_args = self.request.query_params
+
+        # Check if time out and time in parameters are provided, if so
+        # then use a separate serializer to retrieve only available items
+        if ((req_args.get('out') == None) or (req_args.get('in') == None)):
+            return EquipmentCategorySerializer
+        else: 
+            return EquipmentCategorySerializerWithTime
 
 
 class EquipmentTypeViewSet(viewsets.ModelViewSet):
