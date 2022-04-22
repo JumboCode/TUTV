@@ -8,7 +8,7 @@ autopep8 = "*"
 black = "*"
 
 [packages]
-django = "==3.2.7"
+django = "==3.2.13"
 gunicorn = "==20.1.0"
 django-heroku = "==0.3.1"
 djangorestframework = "==3.12.4"
