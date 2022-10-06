@@ -8,13 +8,13 @@ autopep8 = "*"
 black = "*"
 
 [packages]
-django = "==3.2.7"
-djangorestframework = "==3.12.4"
-djangorestframework-simplejwt = "==4.6.0"
-django-cors-headers = "==3.8.0"
-django-on-heroku = "==1.1.2"
-gunicorn = "==20.1.0"
-pillow = "==8.3.2"
+django = "*"
+djangorestframework = "*"
+djangorestframework-simplejwt = "*"
+django-cors-headers = "*"
+django-on-heroku = "*"
+gunicorn = "*"
+pillow = "*"
 whitenoise = "*"
 
 [requires]
