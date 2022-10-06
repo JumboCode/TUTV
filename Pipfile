@@ -8,7 +8,7 @@ autopep8 = "*"
 black = "*"
 
 [packages]
-django = "==3.2.7"
+django = "==3.2.15"
 djangorestframework = "==3.12.4"
 djangorestframework-simplejwt = "==4.6.0"
 django-cors-headers = "==3.8.0"
